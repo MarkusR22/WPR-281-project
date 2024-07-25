@@ -12,16 +12,40 @@ body {
 .header{
     grid-row: 2/3;
     display: flex;
-    justify-items: center;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .header img{
-    width: 200px;
-    height: 100px;
+    width: 120px;
+
 }
 
 .header h1{
     font-size: 50px;
+}
+
+
+.footer{
+    grid-row: 5/6;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.footer img{
+    width: 250px;
+    height: 100px;
+    float: left;
+}
+
+.list {
+    text-align: center;
+    margin-left: 500px;
+
+}
+
+.list ul{
+    list-style-type: none;
 }
