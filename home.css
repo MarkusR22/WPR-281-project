@@ -6,7 +6,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 10vh 6vh minmax(30vh, auto) 20vh;
+    grid-template-rows: 10vh 6vh minmax(30vh, auto) 25vh;
 }
 
 .header{
@@ -63,35 +63,56 @@ body {
 
 .footer{
     grid-row: 4/5;
-    background: black;
+    background: #111;
     color: white;
     padding: 20px;
 
 }
 
-.footerImage{
+.socialIcons{
+    display: flex;
     justify-content: center;
 }
 
-.footerImage img{
-    width: 250px;
-    height: 100px;
-    float: left;
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
 }
 
-.list {
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #bb2626;
+    transition: 0.5s;
+
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+
+}
+
+.contactDetails{
     text-align: center;
 }
 
-.list ul{
+.contactDetails ul{
     list-style-type: none;
 }
 
-.footerImage ul li{
-    display: inline-block;
+.contactDetails ul li{
+    margin: 20px; 
 }
-
-.footerImage ul li img{
-    width: 20px;
-    height: 40px;
+.contactDetails ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
 }
