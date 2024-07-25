@@ -65,20 +65,33 @@ body {
     grid-row: 4/5;
     background: black;
     color: white;
-    /* display: flex;
-    align-items: center; */
+    padding: 20px;
+
+}
+
+.footerImage{
+    justify-content: center;
 }
 
 .footerImage img{
     width: 250px;
     height: 100px;
+    float: left;
 }
 
 .list {
     text-align: center;
-
 }
 
 .list ul{
     list-style-type: none;
+}
+
+.footerImage ul li{
+    display: inline-block;
+}
+
+.footerImage ul li img{
+    width: 20px;
+    height: 40px;
 }
