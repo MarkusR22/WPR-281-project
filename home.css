@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: grid;
+    grid-template-rows: 10vh 10vh 10vh minmax(30vh, auto) 20vh;
+}
+
+.header{
+    grid-row: 2/3;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header img{
+    width: 200px;
+    height: 100px;
+}
+
+.header h1{
+    font-size: 50px;
+}
