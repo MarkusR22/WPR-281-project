@@ -6,11 +6,11 @@
 
 body {
     display: grid;
-    grid-template-rows: 10vh 10vh 6vh minmax(30vh, auto) 20vh;
+    grid-template-rows: 10vh 6vh minmax(30vh, auto) 20vh;
 }
 
 .header{
-    grid-row: 2/3;
+    grid-row: 1/2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,11 +25,14 @@ body {
     font-size: 50px;
 }
 .navbar {
-    grid-row: 3/4;
+    grid-row: 2/3;
     display: flex;
     justify-content: space-between;
     background-color: #333;
     padding: 10px;
+    Width:100%;/*hier */
+    top:0;
+    z-index:1000;
 }
 .navbar a {
     color: white;
@@ -43,10 +46,23 @@ body {
 }
 .nav-left, .nav-right {
     display: flex;}
-
+.nav-left{
+    font-size: 20px;
+    padding-left: 20px;
+}
+.nav-left a{
+    border: 1px solid white;
+    border-radius:5px;
+    margin-right:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 .footer{
-    grid-row: 5/6;
+    grid-row: 4/5;
     background: black;
     color: white;
     /* display: flex;
