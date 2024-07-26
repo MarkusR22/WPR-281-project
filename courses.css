@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas:  "navbar navbar navbar"
+                          "course search search"
+                          "course module lecturer"
+                          "course description lecturer"
+                          "footer footer footer"
+                          ;
+    
+    grid-template-rows: 100px 100px 800px 300px 300px;
+    grid-template-columns: 0.30fr 1fr 0.5fr;
+}
+
+
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+}
+.navbar aactive{
+   background-color: rgb(37, 36, 39);
+    color: #bb2626;
+    font-weight: bolder;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar a:hover {
+    font-weight: bolder;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+.nav-left, .nav-right {
+    display: flex;}
+
+.nav-left{
+    font-size: 20px;    
+    padding-left: 20px;
+}
+.nav-left a:hover{
+    border-bottom: solid 3px #bb2626;
+}
+.nav-left a{  
+    margin-right:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.nav-right:hover{
+    outline:solid 3px #bb2626;
+}
+
+.courses{
+    grid-area: course;
+    background-color: yellow;
+}
+
+.modules{
+    grid-area: module;
+    background-color: blue;
+}
+
+.search{
+    grid-area: search;
+    background-color: cornflowerblue;
+}
+
+.lecturer{
+    grid-area: lecturer;
+    background-color: cyan;
+}
+
+.description{
+    grid-area: description;
+    background-color: dimgray;
+}
+
+
+.footer{
+    grid-area: footer;
+    background: #111;
+    color: white;
+    padding-top: 30px;
+
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 6px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #bb2626;
+    transition: 0.5s;
+
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+
+}
+
+.contactDetails{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contactDetails ul{
+    list-style-type: none;
+}
+
+.contactDetails ul li{
+    margin: 10px; 
+}
+.contactDetails ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.contactDetails ul li a:hover{
+    text-decoration: underline;
+    color: #bb2626;
+
+}
