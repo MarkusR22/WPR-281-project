@@ -74,7 +74,14 @@ body {
 .section1, .section2{
     margin: 50px;
 }
-
+.section1{
+    display:flex;
+    align-items:flex-start;
+}
+.section1.left-image{
+width: 300px;
+margin-right:20px;
+}
 .section1 h1, .section2 h1{
     margin-bottom: 20px;
     text-align: center;
@@ -88,7 +95,7 @@ body {
 .section1 p, .section2 p{
     text-align: center;
     margin: 5px;
-}    
+}     
 
 .footer{
     grid-row: 4/5;
