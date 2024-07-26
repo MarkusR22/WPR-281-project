@@ -31,7 +31,13 @@ body {
     background-color: #333;
     padding: 10px;
 }
-
+.navbar aactive{
+   background-color: rgb(37, 36, 39);
+    color: #bb2626;
+    font-weight: bolder;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
 .navbar a {
     color: white;
     padding: 14px 20px;
@@ -39,9 +45,7 @@ body {
     text-align: center;
 }
 .navbar a:hover {
-     /* background-color: rgb(58, 55, 55);  */
-    /* color: #bb2626; */
-    border-bottom: solid 3px #bb2626;
+    font-weight: bolder;
     transform: translateY(-5px);
     transition: 0.5s;
 }
@@ -49,19 +53,22 @@ body {
     display: flex;}
 
 .nav-left{
-    font-size: 20px;
+    font-size: 20px;    
     padding-left: 20px;
 }
-
-.nav-left a{
-    
-    /* border-radius:5px; */
+.nav-left a:hover{
+    border-bottom: solid 3px #bb2626;
+}
+.nav-left a{  
     margin-right:5px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 30px;
     padding-right: 30px;
+}
+.nav-right:hover{
+    outline:solid 3px #bb2626;
 }
 
 .section1, .section2{
