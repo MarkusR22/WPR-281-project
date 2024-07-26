@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-
+    font-family: sans-serif;
 }
 
 body {
@@ -61,11 +61,30 @@ body {
     padding-right: 30px;
 }
 
+.section1, .section2{
+    margin: 50px;
+}
+
+.section1 h1, .section2 h1{
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #bb2626;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.section1 p, .section2 p{
+    text-align: center;
+    margin: 5px;
+}    
+
 .footer{
     grid-row: 4/5;
     background: #111;
     color: white;
-    padding: 20px;
+    padding: 0px;
 
 }
 
@@ -102,6 +121,8 @@ body {
 
 .contactDetails{
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .contactDetails ul{
@@ -115,4 +136,11 @@ body {
     text-decoration: none;
     color: white;
     font-size: 1em;
+    transition: 0.5s;
+}
+
+.contactDetails ul li a:hover{
+    text-decoration: underline;
+    color: #bb2626;
+
 }
