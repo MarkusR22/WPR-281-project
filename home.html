@@ -20,7 +20,7 @@
             <a href="courses.html">Courses</a>
         </div>
         <div class="nav-right">
-            <a href="login.html">Login/Sign Up</a>
+            <a href='#' id="loginButton">Login/Sign Up</a>
         </div>
     </div>
    <main>
@@ -77,5 +77,43 @@
         
         
     </div>
+<div id="modal" class="modal">
+    <div class="modalContent">
+
+        <span class="close">&times;</span>
+        <h3>Login/ Sign Up</h3>
+
+        <div class="modalBody">
+
+            <div class="loginForm">
+                <h4>Login</h4>
+
+                <form id="FormLogin">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+
+            </div>
+            <hr>
+            <div class="signUpForm">
+                <h4>Sign Up</h4>
+                <form id="FormSignUp">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required> 
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
