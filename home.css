@@ -161,3 +161,8 @@ margin-right:20px;
     color: #bb2626;
 
 }
+/*style the modal*/
+.modal{
+    display: none;
+    position: fixed;
+}
