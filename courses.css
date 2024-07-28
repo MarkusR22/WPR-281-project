@@ -68,18 +68,89 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    
 }
 
-.courses .BCOMP, .courses .BIT, .courses .DiplomaIT, .courses .CertificateIT{
-    border: solid black 0px;
-    border-radius: 15px;
-    background: linear-gradient(to right, rgb(2, 3, 100), rgb(19, 45, 194));
+.CourseIcon{
+    width: 60px;
+    height: 60px;
+    background: #DA0037;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.card:hover .CourseIcon{
+    box-shadow: 0 0 10px red;
+
+}
+
+.CourseIcon i{
+    font-size: 1.5em;
+}
+
+.card p{
+    margin: 0.5em 0;
+    font-size: 0.8em;
+    display: none;
+    opacity: 0;
+    transition: all .4s;
+    z-index: 1;
+}
+
+.card:hover p{
+    display: block;
+    opacity: 1;
+}
+
+.card h3{
+    margin-top: 0.5em;
+    z-index: 1;
+}
+
+.card::before, .card::after{
+    content: "";
+    position: absolute;
+    background: #171717;
+    width: 100%;
+    height: 40%;
+    z-index: 0;
+    border-radius: 15px 15px 0 0;
+    transition: all .4s;
+
+}
+
+.card::before{
+    top: 0;
+}
+
+.card:hover::before{
+    transform: translateY(-20px);
+}
+
+.card::after{
+    bottom: 10px;
+    height: 60%;
+    border-radius: 0 0 15px 15px;
+}
+
+.card{
+    width: 250px;
+    height: 200px;
     color: white;
-    
-    font-size: 1.2em;
-    height: 250px;
-    margin: 20px;
-    padding: 5px 10px;
+    margin: 1em;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1.5em;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
 }
 
 .modules{
