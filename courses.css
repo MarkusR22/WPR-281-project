@@ -68,8 +68,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
+}
+
+.courses h1{
+    margin-bottom: 10px;
 }
 
 .CourseIcon{
@@ -155,7 +158,59 @@ body {
 
 .modules{
     grid-area: module;
-    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* gap: 10px; */
+}
+
+
+.module-card{
+    border-radius: 25px;
+    background-color: whitesmoke;
+    height: 200px;
+    width: 180px;
+    margin: 20px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.856);
+}
+
+.module-card .empty{
+    background-color: #2a8af8;
+    /* background-color: whitesmoke; */
+    border: #333 2px solid;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.module-card .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.card-content p{
+    text-align: center;
+    padding: 10px 7px;
+}
+
+.card-content button{
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    /* margin: 10px; */
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.card-content button:hover{
+    background: #265DF2;
 }
 
 .search{
