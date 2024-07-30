@@ -13,7 +13,7 @@ body {
                           "footer footer footer"
                           ;
     
-    grid-template-rows: 5vh 7vh 70vh 30vh 20vh;
+    grid-template-rows: 5vh 7vh 70vh 30vh 25vh;
     grid-template-columns: 0.30fr 1fr 0.40fr;
 }
 
