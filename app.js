@@ -1,27 +1,35 @@
-document.addEventListener('DOMContentLoaded',(event)=>{ //ensures the page has been loaded succesfully before the js script runs
-   
-    //select modal events based on their ids
-    const modal=document.getElementById("modal"); 
-    const loginButton=document.getElementById("loginButton");
-    const closeButton=document.getElementsByClassName("close")[0];
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.5 });
 
-    loginButton.onclick=function(){ //modal is made visible when user clicks login/signUp
-        modal.style.display="flex"
-    }
+    document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+    });
 
-    closeButton.onclick=function() { 
-        modal.style.display="none"
-    }
+    const modal = document.getElementById('modal');
+    const loginButton = document.getElementById('loginButton');
+    const closeButton = document.querySelector('.close');
 
-    window.onclick=function(event){ //modal closes when user clicks outside it
-        if (event.target==modal) {
-            modal.style.display="none"; 
+    loginButton.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
         }
     }
 });
-
-
-
 
 
 
