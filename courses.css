@@ -163,7 +163,7 @@ body {
     flex-wrap: wrap;
     justify-content: left;
     gap: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
