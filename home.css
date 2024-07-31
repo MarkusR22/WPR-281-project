@@ -58,7 +58,7 @@ header p {
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 97.1%;
     background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: space-between;
@@ -137,6 +137,7 @@ main {
     align-items: center;
     padding: 10px;
     margin-top: 5px; 
+    background-color: rgb(238, 238, 238);
 }
 
 .section {
