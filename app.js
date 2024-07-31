@@ -31,6 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const video = document.getElementById('myVideo');
+  
+    video.addEventListener('mouseover', () => {
+      video.controls = true;
+    });
+  
+    video.addEventListener('mouseout', () => {
+      video.controls = false;
+    });
+  });
+  
 
 
 

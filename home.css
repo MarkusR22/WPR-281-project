@@ -78,6 +78,7 @@ header p {
 
 .active{
     border-bottom: solid 2px red; 
+    font-weight: bolder;
 }
 
 
@@ -152,34 +153,53 @@ main {
 
 .section:nth-child(even) {
     flex-direction: row-reverse;
-}
-/* 
-.section img, .section .video {
-    width: 50%;
-    height: auto;
-    padding: 20px;
-} */
+} 
 
 .section .content {
     flex: 1;
-    padding: 10px;
-    text-align: left;
+    padding: 100px;
+    text-align:justify;
+    font-size: larger;
+    font-weight: bold;
 }
 .Image1{
-    border-radius: 30px;
-    width: 500px;
-    height:200px;
+    border-radius: 5px;
+    width: 1000px;
+    height:400px;
+  
+   
 }
 
 .video {
-    width: 10%;
-    height: auto;
-    padding: 4px;
+   margin-left: 40px;
+    width: 800px;
+    height: 450px;
+   
+    border-radius:40px;
 }
+
+.video-controls-hidden {
+    display: none;
+  }
+  
+  .video:hover .video-controls-hidden {
+    display: block;
+  }
+
 .Image2{
     border-radius: 10px;
-    width: 600px;
-    height:450px;
+    width: 850px;
+    height:460px;
+}
+
+#section2 .content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#section2 .video {
+    max-width: 45%; /* Adjust the percentage to your preference */
+    margin-right: 20px;
 }
 
 /*Footer*/
