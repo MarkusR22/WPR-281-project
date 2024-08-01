@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body id="enrollmentPage"> 
+    <div class="navbar">       
+       
+        <div class="nav-left">
+            <div class="logo-container" href="home.html">
+                <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo">
+                <div class="logo-text">
+                    <h2>Belgium Campus</h2>
+                    <h3>It's the way we're wired!</h3>
+                </div>
+            </div>
+            <a href="home.html" class="active">Home</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="courses.html">Courses</a>
+            <a href="Enroll.html">Enroll Now</a>
+        </div>
+       
+    </div>
+    
+    <div id="StudentEnroll" >
+            <h1>Stuent Enrollment form</h1>
+            <form id="formGroup">
+
+                <label>Name:</label>
+                <input type="text" id="name" name="name" placeholder="Full Name">
+                <input type="text" id="surname" name="surname" placeholder="Surname">
+                <br>
+
+                <label>ID number:</label>
+                <input type="text" id="id" name="id">
+                <br><br>
+
+
+                <label>Address:</label>
+                <input type="text" id="adr" name="adr" placeholder="Address line 1">
+                <input type="text" id="adr" name="adr" placeholder="Address line 2">
+                <input type="text" id="city" name="city" placeholder="City">
+                <input type="text" id="zip" name="zip" placeholder="Postal/Zip Code">
+
+                <select name="province" id="province" >
+                    <option value="" selected="selected">Select Province</option>
+                    <option value="Gau">Gauteng</option>
+                    <option value="MP">Mpumalanga</option>
+                    <option value="LP">Limpopo</option>
+                    <option value="NW">Northwest</option>
+                    <option value="F">Freestate</option>
+                    <option value="KZN">Kwazulu-Natal</option>
+                    <option value="EC">Eastern Cape</option>
+                    <option value="WC">Western Cape</option>
+                    <option value="NC">Northern Cape</option>
+                </select>
+                <br><br>
+
+                <label>Gender:</label>
+                    <div class="gender-group">
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                    </div>
+                <br><br>
+
+                <label>Email:</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+
+                <label for="course">Enroll in this course:</label>
+                <select name="course" id="course">
+                    <option value="BA of Computing">BA of Computing</option>
+                    <option value="BA of IT">BA of IT</option>
+                    <option value="Diploma in IT">Diploma in IT</option>
+                    <option value="Certificate in IT">Certificate in IT</option>
+                </select>
+                <br><br>
+                <button type="submit">Enroll now</button>
+            </form>
+ </div>
+    
+</body>
+</html>

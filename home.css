@@ -309,13 +309,14 @@ main {
 }
 
 .modalContent {
-    background-color: #fefefe;
+    background-color:rgb(42,47,54);
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
     border-radius: 8px;
+    color: white;
 }
 
 .close {
@@ -328,7 +329,7 @@ main {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #da5252;
     text-decoration: none;
     cursor: pointer;
 }
@@ -354,7 +355,7 @@ form input, form button {
 }
 
 form button {
-    background-color: red;
+    background-color: #e9d53e;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -366,4 +367,88 @@ form button:hover {
     background-color: rgb(168, 43, 43);
 }
 
+/*enrolment form*/
 
+#enrollmentPage {
+    background-color: #2b2b2b; 
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;    
+}
+
+#StudentEnroll {
+    background-color: #333;
+    width: 50%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#StudentEnroll h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#formGroup {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#formGroup label {
+    margin: 10px 0 5px;
+}
+
+#formGroup input[type="text"],
+#formGroup input[type="email"],
+#formGroup select {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+   
+}
+
+#formGroup input[type="radio"] {
+    margin-right: 5px;
+    accent-color: red;
+}
+
+#formGroup .gender-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: lighter;
+}
+#formGroup .gender-group label {
+    margin: 0; 
+    display: flex;
+    align-items: center;
+}
+
+#formGroup button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#formGroup button:hover {
+    background-color: #ffa600;
+}
