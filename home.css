@@ -199,7 +199,7 @@ main {
 }
 
 #section2 .video {
-    max-width: 45%; /* Adjust the percentage to your preference */
+    max-width: 45%; 
     margin-right: 20px;
 }
 
@@ -229,23 +229,41 @@ main {
 .contactDetails a:hover, .socialIcons a:hover {
     color: red;
 }
-
-
-.socialIcons {
+ 
+.socialIcons{
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
-.socialIcons a {
-    color: #fff;
+.socialIcons a{
     text-decoration: none;
-    font-size: 24px;
-    margin: 0 10px;
+    padding: 10px;
+    background-color: white;
+    margin:6px;
+    border-radius: 50%;
 }
 
-.socialIcons a:hover {
-    color: red;
+.socialIcons a i{
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;
 }
+
+.socialIcons a:hover{
+    background-color: #bb2626;
+    transition: 0.5s;
+
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+
+} 
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
