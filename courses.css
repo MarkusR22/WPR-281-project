@@ -68,8 +68,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
+
+}
+
+.courses h1{
+    margin-bottom: 10px;
 }
 
 .CourseIcon{
@@ -155,7 +159,73 @@ body {
 
 .modules{
     grid-area: module;
-    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+
+.module-card{
+    background-color: whitesmoke;
+    height: 200px;
+    width: 180px;
+    margin: 20px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.856);
+    border: #333 1PX solid;
+}
+
+.module-card .module-header{
+    border-bottom: #333 1px solid;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.year1 .module-header{
+    background-color: #2a8af8;
+}
+
+.year2 .module-header{
+    background-color: #2af857;
+}
+
+.year3 .module-header{
+    background-color: #e0ee1e;
+}
+
+.year4 .module-header{
+    background-color: #ee2c1e;
+}
+
+.module-card .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.card-content p{
+    text-align: center;
+    padding: 10px 7px;
+}
+
+.card-content button{
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    /* margin: 10px; */
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.card-content button:hover{
+    background: #265DF2;
 }
 
 .search{
@@ -195,12 +265,60 @@ body {
 }
 .lecturer{
     grid-area: lecturer;
-    background-color: cyan;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.lecturerCard{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    background: yellow;
+}
+
+.container{
+    width: 40%;
+    height: 20%;
+    margin: 10px;
+}
+.container:hover .lecturerCard{
+    transform: rotateY(180deg);
+}
+
+.frontCard{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: white;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frontCard img{
+    width: 75%;
+}
+
+.backCard{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #333;
+    color: #fafafa;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .description{
     grid-area: description;
-    background-color: dimgray;
 }
 
 
