@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enroll</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 </head>
 <body id="enrollmentPage"> 
     <div class="navbar">       
@@ -17,13 +20,16 @@
                     <h3>It's the way we're wired!</h3>
                 </div>
             </div>
-            <a href="home.html" class="active">Home</a>
+            <a href="home.html" >Home</a>
             <a href="Dashboard.html">Dashboard</a>
             <a href="courses.html">Courses</a>
-            <a href="Enroll.html">Enroll Now</a>
+            <a href="Enroll.html"class="active">Enroll Now</a>
         </div>
-       
-    </div>
+        <div class="nav-right">
+            <a href='#' id="loginButton">Login/Sign Up</a>
+        </div>
+    </div>       
+    
     
     <div id="StudentEnroll" >
             <h1>Student Enrollment form</h1>
@@ -101,6 +107,56 @@
         </div>
     </div>
 
+    <div class="footer">
+        <div class="contactDetails">
+            <ul>
+                <li>Contact Us :</li>
+                <li><a href=""><i class="fa fa-phone" aria-hidden="true"></i> 010 593 5368</a></li>
+                <li><a href=""><i class="fa fa-envelope" aria-hidden="true"></i> info@belgiumcampus.ac.za</a></li>
+                <li><a href="https://www.google.com/maps/place/Belgium+Campus+iTversity/@-25.6832148,28.1311551,17z/data=!3m1!4b1!4m6!3m5!1s0x1ebfd9c195138ddb:0x28ef5bd262dd8ad1!8m2!3d-25.6832148!4d28.1311551!16s%2Fg%2F1tcx42xb?entry=ttu"><i class="fa fa-location-arrow" aria-hidden="true"></i> Pretoria Campus</a></li>
+            </ul>
+        </div>    
+        <div class="socialIcons">
+            <a href="https://www.facebook.com/BelgiumCampusSA/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/belgiumcampus/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/BelgiumCampus"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@BelgiumCampusIT"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div> 
+
+     <div id="modal" class="modal">
+         <div class="modalContent">
+             <span class="close">&times;</span>
+             <div class="modalBody">
+                 <div class="loginForm">
+                     <h3>Login</h3>
+                     <form id="FormLogin">
+                         <label for="email">Email:</label>
+                         <input type="email" id="email" name="email" required>
+                         <label for="password">Password:</label>
+                         <input type="password" id="password" name="password" required>
+                         <button type="submit">Login</button>
+                     </form>
+                 </div>
+                 <hr>
+                 <div class="signUpForm">
+                     <h3>Sign Up</h3>
+                     <form id="FormSignUp">
+                         <label for="name">Name:</label>
+                         <input type="text" id="name" name="name" required>
+                         <label for="email">Email:</label>
+                         <input type="email" id="email" name="email" required>
+                         <label for="password">Password:</label>
+                         <input type="password" id="password" name="password" required>
+                         <button type="submit">Sign Up</button>
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+  
+ </body>
     <script src="app.js"></script>
+
 </body>
 </html>

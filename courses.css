@@ -13,21 +13,23 @@ body {
                           "footer footer footer"
                           ;
     
-    grid-template-rows: 7vh 7vh 70vh 30vh 25vh;
+    grid-template-rows: 7vh 7vh 70vh 30vh 15vh;
     grid-template-columns: 0.30fr 1fr 0.40fr;
 }
 
 /*Navbar*/
 .navbar {
     grid-area: navbar;
+    position: fixed;
+    top: 0;
+    width: 97.1%;
+    background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: space-between;
-    background-color: #333;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    z-index: 100000;
+    padding: 10px 20px; 
+    z-index: 3;    
 }
+
 .navbar a {
     color: #fff;
     padding: 10px;
@@ -92,6 +94,7 @@ body {
     margin-right: 30px;
 }
 
+/*Courses Side Nav*/
 .courses{
     grid-area: course;
     background: #f6f6f6;
@@ -187,6 +190,7 @@ body {
     position: relative;
 }
 
+/*Modules*/
 .modules{
     grid-area: module;
     display: flex;
@@ -307,6 +311,7 @@ body {
     background-color: rgb(179, 39, 39);
 }
 
+/*Searchbar and filter*/
 .search{
     grid-area: search;
     display: flex;
@@ -342,6 +347,8 @@ body {
 .search-input::placeholder, .search-icon{
     color: rgba(0, 0, 0, 0.5) ;
 }
+
+/*Lecturers*/
 .lecturer{
     grid-area: lecturer;
     position: relative;
@@ -400,15 +407,34 @@ body {
     grid-area: description;
 }
 
-
-.footer{
+/*Footer*/
+.footer {
     grid-area: footer;
-    background: #111;
-    color: white;
-    padding-top: 5px;
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
+.contactDetails ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.contactDetails li, .contactDetails a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.contactDetails a:hover, .socialIcons a:hover {
+    color: red;
+}
+ 
 .socialIcons{
     display: flex;
     justify-content: center;
@@ -418,7 +444,7 @@ body {
     text-decoration: none;
     padding: 10px;
     background-color: white;
-    margin: 6px;
+    margin:6px;
     border-radius: 50%;
 }
 
@@ -438,30 +464,78 @@ body {
     color: white;
     transition: 0.5s;
 
-}
+} 
 
-.contactDetails{
-    text-align: center;
-    display: flex;
+/* Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
     justify-content: center;
+    align-items: center;
 }
 
-.contactDetails ul{
-    list-style-type: none;
-}
-
-.contactDetails ul li{
-    margin: 10px; 
-}
-.contactDetails ul li a{
-    text-decoration: none;
+.modalContent {
+    background-color:rgb(42,47,54);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
     color: white;
-    font-size: 1em;
-    transition: 0.5s;
 }
 
-.contactDetails ul li a:hover{
-    text-decoration: underline;
-    color: #bb2626;
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
+.close:hover,
+.close:focus {
+    color: #da5252;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalBody {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #e9d53e;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+form button:hover {
+    background-color: rgb(168, 43, 43);
 }
