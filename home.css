@@ -373,24 +373,23 @@ form button:hover {
     background-color: #2b2b2b; 
     color: white;
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    margin:0; 
+    padding:0;    
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    box-sizing: border-box;    
+       
 }
 
 #StudentEnroll {
     background-color: #333;
-    width: 50%; 
+    width: 60%; 
     max-width: 800px; 
-    margin: 20px auto; 
+    margin: 60px auto; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+    
 }
 
 #StudentEnroll h1 {
@@ -437,6 +436,17 @@ form button:hover {
     display: flex;
     align-items: center;
 }
+#formGroup .attendance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: lighter;
+}
+#formGroup .attendance label {
+    margin: 0; 
+    display: flex;
+    align-items: center;
+}
 
 #formGroup button {
     background-color: #ffcc00;
@@ -451,4 +461,60 @@ form button:hover {
 
 #formGroup button:hover {
     background-color: #ffa600;
+}
+
+/* enrollment modal*/
+
+.background {
+    filter: blur(5px);
+}
+
+#enrollModal {
+    display: none;
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); 
+}
+
+#mContent {
+    background-color: #ffffff; 
+    color: #333; 
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px; 
+    border: 2px solid #888; 
+    width: 60%;
+    max-width: 700px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#returnHome {
+    background-color: #e74c3c; 
+    color: #fff; 
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#returnHome:hover {
+    background-color: #c0392b; 
+}
+#continueButton {
+    background-color: #e74c3c; 
+    color: #fff; 
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#continueButton:hover {
+    background-color: #c0392b; 
 }

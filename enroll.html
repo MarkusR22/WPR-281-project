@@ -26,12 +26,12 @@
     </div>
     
     <div id="StudentEnroll" >
-            <h1>Stuent Enrollment form</h1>
+            <h1>Student Enrollment form</h1>
             <form id="formGroup">
 
                 <label>Name:</label>
-                <input type="text" id="name" name="name" placeholder="Full Name">
-                <input type="text" id="surname" name="surname" placeholder="Surname">
+                <input type="text" id="name" name="name" placeholder="Full Name" >
+                <input type="text" id="surname" name="surname" placeholder="Surname" >
                 <br>
 
                 <label>ID number:</label>
@@ -40,10 +40,10 @@
 
 
                 <label>Address:</label>
-                <input type="text" id="adr" name="adr" placeholder="Address line 1">
+                <input type="text" id="adr" name="adr" placeholder="Address line 1" >
                 <input type="text" id="adr" name="adr" placeholder="Address line 2">
-                <input type="text" id="city" name="city" placeholder="City">
-                <input type="text" id="zip" name="zip" placeholder="Postal/Zip Code">
+                <input type="text" id="city" name="city" placeholder="City" >
+                <input type="text" id="zip" name="zip" placeholder="Postal/Zip Code" >
 
                 <select name="province" id="province" >
                     <option value="" selected="selected">Select Province</option>
@@ -69,20 +69,38 @@
                 <br><br>
 
                 <label>Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" >
                 <br><br>
 
                 <label for="course">Enroll in this course:</label>
-                <select name="course" id="course">
+                <select name="course" id="course" required>
                     <option value="BA of Computing">BA of Computing</option>
                     <option value="BA of IT">BA of IT</option>
                     <option value="Diploma in IT">Diploma in IT</option>
                     <option value="Certificate in IT">Certificate in IT</option>
                 </select>
                 <br><br>
+                <label for="attendance">Please select your preferred model of attendance:</label>                
+                    <div class="attendance">
+                        <input type="radio" id="online" name="attendance" value="online">
+                        <label for="online">Online</label>
+                        <input type="radio" id="ftf" name="attendance" value="face-to-face">
+                        <label for="ftf">Face-to-Face</label>
+                    </div>
+                <br><br>
                 <button type="submit">Enroll now</button>
             </form>
- </div>
+        </div>
     
+      
+    <div id="enrollModal">
+        <div id="mContent">
+            <p id="modalMessage"></p>
+            <button id="continueButton" type="button">Go back to Form</button>
+            <p></p><button type="button" id="returnHome"><a href="home.html">Return to home</a></button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
