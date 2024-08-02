@@ -317,6 +317,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .searchBar{
@@ -511,23 +512,23 @@ body {
     margin-top: 20px;
 }
 
-form {
+.modalContent form {
     display: flex;
     flex-direction: column;
 }
 
-form label {
+.modalContent form label {
     margin-bottom: 5px;
 }
 
-form input, form button {
+.modalContent form input, .modalContent form button {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-form button {
+.modalContent form button {
     background-color: #e9d53e;
     border: none;
     cursor: pointer;
@@ -536,6 +537,7 @@ form button {
     font-weight: bolder;
 }
 
-form button:hover {
+.modalContent form button:hover {
     background-color: rgb(168, 43, 43);
 }
+
