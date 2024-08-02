@@ -13,53 +13,83 @@ body {
                           "footer footer footer"
                           ;
     
-    grid-template-rows: 5vh 7vh 70vh 30vh 25vh;
+    grid-template-rows: 7vh 7vh 70vh 30vh 25vh;
     grid-template-columns: 0.30fr 1fr 0.40fr;
 }
 
-
+/*Navbar*/
 .navbar {
     grid-area: navbar;
     display: flex;
     justify-content: space-between;
     background-color: #333;
     padding: 10px;
-}
-.navbar aactive{
-   background-color: rgb(37, 36, 39);
-    color: #bb2626;
-    font-weight: bolder;
-    transform: translateY(-5px);
-    transition: 0.5s;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
 }
 .navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
 }
-.navbar a:hover {
-    font-weight: bolder;
-    transform: translateY(-5px);
-    transition: 0.5s;
-}
-.nav-left, .nav-right {
-    display: flex;}
 
-.nav-left{
-    font-size: 20px;    
-    padding-left: 20px;
+.navbar a:hover {
+    border-bottom: solid 2px red; 
 }
-.nav-left a:hover{
-    border-bottom: solid 3px #bb2626;
+
+.active{
+    border-bottom: solid 2px red; 
+    font-weight: bolder;
 }
-.nav-left a{  
-    margin-right:5px;
+
+
+.logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-left: 30px;
-    padding-right: 30px;
+}
+
+.logo-container :hover{
+    cursor: pointer;
+}
+
+.logo-container img {
+    max-width: 40px;
+    margin-right: 10px;
+    border-radius: 100px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    color: white;
+    font-size: 14px; 
+}
+
+.logo-text h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    color: red;
+    font-size: 12px; 
+}
+
+.nav-left {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
 }
 
 .courses{
