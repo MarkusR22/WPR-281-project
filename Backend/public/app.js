@@ -94,6 +94,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/*courses side nav*/
+function toggleNav() {
+    var sidebar = document.querySelector('.sidebar');
+    var toggleStrip = document.querySelector('.toggle-strip');
+    var toggleIcon = document.getElementById('toggle-icon');
+
+    if (sidebar.style.width === '250px') {
+        sidebar.style.width = '0';
+        toggleStrip.style.left = '0';
+        toggleIcon.classList.remove('fa-arrow-left');
+        toggleIcon.classList.add('fa-arrow-right');
+    } else {
+        sidebar.style.width = '250px';
+        toggleStrip.style.left = '250px';
+        toggleIcon.classList.remove('fa-arrow-right');
+        toggleIcon.classList.add('fa-arrow-left');
+    }
+}
+
 document.getElementById('loginForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const username = document.getElementById('loginUsername').value;
