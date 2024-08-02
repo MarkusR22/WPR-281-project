@@ -9,27 +9,15 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="navbar">       
-       
+    <div class="navbar">
         <div class="nav-left">
-            <div class="logo-container" href="home.html">
-                <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo">
-                <div class="logo-text">
-                    <h2>Belgium Campus</h2>
-                    <h3>It's the way we're wired!</h3>
-                </div>
-            </div>
-            <a href="home.html" >Home</a>
+            <a href="home.html">Home</a>
             <a href="Dashboard.html">Dashboard</a>
-            <a href="courses.html"class="active">Courses</a>
-            <a href="Enroll.html">Enroll Now</a>
+            <a href="Courses.html">Courses</a>
         </div>
-        <div class="nav-right">
-            <a href='#' id="loginButton">Login/Sign Up</a>
-        </div>
-    </div>      
+    </div>
     
-    <div class="courses">
+    <!-- <div class="courses">
         <h1>Courses</h1>
 
         <div class="card">
@@ -71,7 +59,48 @@
                 <h3>Certificate in IT</h3>
                 <p>Basic IT skills, focusing on entry-level support and troubleshooting.</p>
 
+        </div> -->
+
+        <div class="sidebar" onclick="toggleNav()">
+            <h1>Courses</h1>
+    
+            <div class="card">
+                <div class="CourseIcon">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+                <h3>BA of Computing</h3>
+                <p>A comprehensive study of computer science, programming, and system analysis.</p>
+            </div>
+    
+            <div class="card">
+                <div class="CourseIcon">
+                    <i class="fa fa-code"></i>
+                </div>
+                <h3>BA of IT</h3>
+                <p>Focuses on networking, databases, cybersecurity, and IT management skills.</p>
+            </div>
+    
+            <div class="card">
+                <div class="CourseIcon">
+                    <i class="fa fa-microchip"></i>
+                </div>
+                <h3>Diploma in IT</h3>
+                <p>Practical training in IT support, networking, and basic programming skills.</p>
+            </div>
+    
+            <div class="card">
+                <div class="CourseIcon">
+                    <i class="fa fa-cloud"></i>
+                </div>
+                <h3>Certificate in IT</h3>
+                <p>Basic IT skills, focusing on entry-level support and troubleshooting.</p>
+            </div>
         </div>
+        <div class="toggle-strip" onclick="toggleNav()">
+            <i class="fa fa-arrow-right" id="toggle-icon"></i>
+        </div>
+    
+        <script src="app.js"></script>
     
     <!-- All the modules for the courses -->
     </div>
@@ -2299,52 +2328,24 @@
     </div>
 
     <div class="footer">
+
         <div class="contactDetails">
             <ul>
-                <li>Contact Us :</li>
-                <li><a href=""><i class="fa fa-phone" aria-hidden="true"></i> 010 593 5368</a></li>
-                <li><a href=""><i class="fa fa-envelope" aria-hidden="true"></i> info@belgiumcampus.ac.za</a></li>
-                <li><a href="https://www.google.com/maps/place/Belgium+Campus+iTversity/@-25.6832148,28.1311551,17z/data=!3m1!4b1!4m6!3m5!1s0x1ebfd9c195138ddb:0x28ef5bd262dd8ad1!8m2!3d-25.6832148!4d28.1311551!16s%2Fg%2F1tcx42xb?entry=ttu"><i class="fa fa-location-arrow" aria-hidden="true"></i> Pretoria Campus</a></li>
+                <li>Contact Us</li>
+                <li><a href=""><i class="fa fa-phone" aria-hidden="true"></i>   010 593 5368</a></li>
+                <li><a href=""><i class="fa fa-envelope" aria-hidden="true"></i>   info@belgiumcampus.ac.za</a></li>
+                <li><a href="https://www.google.com/maps/place/Belgium+Campus+iTversity/@-25.6832148,28.1311551,17z/data=!3m1!4b1!4m6!3m5!1s0x1ebfd9c195138ddb:0x28ef5bd262dd8ad1!8m2!3d-25.6832148!4d28.1311551!16s%2Fg%2F1tcx42xb?entry=ttu"><i class="fa fa-location-arrow" aria-hidden="true"></i></i>   Pretoria Campus</a></li>
             </ul>
-        </div>    
-        <div class="socialIcons">
-            <a href="https://www.facebook.com/BelgiumCampusSA/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/belgiumcampus/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/BelgiumCampus"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@BelgiumCampusIT"><i class="fa-brands fa-youtube"></i></a>
         </div>
-    </div>
 
-    <div id="modal" class="modal">
-        <div class="modalContent">
-            <span class="close">&times;</span>
-            <div class="modalBody">
-                <div class="loginForm">
-                    <h3>Login</h3>
-                    <form id="FormLogin">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                        <button type="submit">Login</button>
-                    </form>
-                </div>
-                <hr>
-                <div class="signUpForm">
-                    <h3>Sign Up</h3>
-                    <form id="FormSignUp">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                        <button type="submit">Sign Up</button>
-                    </form>
-                </div>
-            </div>
+        <div class="socialIcons">
+            <a href="https://www.facebook.com/BelgiumCampusSA/"><i class = "fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/belgiumcampus/"><i class = "fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/BelgiumCampus"><i class = "fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@BelgiumCampusIT"><i class = "fa-brands fa-youtube"></i></a>
         </div>
+        
+        
     </div>
-    <script src="app.js"></script>
 </body>
 </html>
