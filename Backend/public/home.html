@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header></header>
+
+    <div class="navbar">
+
+        <div class="nav-left">
+            <div class="logo-container" href="home.html">
+                <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo">
+                <div class="logo-text">
+                    <h2>Belgium Campus</h2>
+                    <h3>It's the way we're wired!</h3>
+                </div>
+            </div>
+            <a href="home.html" class="active">Home</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="courses.html">Courses</a>
+            <a href="Enroll.html">Enroll Now</a>
+        </div>
+        <div class="nav-right">
+            <a href='#' id="loginButton">Login</a>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="section" id="section1">
+            <div class="content">
+                <h1>Why Study At Belgium Campus?</h1>
+                <p>
+                    Experience a world-class education at Belgium Campus, where we blend theoretical knowledge with
+                    practical skills to prepare you for the modern workforce.
+                    Specializing in IT and engineering, our programs are designed to meet industry demands and ensure
+                    your success. Enjoy state-of-the-art facilities,
+                    a diverse student body, and strong industry connections that open doors to countless career
+                    opportunities. Our commitment to innovation, research,
+                    and community engagement provides a holistic education that goes beyond the classroom. Choose
+                    Belgium Campus and embark on a journey towards a bright
+                    professional future.
+                </p>
+            </div>
+            <img src="./Images/Why study.png" alt="Dynamic Student Life" class="Image1">
+        </div>
+
+        <div class="section" id="section2">
+            <div class="content-wrapper">
+                <video src="Images/Belgium Campus.mp4" class="video" id="myVideo" muted autoplay loop></video>
+                <div class="content">
+                    <h1>Our Facilities</h1>
+                    <p>
+                        Belgium Campus iTversity boasts world-class facilities designed to enhance every aspect of
+                        student life and learning. Our modern lecture halls are equipped with
+                        cutting-edge technology, creating an optimal environment for interactive and engaging education.
+                        Students have access to advanced computer labs, fostering hands-on
+                        experience with the latest software and hardware. Our library is a hub of knowledge, offering an
+                        extensive collection of resources and quiet study areas.
+
+                        For collaboration and innovation, we provide numerous collaborative workspaces where students
+                        can brainstorm and work on projects together. Additionally, our campus
+                        includes comfortable recreational areas and sports facilities, promoting a balanced lifestyle
+                        and ensuring students can unwind and stay active. At Belgium Campus iTversity,
+                        our facilities are tailored to support your academic and personal growth, making your
+                        educational journey as enriching and enjoyable as possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section3">
+            <div class="content">
+                <h1>Student Life</h1>
+                <p>
+                    Student life at Belgium Campus iTversity is vibrant and enriching, perfectly balancing academic
+                    excellence and personal growth. Our diverse, inclusive community fosters a
+                    welcoming atmosphere where students thrive. Engaging clubs, societies, and regular events ensure
+                    there's always something exciting happening, fostering a sense of
+                    camaraderie and school spirit. Workshops and cultural festivals add to the lively campus life,
+                    making every day an opportunity for new experiences.
+
+                    Our state-of-the-art recreational facilities, including sports fields and fitness centers, promote a
+                    healthy and active lifestyle, while serene study spaces and cozy lounges
+                    offer the perfect spots for relaxation and reflection. At Belgium Campus iTversity, student life is
+                    about more than just academics it's about building a well-rounded,
+                    fulfilling experience that prepares you for a successful future while creating memories you'll
+                    cherish forever.
+                </p>
+            </div>
+            <img src="./Images/Student.png" alt="Student Activities" class="Image2">
+        </div>
+    </main>
+
+
+    <div class="footer">
+        <div class="contactDetails">
+            <ul>
+                <li>Contact Us :</li>
+                <li><a href=""><i class="fa fa-phone" aria-hidden="true"></i> 010 593 5368</a></li>
+                <li><a href=""><i class="fa fa-envelope" aria-hidden="true"></i> info@belgiumcampus.ac.za</a></li>
+                <li><a
+                        href="https://www.google.com/maps/place/Belgium+Campus+iTversity/@-25.6832148,28.1311551,17z/data=!3m1!4b1!4m6!3m5!1s0x1ebfd9c195138ddb:0x28ef5bd262dd8ad1!8m2!3d-25.6832148!4d28.1311551!16s%2Fg%2F1tcx42xb?entry=ttu"><i
+                            class="fa fa-location-arrow" aria-hidden="true"></i> Pretoria Campus</a></li>
+            </ul>
+        </div>
+        <div class="socialIcons">
+            <a href="https://www.facebook.com/BelgiumCampusSA/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/belgiumcampus/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/BelgiumCampus"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@BelgiumCampusIT"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modalContent">
+            <span class="close">&times;</span>
+            <div class="modalBody">
+                <div class="loginForm">
+                    <h3>Login</h3>
+                    <form id="FormLogin">
+                        <label for="studentID">Student ID:</label>
+                        <input type="studentID" id="studentID" name="studentID" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <p>Do not have a student ID? <a href="Enroll.html">Enroll NOW</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
