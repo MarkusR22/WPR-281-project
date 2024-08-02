@@ -208,3 +208,28 @@ function populateEnrollmentForm(data) {
     document.querySelector(`input[name="attendance"][value="${data.attendance}"]`).checked = true;
 };
 
+async function handleSubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(document.getElementById('formGroup'));
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    try {
+        const response = await fetch('http://localhost:3000/saveForm', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        alert(result.message);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
