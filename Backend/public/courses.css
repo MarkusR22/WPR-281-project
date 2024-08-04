@@ -49,6 +49,7 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
+    overflow: auto;
 }
 
 .logo-container :hover{
@@ -64,6 +65,7 @@ body {
 .logo-text {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .logo-text h2 {
@@ -342,6 +344,19 @@ body {
     overflow-y: auto;
     padding: 20px 60px;
 }
+.modules::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.modules::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: #1d1b1b;
+}
+
+.modules:-webkit-scrollbar-button {
+    height: 16px;
+}
 
 
 .module-card{
@@ -498,6 +513,19 @@ body {
     flex-wrap: wrap;
     overflow-y: auto;
     justify-content: space-around;
+}
+.lecturer::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.lecturer::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: #1d1b1b;
+}
+
+.lecturer::-webkit-scrollbar-button {
+    height: 16px;
 }
 
 .lecturerCard{
