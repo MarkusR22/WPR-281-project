@@ -135,33 +135,33 @@
                 <div class="loginForm">
                     <h3>Login</h3>
                     <form id="FormLogin">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="StudentID">StudentID:</label>
+                        <input type="StudentID" id="StudentID" name="StudentID" required>
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required>
                         <button type="submit">Login</button>
                     </form>
                 </div>
                 <hr>
-                <div class="signUpForm">
-                    <h3>Sign Up</h3>
-                    <form id="FormSignUp">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                        <button type="submit">Sign Up</button>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
+    <div id="passwordChangeModal" class="modal">
+        <div class="modalContent">
+            <span class="close" id="closePasswordChange">&times;</span>
+            <h3>Change Password</h3>
+            <p>Please change you password form the temp password provide</p>
+            <form id="changePasswordForm">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                <label for="confirmPassword">Confirm New Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <button type="submit">Change Password</button>
+            </form>
+        </div>
+    </div>
+    
     <script src="app.js"></script>
 </body>
-
-
-
 
 </html>

@@ -37,20 +37,45 @@ app.post('/signup', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
+    const { studentId, password } = req.body;
 
-    fs.readFile('users.txt', 'utf8', (err, data) => {
+    fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             return res.json({ message: 'Error logging in' });
         }
 
-        const users = data.split('\n').map(line => line.split(':'));
-        const user = users.find(u => u[0] === username && u[1] === password);
+        const students = JSON.parse(data);
+        const student = students.find(s => s.studentId === studentId && s.password === password);
 
-        if (user) {
+        if (student) {
             res.json({ message: 'Login successful' });
         } else {
-            res.json({ message: 'Invalid username or password' });
+            res.json({ message: 'Invalid Student ID or password' });
+        }
+    });
+});
+
+app.post('/changePassword', (req, res) => {
+    const { studentId, newPassword } = req.body;
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ message: 'Failed to read form data.' });
+        }
+
+        const students = JSON.parse(data);
+        const studentIndex = students.findIndex(student => student.studentId === studentId);
+
+        if (studentIndex !== -1) {
+            students[studentIndex].password = newPassword;
+            fs.writeFile(filePath, JSON.stringify(students, null, 2), (err) => {
+                if (err) {
+                    return res.status(500).json({ message: 'Failed to save form data.' });
+                }
+                res.json({ message: 'Password changed successfully.' });
+            });
+        } else {
+            res.status(404).json({ message: 'Student not found.' });
         }
     });
 });
@@ -64,6 +89,7 @@ app.post('/saveForm', (req, res) => {
             if (err.code === 'ENOENT') {
                 // File does not exist, create it
                 formData.studentId = '700984';
+                formData.password = 'BelgiumCampus';
                 jsonData = [formData];
             } else {
                 return res.status(500).json({ message: 'Failed to read form data.' });
@@ -72,6 +98,7 @@ app.post('/saveForm', (req, res) => {
             // File exists, append data
             jsonData = JSON.parse(data);
             formData.studentId = generateStudentId(jsonData);
+            formData.password = 'BelgiumCampus';
             jsonData.push(formData);
         }
 
@@ -80,7 +107,7 @@ app.post('/saveForm', (req, res) => {
                 return res.status(500).json({ message: 'Failed to save form data.' });
             }
 
-            res.json({ message: 'Form data saved successfully!', studentId: formData.studentId });
+            res.json({ message: `Enrolled successfully! \n\nAccess your Dashboard\nStudent number: ${formData.studentId} \nTemp password: "BelgiumCampus"`, studentId: formData.studentId });
         });
     });
 });
