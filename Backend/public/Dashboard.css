@@ -22,9 +22,8 @@ body, html {
     --sideNavbar-light-secondary: #8392a5;
 }
 
-html,
+
 body {
-    margin: 0;
     background: var(--background);
 }
 
@@ -86,7 +85,7 @@ body {
     left: 1vw;
     margin-top:50px;
     top: 1vw;
-    height: calc(95% - 2vw);/*//////////////////////*/
+    height: calc(95% - 2vw);
     background: var(--sideNavbar-dark-primary);
     border-radius: 16px;
     display: flex;
@@ -284,38 +283,6 @@ label[for=sideNav-toggle] {
 
 .sideNav-button:nth-of-type(4):hover~#sideNav-content-highlight {
     top: 178px;
-}
-
-.sideNav-button:nth-of-type(5):hover {
-    color: var(--sideNavbar-dark-primary);
-}
-
-.sideNav-button:nth-of-type(5):hover~#sideNav-content-highlight {
-    top: 232px;
-}
-
-.sideNav-button:nth-of-type(6):hover {
-    color: var(--sideNavbar-dark-primary);
-}
-
-.sideNav-button:nth-of-type(6):hover~#sideNav-content-highlight {
-    top: 286px;
-}
-
-.sideNav-button:nth-of-type(7):hover {
-    color: var(--sideNavbar-dark-primary);
-}
-
-.sideNav-button:nth-of-type(7):hover~#sideNav-content-highlight {
-    top: 340px;
-}
-
-.sideNav-button:nth-of-type(8):hover {
-    color: var(--sideNavbar-dark-primary);
-}
-
-.sideNav-button:nth-of-type(8):hover~#sideNav-content-highlight {
-    top: 394px;
 }
 
 #sideNav-bar .fas {

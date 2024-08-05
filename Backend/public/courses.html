@@ -9,6 +9,7 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Navbar -->
     <div class="navbar">
         <div class="nav-left">
             <a href="home.html">Home</a>
@@ -17,51 +18,30 @@
         </div>
     </div>
     
-    <!-- <div class="courses">
-        <h1>Courses</h1>
-
-        <div class="card">
-             <div class="CourseIcon">
-                <i class = "fa fa-graduation-cap"></i>
-             </div>
-    
-                <h3>BA of Computing</h3>
-                <p>A comprehensive study of computer science, programming, and system analysis.</p>
-            
+    <div id="sideNav-bar">
+        <input id="sideNav-toggle" type="checkbox" />
+        <div id="sideNav-header">
+            <div class="logo-container" href="home.html">
+                <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo">
+                <div class="logo-text sideNav-button">
+                    <h2>Belgium Campus</h2>
+                    <h3>It's the way we're wired!</h3>
+                </div>
+            </div>
+            <label for="sideNav-toggle"><span id="sideNav-toggle-burger"></span></label>
+            <hr />
         </div>
+        <div id="sideNav-content">
+            <div class="sideNav-button"><i class="fa fa-graduation-cap"></i><span>BA of Computing</span></div>
+            <div class="sideNav-button"><i class="fa fa-code"></i><span>BA of IT</span></div>
+            <div class="sideNav-button"><i class="fa fa-microchip"></i><span>Diploma in IT</span></div>
+            <div class="sideNav-button"><i class="fa fa-cloud"></i><span>Certificate in IT</span></div>
+            <hr />
+            <div id="sideNav-content-highlight"></div>
+        </div>        
+    </div>
 
-        <div class="card">
-            <div class="CourseIcon">
-                <i class = "fa fa-code"></i>
-             </div>
-            
-                <h3>BA of IT</h3>
-                <p>Focuses on networking, databases, cybersecurity, and IT management skills.</p>
-
-            
-        </div>
-
-        <div class="card">
-            <div class="CourseIcon">
-                <i class = "fa fa-microchip"></i>
-             </div>
-            
-                <h3>Diploma in IT</h3>
-                <p>Practical training in IT support, networking, and basic programming skills.</p>
-
-        </div>
-
-        <div class="card">
-            <div class="CourseIcon">
-                <i class = "fa fa-cloud"></i>
-             </div>
-            
-                <h3>Certificate in IT</h3>
-                <p>Basic IT skills, focusing on entry-level support and troubleshooting.</p>
-
-        </div> -->
-
-        <div class="sidebar" onclick="toggleNav()">
+        <!-- <div class="sidebar" onclick="toggleNav()">
             <h1>Courses</h1>
     
             <div class="card">
@@ -98,10 +78,12 @@
         </div>
         <div class="toggle-strip" onclick="toggleNav()">
             <i class="fa fa-arrow-right" id="toggle-icon"></i>
-        </div>
+        </div> -->
     
         <script src="app.js"></script>
     
+
+
     <!-- All the modules for the courses -->
     </div>
     <div class="modules">
