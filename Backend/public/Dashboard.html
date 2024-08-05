@@ -168,64 +168,7 @@
         </div>
       </div>
 
-      <!-- <script src="app.js"></script> -->
-      <script>
-        function createHome() {
-          let dashContent = document.querySelector(".dashboardContent");
-          dashContent.innerHTML = ''  
-
-          let tHead = document.createElement("thead");
-          let tBody = document.createElement("tbody");
-          let table = document.createElement("table");
-          let bcompData = [
-            ["Academic Writing", "ACW181", 5, "4", "Phi", "Simba"],
-            ["Computer Architecture 181", "COA181", 5, "4", "Chi", "Zuma"],
-            ["Database Development 181", "DBD181", 5, "12", "Kappa", "Malema"],
-            ["Information Systems 181", "INF181", 5, "5", "Lambda", "Neil"],
-            ["Linear Programming 181", "LPR181", 5, "11", "Omega", "Gift"],
-          ];
-
-          let Heading = [
-            "Module",
-            "Module Code",
-            "NQF",
-            "Credits",
-            "Venues",
-            "Lecturers",
-          ];
-
-          Heading.forEach((data) => {
-            let th = document.createElement("th");
-            th.style.border = "1px solid black";
-            th.style.padding = "5px";
-
-            th.textContent = data;
-            tHead.appendChild(th);
-          });
-
-          table.appendChild(tHead);
-          table.appendChild(tBody); // Add tbody to the table
-
-          bcompData.forEach((rowData) => {
-            const row = document.createElement("tr");
-            rowData.forEach((cellData) => {
-              const cell = document.createElement("td");
-              cell.style.padding = "5px";
-              cell.style.border = "1px solid black";
-              cell.textContent = cellData;
-              row.appendChild(cell);
-            });
-            tBody.appendChild(row);
-          });
-
-          table.appendChild(tBody);
-          table.style.all = "1px solid black";
-          table.style.borderCollapse = "collapse";
-          dashContent.appendChild(table);
-        }
-
-        //  document.querySelector("#HomeButton").addEventListener('click', createHome());
-      </script>
+      <script src="app.js"></script>
     </body>
   </html>
 </html>
