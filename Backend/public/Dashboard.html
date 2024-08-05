@@ -1,95 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="Sidenave.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <link rel="stylesheet" href="Sidenave.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="Dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Home</title>
+
+      <link rel="stylesheet" href="home.css" />
+      <link rel="stylesheet" href="Dashboard.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </head>
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="Dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-    <div class="navbar">
+    <body>
+      <div class="navbar">
         <div class="nav-left">
-            <div class="logo-container" href="home.html">
-                <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo">
-                <div class="logo-text">
-                    <h2>Belgium Campus</h2>
-                    <h3>It's the way we're wired!</h3>
-                </div>
+          <div class="logo-container" href="home.html">
+            <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo" />
+            <div class="logo-text">
+              <h2>Belgium Campus</h2>
+              <h3>It's the way we're wired!</h3>
             </div>
-            <a href="home.html">Home</a>
-            <a href="Dashboard.html" class="active">Dashboard</a>
-            <a href="courses.html">Courses</a>
-            <a href="Enroll.html">Enroll Now</a>
+          </div>
+          <a href="home.html">Home</a>
+          <a href="Dashboard.html" class="active">Dashboard</a>
+          <a href="courses.html">Courses</a>
+          <a href="Enroll.html">Enroll Now</a>
         </div>
         <div class="nav-right">
-            <a href='#' id="loginButton">Login</a>
+          <a href="#" id="loginButton">Login</a>
         </div>
-    </div>
+      </div>
 
-    <div id="sideNav-bar">
+      <div id="sideNav-bar">
         <input id="sideNav-toggle" type="checkbox" />
         <div id="sideNav-header">
-            <div class="logo-container" href="home.html">
-                <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo">
-                <div class="logo-text sideNav-button">
-                    <h2>Belgium Campus</h2>
-                    <h3>It's the way we're wired!</h3>
-                </div>
+          <div class="logo-container" href="home.html">
+            <img src="./Images/BelgiumLogo.png" alt="Belgium Campus Logo" />
+            <div class="logo-text sideNav-button">
+              <h2>Belgium Campus</h2>
+              <h3>It's the way we're wired!</h3>
             </div>
-            <label for="sideNav-toggle"><span id="sideNav-toggle-burger"></span></label>
-            <hr />
+          </div>
+          <label for="sideNav-toggle"
+            ><span id="sideNav-toggle-burger"></span
+          ></label>
+          <hr />
         </div>
         <div id="sideNav-content">
-            <div class="sideNav-button"><i class="fas fa-home"></i><span>Home</span></div>
-            <div class="sideNav-button"><i class="fas fa-palette"></i><span>My Modules</span></div>
-            <div class="sideNav-button"><i class="fas fa-calendar"></i><span>Important dates</span></div>
-            <div class="sideNav-button"><i class="fas fa-thumbtack"></i><span>Venues</span></div>
-            <hr />
-            <div id="sideNav-content-highlight"></div>
+          <div id="HomeButton" class="sideNav-button" onclick="createHome()">
+            <i class="fas fa-home"></i><span>Home</span>
+          </div>
+          <div class="sideNav-button">
+            <i class="fas fa-palette"></i><span>My Modules</span>
+          </div>
+          <div class="sideNav-button">
+            <i class="fas fa-calendar"></i><span>Important dates</span>
+          </div>
+          <div class="sideNav-button">
+            <i class="fas fa-thumbtack"></i><span>Venues</span>
+          </div>
+          <hr />
+          <div id="sideNav-content-highlight"></div>
         </div>
         <input id="sideNav-footer-toggle" type="checkbox" />
         <div id="sideNav-footer">
-            <div id="sideNav-footer-heading">
-                <div id="sideNav-footer-avatar"><img
-                        src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547" />
-                </div>
-                <div id="sideNav-footer-titlebox"><a id="sideNav-footer-title">Erick Knoetze</a><span
-                        id="sideNav-footer-subtitle">600984</span></div>
-                <label for="sideNav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+          <div id="sideNav-footer-heading">
+            <div id="sideNav-footer-avatar">
+              <img
+                src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547"
+              />
             </div>
-            <div id="nav-footer-content">
-                <Lorem>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</Lorem>
+            <div id="sideNav-footer-titlebox">
+              <a id="sideNav-footer-title">Erick Knoetze</a
+              ><span id="sideNav-footer-subtitle">600984</span>
             </div>
+            <label for="sideNav-footer-toggle"
+              ><i class="fas fa-caret-up"></i
+            ></label>
+          </div>
+          <div id="nav-footer-content">
+            <Lorem
+              >ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</Lorem
+            >
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="content">
+      <div class="dashboardContent">
         <!-- Main content goes here -->
-        <p>Some content to ensure the page has enough length to scroll down...</p>
+        <!-- <p>Some content to ensure the page has enough length to scroll down...</p>
         <p>Some content to ensure the page has enough length to scroll down...</p>
         <p>Some content to ensure the page has enough length to scroll down...</p>
         <p>Some content to ensure the page has enough length to scroll down...</p>
@@ -101,30 +125,107 @@
         <p>Some content to ensure the page has enough length to scroll down...</p>
         <p>Some content to ensure the page has enough length to scroll down...</p>
         <p>Some content to ensure the page has enough length to scroll down...</p>
-        <p>Some content to ensure the page has enough length to scroll down...</p>
-    </div>
+        <p>Some content to ensure the page has enough length to scroll down...</p> -->
+      </div>
 
-    <div class="footer">
+      <div class="footer">
         <div class="contactDetails">
-            <ul>
-                <li>Contact Us :</li>
-                <li><a href=""><i class="fa fa-phone" aria-hidden="true"></i> 010 593 5368</a></li>
-                <li><a href=""><i class="fa fa-envelope" aria-hidden="true"></i> info@belgiumcampus.ac.za</a></li>
-                <li><a
-                        href="https://www.google.com/maps/place/Belgium+Campus+iTversity/@-25.6832148,28.1311551,17z/data=!3m1!4b1!4m6!3m5!1s0x1ebfd9c195138ddb:0x28ef5bd262dd8ad1!8m2!3d-25.6832148!4d28.1311551!16s%2Fg%2F1tcx42xb?entry=ttu"><i
-                            class="fa fa-location-arrow" aria-hidden="true"></i> Pretoria Campus</a></li>
-            </ul>
+          <ul>
+            <li>Contact Us :</li>
+            <li>
+              <a href=""
+                ><i class="fa fa-phone" aria-hidden="true"></i> 010 593 5368</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa fa-envelope" aria-hidden="true"></i>
+                info@belgiumcampus.ac.za</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/place/Belgium+Campus+iTversity/@-25.6832148,28.1311551,17z/data=!3m1!4b1!4m6!3m5!1s0x1ebfd9c195138ddb:0x28ef5bd262dd8ad1!8m2!3d-25.6832148!4d28.1311551!16s%2Fg%2F1tcx42xb?entry=ttu"
+                ><i class="fa fa-location-arrow" aria-hidden="true"></i>
+                Pretoria Campus</a
+              >
+            </li>
+          </ul>
         </div>
         <div class="socialIcons">
-            <a href="https://www.facebook.com/BelgiumCampusSA/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/belgiumcampus/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/BelgiumCampus"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.youtube.com/@BelgiumCampusIT"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/BelgiumCampusSA/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/belgiumcampus/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com/BelgiumCampus"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://www.youtube.com/@BelgiumCampusIT"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
         </div>
-    </div>
-</body>
+      </div>
 
-</html>
+      <!-- <script src="app.js"></script> -->
+      <script>
+        function createHome() {
+          let dashContent = document.querySelector(".dashboardContent");
+          dashContent.innerHTML = ''  
 
+          let tHead = document.createElement("thead");
+          let tBody = document.createElement("tbody");
+          let table = document.createElement("table");
+          let bcompData = [
+            ["Academic Writing", "ACW181", 5, "4", "Phi", "Simba"],
+            ["Computer Architecture 181", "COA181", 5, "4", "Chi", "Zuma"],
+            ["Database Development 181", "DBD181", 5, "12", "Kappa", "Malema"],
+            ["Information Systems 181", "INF181", 5, "5", "Lambda", "Neil"],
+            ["Linear Programming 181", "LPR181", 5, "11", "Omega", "Gift"],
+          ];
 
+          let Heading = [
+            "Module",
+            "Module Code",
+            "NQF",
+            "Credits",
+            "Venues",
+            "Lecturers",
+          ];
+
+          Heading.forEach((data) => {
+            let th = document.createElement("th");
+            th.style.border = "1px solid black";
+            th.style.padding = "5px";
+
+            th.textContent = data;
+            tHead.appendChild(th);
+          });
+
+          table.appendChild(tHead);
+          table.appendChild(tBody); // Add tbody to the table
+
+          bcompData.forEach((rowData) => {
+            const row = document.createElement("tr");
+            rowData.forEach((cellData) => {
+              const cell = document.createElement("td");
+              cell.style.padding = "5px";
+              cell.style.border = "1px solid black";
+              cell.textContent = cellData;
+              row.appendChild(cell);
+            });
+            tBody.appendChild(row);
+          });
+
+          table.appendChild(tBody);
+          table.style.all = "1px solid black";
+          table.style.borderCollapse = "collapse";
+          dashContent.appendChild(table);
+        }
+
+        //  document.querySelector("#HomeButton").addEventListener('click', createHome());
+      </script>
+    </body>
+  </html>
 </html>

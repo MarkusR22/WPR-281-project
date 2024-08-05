@@ -396,3 +396,11 @@ label[for=sideNav-footer-toggle] {
     border-radius: 99px;
     background-color: #D62929;
 }
+
+.dashboardContent{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+}

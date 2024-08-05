@@ -1,4 +1,5 @@
 /*Login/sign up modal */
+
 document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 /*Enrolment form modal */
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById("formGroup");
     const modal = document.getElementById("enrollModal");
@@ -95,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*courses side nav*/
+
 function toggleNav() {
     var sidebar = document.querySelector('.sidebar');
     var toggleStrip = document.querySelector('.toggle-strip');
@@ -262,6 +265,60 @@ async function handleSubmit(event) {
         console.error('Error:', error);
     }
 }
+
+//Dashboard table content
+// document.addEventListener('DOMContentLoaded', () => {
+//     let dashContent = document.querySelector('.dashboardContent')
+    
+//     dashContent.innerHTML = '<h1>Helaoo</h1>'
+// });
+
+
+// let tHead = document.createElement('thead')
+// let tBody = document.createElement('tbody')
+// let table = document.createElement('table')
+
+// let Heading = ['Module', 'Module Code', 'NQF', 'Credits', 'Venues', 'Lecturers']
+
+// Heading.forEach(data => {
+//     let th = document.createElement('th')
+//     th.textContent = data
+//     tHead.appendChild(th)  
+// });
+
+// table.appendChild(tHead);
+
+// dashContent.appendChild(table)
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     let dashContent = document.querySelector('.dashboardContent');
+
+//     console.log('Dashboard Content:', dashContent);
+    
+//     dashContent.innerHTML = '<h1>Helaoo</h1>';
+    
+//     let tHead = document.createElement('thead');
+//     let tBody = document.createElement('tbody');
+//     let table = document.createElement('table');
+    
+//     let Heading = ['Module', 'Module Code', 'NQF', 'Credits', 'Venues', 'Lecturers'];
+    
+//     Heading.forEach(data => {
+//         let th = document.createElement('th');
+//         th.textContent = data;
+//         tHead.appendChild(th);
+//     });
+    
+//     table.appendChild(tHead);
+//     table.appendChild(tBody); // Add tbody to the table
+    
+//     dashContent.appendChild(table);
+// });
+
+
+
+
+
 
 
 
