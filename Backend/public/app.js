@@ -1,5 +1,5 @@
-/*Login/sign up modal */
 document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer for sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -7,94 +7,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, {threshold: 0.5});
+    }, { threshold: 0.5 });
 
     document.querySelectorAll('.section').forEach(section => {
         observer.observe(section);
     });
 
+    // Modal functionality
     const modal = document.getElementById('modal');
     const loginButton = document.getElementById('loginButton');
     const closeButton = document.querySelector('.close');
 
-    loginButton.addEventListener('click', () => {
-        modal.style.display = 'flex';
-    });
+    if (loginButton) {
+        loginButton.addEventListener('click', () => {
+            if (modal) modal.style.display = 'flex';
+        });
+    }
 
-    closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            if (modal) modal.style.display = 'none';
+        });
+    }
 
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = 'none';
         }
+    };
+
+    // Video controls on hover
+    const video = document.getElementById('myVideo');
+
+    if (video) {
+        video.addEventListener('mouseover', () => {
+            video.controls = true;
+        });
+
+        video.addEventListener('mouseout', () => {
+            video.controls = false;
+        });
     }
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    const video = document.getElementById('myVideo');
-
-    video.addEventListener('mouseover', () => {
-        video.controls = true;
-    });
-
-    video.addEventListener('mouseout', () => {
-        video.controls = false;
-    });
-});
-
-/*Enrolment form modal */
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById("formGroup");
-    const modal = document.getElementById("enrollModal");
-    const studentNameSpan = document.getElementById("studentName");
-    const container = document.getElementById("StudentEnroll");
-    const modalMessage = document.getElementById("modalMessage");
-    const continueButton = document.getElementById("continueButton");
-
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        const name = document.getElementById("name").value;
-        const surname = document.getElementById("surname").value;
-        const id = document.getElementById("id").value;
-        const address1 = document.getElementById("adr").value;
-        const city = document.getElementById("city").value;
-        const zip = document.getElementById("zip").value;
-        const province = document.getElementById("province").value;
-        const gender = document.querySelector('input[name="gender"]:checked');
-        const email = document.getElementById("email").value;
-        const course = document.getElementById("course").value;
-        const attendance = document.querySelector('input[name="attendance"]:checked');
-
-        if (name && surname && id && address1 && city && zip && province && gender && email && course && attendance) {
-            studentNameSpan.textContent = name;
-            modalMessage.textContent = "Welcome, " + name + "! You have successfully enrolled in the course.";
-            continueButton.style.display = "none";  // Hide the continue button if the form is complete
-        } else {
-            modalMessage.textContent = "The form is incomplete. Please fill out all required fields.";
-            continueButton.style.display = "inline-block";  // Show the continue button if the form is incomplete
-        }
-
-        container.classList.add("background");
-        modal.style.display = 'block';
-    });
-
-    window.addEventListener("click", (event) => {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-            container.classList.remove("background");
-        }
-    });
-
-    continueButton.addEventListener("click", () => {
-        modal.style.display = 'none';
-        container.classList.remove("background");
-    });
-});
-
-/*courses side nav*/
+// Courses side nav
 function toggleNav() {
     var sidebar = document.querySelector('.sidebar');
     var toggleStrip = document.querySelector('.toggle-strip');
@@ -120,17 +76,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const closePasswordChange = document.getElementById('closePasswordChange');
     const changePasswordForm = document.getElementById('changePasswordForm');
 
-    loginButton.addEventListener('click', () => {
-        modal.style.display = 'flex';
-    });
+    if (loginButton) {
+        loginButton.addEventListener('click', () => {
+            if (modal) modal.style.display = 'flex';
+        });
+    }
 
-    closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            if (modal) modal.style.display = 'none';
+        });
+    }
 
-    closePasswordChange.addEventListener('click', () => {
-        passwordChangeModal.style.display = 'none';
-    });
+    if (closePasswordChange) {
+        closePasswordChange.addEventListener('click', () => {
+            if (passwordChangeModal) passwordChangeModal.style.display = 'none';
+        });
+    }
 
     window.onclick = function (event) {
         if (event.target == modal) {
@@ -138,107 +100,140 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (event.target == passwordChangeModal) {
             passwordChangeModal.style.display = 'none';
         }
+    };
+
+    const formLogin = document.getElementById('FormLogin');
+
+    if (formLogin) {
+        formLogin.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const studentId = document.getElementById('StudentID').value;
+            const password = document.getElementById('password').value;
+
+            fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ studentId, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Login successful') {
+                    if (password === 'BelgiumCampus') {
+                        if (passwordChangeModal) passwordChangeModal.style.display = 'flex';
+                    } else {
+                        window.location.href = 'Enroll.html';
+                    }
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
     }
 
-    document.getElementById('FormLogin').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const studentId = document.getElementById('StudentID').value;
-        const password = document.getElementById('password').value;
+    if (changePasswordForm) {
+        changePasswordForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const studentId = document.getElementById('StudentID').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
 
-        fetch('http://localhost:3000/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ studentId, password })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.message === 'Login successful') {
-                if (password === 'BelgiumCampus') {
-                    passwordChangeModal.style.display = 'flex';
-                } else {
-                    window.location.href = 'Enroll.html';
-                }
-            } else {
-                alert(data.message);
+            if (newPassword !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
             }
-        })
-        .catch(error => console.error('Error:', error));
-    });
 
-    changePasswordForm.addEventListener('submit', function (event) {
+            fetch('http://localhost:3000/changePassword', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ studentId, newPassword })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (passwordChangeModal) passwordChangeModal.style.display = 'none';
+                if (modal) modal.style.display = 'none';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    }
+});
+
+const signUpForm = document.getElementById('signUpForm');
+
+if (signUpForm) {
+    signUpForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        const studentId = document.getElementById('StudentID').value;
-        const newPassword = document.getElementById('newPassword').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
+        const username = document.getElementById('signUpUsername').value;
+        const password = document.getElementById('signUpPassword').value;
 
-        if (newPassword !== confirmPassword) {
-            alert('Passwords do not match.');
-            return;
-        }
-
-        fetch('http://localhost:3000/changePassword', {
+        fetch('http://localhost:3000/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ studentId, newPassword })
+            body: JSON.stringify({ username, password })
         })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            passwordChangeModal.style.display = 'none';
-            modal.style.display = 'none';
-        })
-        .catch(error => console.error('Error:', error));
-    });
-});
-
-
-document.getElementById('signUpForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const username = document.getElementById('signUpUsername').value;
-    const password = document.getElementById('signUpPassword').value;
-
-    fetch('http://localhost:3000/signup', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, password })
-    })
         .then(response => response.json())
         .then(data => {
             alert(data.message);
         })
         .catch(error => console.error('Error:', error));
-});
+    });
+}
 
 function populateEnrollmentForm(data) {
-    document.getElementById('name').value = data.name;
-    document.getElementById('surname').value = data.surname;
-    document.getElementById('id').value = data.id;
-    const addressFields = data.address;
-    document.getElementById('adr').value = addressFields[0];
-    document.getElementById('adr').value = addressFields[1];
-    document.getElementById('city').value = addressFields[2];
-    document.getElementById('zip').value = addressFields[3];
-    document.getElementById('province').value = data.province;
-    document.querySelector(`input[name="gender"][value="${data.gender}"]`).checked = true;
-    document.getElementById('email').value = data.username;
-    document.getElementById('course').value = data.course;
-    document.querySelector(`input[name="attendance"][value="${data.attendance}"]`).checked = true;
+    const name = document.getElementById('name');
+    const surname = document.getElementById('surname');
+    const id = document.getElementById('id');
+    const adr1 = document.getElementById('adr1');
+    const adr2 = document.getElementById('adr2');
+    const city = document.getElementById('city');
+    const zip = document.getElementById('zip');
+    const province = document.getElementById('province');
+    const gender = document.querySelector(`input[name="gender"][value="${data.gender}"]`);
+    const email = document.getElementById('email');
+    const course = document.getElementById('course');
+    const attendance = document.querySelector(`input[name="attendance"][value="${data.attendance}"]`);
+
+    if (name) name.value = data.name;
+    if (surname) surname.value = data.surname;
+    if (id) id.value = data.id;
+    if (adr1) adr1.value = data.address[0];
+    if (adr2) adr2.value = data.address[1];
+    if (city) city.value = data.address[2];
+    if (zip) zip.value = data.address[3];
+    if (province) province.value = data.province;
+    if (gender) gender.checked = true;
+    if (email) email.value = data.username;
+    if (course) course.value = data.course;
+    if (attendance) attendance.checked = true;
 };
 
 async function handleSubmit(event) {
     event.preventDefault();
 
-    const formData = new FormData(document.getElementById('formGroup'));
+    const form = document.getElementById('formGroup');
+    const formData = new FormData(form);
     const data = {};
+
+    let allFieldsFilled = true;
+
     formData.forEach((value, key) => {
+        if (!value) {
+            allFieldsFilled = false;
+        }
         data[key] = value;
     });
+
+    if (!allFieldsFilled) {
+        alert('Please fill in all fields.');
+        return;
+    }
 
     try {
         const response = await fetch('http://localhost:3000/saveForm', {
@@ -251,15 +246,45 @@ async function handleSubmit(event) {
 
         const result = await response.json();
         alert(result.message);
-        document.getElementById('modal').style.display = 'flex';
-        document.getElementById('FormLogin').innerHTML = `
-            <label for="StudentID">StudentID:</label>
-            <input type="text" id="StudentID" name="StudentID" value="${result.studentId}" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" value="BelgiumCampus" required>
-            <button type="submit">Login</button>`;
+
+        const modal = document.getElementById('modal');
+        const formLogin = document.getElementById('FormLogin');
+
+        if (modal) modal.style.display = 'flex';
+        if (formLogin) {
+            formLogin.innerHTML = `
+                <label for="StudentID">StudentID:</label>
+                <input type="text" id="StudentID" name="StudentID" value="${result.studentId}" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="BelgiumCampus" required>
+                <button type="submit">Login</button>`;
+        }
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const dashContent = document.querySelector('.dashboardContent');
+
+    if (dashContent) {
+        dashContent.innerHTML = '<h1>Helaoo</h1>';
+
+        const tHead = document.createElement('thead');
+        const tBody = document.createElement('tbody');
+        const table = document.createElement('table');
+
+        const headings = ['Module', 'Module Code', 'NQF', 'Credits', 'Venues', 'Lecturers'];
+
+        headings.forEach(data => {
+            const th = document.createElement('th');
+            th.textContent = data;
+            tHead.appendChild(th);
+        });
+
+        table.appendChild(tHead);
+        table.appendChild(tBody); // Add tbody to the table
+
+        dashContent.appendChild(table);
+    }
+});
