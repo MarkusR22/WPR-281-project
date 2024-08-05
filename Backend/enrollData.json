@@ -11,7 +11,22 @@
     "email": "erickknoetze06@gmail.com",
     "course": "BA of Computing",
     "attendance": "face-to-face",
-    "studentId": "700984",
+    "studentId": "600984",
     "password": "P@ssw0rd"
+  },
+  {
+    "name": "Marco",
+    "surname": "Reiners",
+    "id": "0120542562598",
+    "adr": "Sunny Side",
+    "city": "Pretoria",
+    "zip": "659",
+    "province": "Gau",
+    "gender": "Male",
+    "email": "Marco@mail.com",
+    "course": "Certificate in IT",
+    "attendance": "online",
+    "studentId": "600985",
+    "password": "Ballas123"
   }
 ]

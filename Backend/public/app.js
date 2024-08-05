@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, { threshold: 0.5 });
+    }, {threshold: 0.5});
 
     document.querySelectorAll('.section').forEach(section => {
         observer.observe(section);
