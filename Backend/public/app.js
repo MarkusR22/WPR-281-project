@@ -263,6 +263,3 @@ async function handleSubmit(event) {
     }
 }
 
-
-
-
