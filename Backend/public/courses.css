@@ -473,8 +473,9 @@ label[for=sideNav-toggle] {
 }
 
 #sideNav-button-logo{
-    padding-right: 9%;
-    color: #bb2626;
+    padding-right: 7%;
+    padding-left: 7%;
+    font-size: larger;
 }
 
 .sideNav-button span {
