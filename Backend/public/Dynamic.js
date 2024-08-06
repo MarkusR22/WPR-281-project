@@ -3,7 +3,7 @@ const lecturers = [
         name: 'Francois Venter',
         email: 'venter.f@belgiumcampus.ac.za',
         imgSrc: './Images/FrancoisVenter.png',
-        modules: ['MTA 181', 'MTA 281', 'MTA 381']
+        modules: ['MAT 181', 'MAT 281', 'MAT 381']
     },
     {
         name: 'Tendai Mkwaira',
@@ -15,7 +15,7 @@ const lecturers = [
         name: 'Alfred Mazorodze',
         email: 'mazorodze.a@belgiumcampus.ac.za',
         imgSrc: './Images/AlfredMazorodze.png',
-        modules: ['COA 181', 'COA 171', 'COA 161','MTA 181', 'MTA 281']
+        modules: ['COA 181', 'COA 171', 'COA 161','MAT 181', 'MAT 281']
     },
     {
         name: 'Anila Mundackal',
@@ -196,968 +196,1004 @@ const lecturers = [
 
 const modules = [
     {
-        code: 'MTA 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'MAT 181',
+        description: 'Mathematics 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'ACW 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Academic Writing 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'COA 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Computer Architecture 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'DBD 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'INF 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Systems 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'INL 101',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Innovation and Leadership 101',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'INL 102',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Innovation and Leadership 102',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'LPR 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Linear Programming 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'NWD 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Networking Development 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'PRG 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'PRG 182',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 182',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'STA 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Statistics 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'WPR 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'BUM 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Business Management 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'ENT 181',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Entrepreneurship 181',
         year: 1,
         course: 'BCOMP'
     },
     {
         code: 'DBD 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 281',
         year: 2,
         course: 'BCOMP'
     },
     {
-        code: 'MTA 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'MAT 281',
+        description: 'Mathematics 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'INF 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Systems 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'INL 201',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Innovation and Leadership 201',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'INL 202',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Innovation and Leadership 202',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'PRG 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'PRG 282',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 282',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'PMM 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project Management 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'STA 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Statistics 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'WPR 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'SAD 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Systems Analysis and Design 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'DWH 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Data Warehousing 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'IOT 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Internet of Things 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'SWT 281',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Software Testing 281',
         year: 2,
         course: 'BCOMP'
     },
     {
         code: 'RSH 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Research Methods 381',
         year: 3,
         course: 'BCOMP'
     },
     {
-        code: 'MTA 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'MAT 381',
+        description: 'Mathematics 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'DBD 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'INL 321',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Innovation and Leadership 321',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'LPR 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Linear Programming 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'MLG 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Machine Learning 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'PRJ 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'PMM 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project Management 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'PRG 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'SEN 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Software Engineering 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'WPR 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'BIN 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Business Intelligence 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'DBA 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Administration 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'STA 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Statistics 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'INM 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Management 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'MLG 382',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Machine Learning 382',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'UAX 381',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'User Experience 381',
         year: 3,
         course: 'BCOMP'
     },
     {
         code: 'AIT 481',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Advanced Information Technology 481',
         year: 4,
         course: 'BCOMP'
     },
     {
         code: 'AIT 482',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Advanced Information Technology 482',
         year: 4,
         course: 'BCOMP'
     },
     {
         code: 'DST 481',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Distributed Systems 481',
         year: 4,
         course: 'BCOMP'
     },
     {
         code: 'ACW 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Academic Writing 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'COA 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Computer Architecture 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'DBD 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'ENG 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'English 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'INF 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Systems 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'MAT 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Mathematics 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'NWD 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Networking Development 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'PRG 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'PRG 172',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 172',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'STA 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Statistics 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'WPR 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'BUM 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Business Management 171',
         year: 1,
         course: 'BIT'
     },
     {
         code: 'ENT 171',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Entrepreneurship 171',
         year: 1,
         course: 'BIT'
     },
     {
-        code: 'CNA 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'DBD 271',
+        description: 'Database Development 271',
         year: 2,
         course: 'BIT'
     },
     {
-        code: 'DBD 221',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
-        year: 2,
-        course: 'BIT'
-    },
-    {
-        code: 'ERP 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
-        year: 2,
-        course: 'BIT'
-    },
-    {
-        code: 'ETH 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'MAT 271',
+        description: 'Mathematics 271',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'INF 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Systems 271',
         year: 2,
         course: 'BIT'
     },
     {
-        code: 'LPR 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'INL 221',
+        description: 'Innovation and Leadership 221',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'PRG 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 271',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'PRG 272',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 272',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'PMM 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project Management 271',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'STA 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Statistics 271',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'WPR 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 271',
+        year: 2,
+        course: 'BIT'
+    },
+    {
+        code: 'SAD 271',
+        description: 'Systems Analysis and Design 271',
+        year: 2,
+        course: 'BIT'
+    },
+    {
+        code: 'DWH 271',
+        description: 'Data Warehousing 271',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'IOT 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Internet of Things 271',
         year: 2,
         course: 'BIT'
     },
     {
         code: 'SWT 271',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Software Testing 271',
         year: 2,
         course: 'BIT'
     },
     {
-        code: 'BIN 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
-        year: 3,
-        course: 'BIT'
-    },
-    {
-        code: 'CNA 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
-        year: 3,
-        course: 'BIT'
-    },
-    {
-        code: 'DAL 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'MAT 371',
+        description: 'Mathematics 371',
         year: 3,
         course: 'BIT'
     },
     {
         code: 'DBD 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 371',
         year: 3,
         course: 'BIT'
     },
     {
-        code: 'INL 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'INL 321',
+        description: 'Innovation and Leadership 321',
         year: 3,
         course: 'BIT'
     },
     {
-        code: 'PRG 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'LPR 371',
+        description: 'Linear Programming 371',
+        year: 3,
+        course: 'BIT'
+    },
+    {
+        code: 'MLG 371',
+        description: 'Machine Learning 371',
         year: 3,
         course: 'BIT'
     },
     {
         code: 'PRJ 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project 371',
         year: 3,
         course: 'BIT'
     },
     {
         code: 'PMM 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project Management 371',
         year: 3,
         course: 'BIT'
     },
     {
-        code: 'SAD 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        code: 'PRG 371',
+        description: 'Programming 371',
         year: 3,
         course: 'BIT'
     },
     {
         code: 'SEN 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Software Engineering 371',
         year: 3,
         course: 'BIT'
     },
     {
         code: 'WPR 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 371',
+        year: 3,
+        course: 'BIT'
+    },
+    {
+        code: 'BIN 371',
+        description: 'Business Intelligence 371',
+        year: 3,
+        course: 'BIT'
+    },
+    {
+        code: 'DBA 371',
+        description: 'Database Administration 371',
+        year: 3,
+        course: 'BIT'
+    },
+    {
+        code: 'STA 371',
+        description: 'Statistics 371',
         year: 3,
         course: 'BIT'
     },
     {
         code: 'INM 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Management 371',
+        year: 3,
+        course: 'BIT'
+    },
+    {
+        code: 'MLG 372',
+        description: 'Machine Learning 372',
         year: 3,
         course: 'BIT'
     },
     {
         code: 'UAX 371',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'User Experience 371',
         year: 3,
         course: 'BIT'
     },
     {
+        code: 'AIT 471',
+        description: 'Advanced Information Technology 471',
+        year: 4,
+        course: 'BIT'
+    },
+    {
+        code: 'AIT 472',
+        description: 'Advanced Information Technology 472',
+        year: 4,
+        course: 'BIT'
+    },
+    {
+        code: 'DST 471',
+        description: 'Distributed Systems 471',
+        year: 4,
+        course: 'BIT'
+    },
+    {
         code: 'BUC 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Business Communication 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'BME 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Business Management 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'COA 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Computer Architecture 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'DBC 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Concepts 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'DBF 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Fundamentals 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'EUC 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'End User Computing 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'INL 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Literacy 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'IOT 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Internet of Things 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'MAT 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Mathematics 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'NWD 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Networking and Web Development 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'PRS 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Professional Skills 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'PRG 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'PRP 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming Principles 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'WPR 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'STA 161',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Statistics 161',
         year: 1,
         course: 'DIT'
     },
     {
         code: 'DBD 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'ERP 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Enterprise Resource Planning 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'INL 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Literacy 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'ILE 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Literacy and Ethics 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'PMM 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project Management 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'CNA 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Computer Networks and Architecture 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'IOT 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Internet of Things 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'OPS 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Operating Systems 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'OPS 262',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Operating Systems 262',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'OPS 263',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Operating Systems 263',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'SEC 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Security 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'PRG 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'PRG 262',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 262',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'SWA 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Software Architecture 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'SWT 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Software Testing 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'UXD 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'User Experience Design 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'WPR 261',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 261',
         year: 2,
         course: 'DIT'
     },
     {
         code: 'CNA 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Computer Networks and Architecture 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'EHA 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Ethics in HCI and AI 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'PET 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Petroleum Engineering Technology 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DOP 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'DevOps 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'MFR 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Manufacturing 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'NWD 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Networking and Web Development 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'OPS 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Operating Systems 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBA 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Administration 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBC 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Concepts 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBD 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBR 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Recovery 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DDB 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Distributed Database 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'WDB 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Database 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'WFS 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Frameworks and Services 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'WSE 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Security 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'PRG 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'SSX 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'System Security and Forensics 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'SWA 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Software Architecture 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'PMM 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project Management 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBA 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Administration 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBC 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Concepts 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBD 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DBR 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Recovery 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'DDB 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Distributed Database 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'PRJ 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'AIT 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Advanced Information Technology 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'WSP 361',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Server Programming 361',
         year: 3,
         course: 'DIT'
     },
     {
         code: 'INF 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Information Systems 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'OPS 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Operating Systems 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'PRJ 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'PMM 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Project Management 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'SEC 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Security 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'MAT 151',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Mathematics 151',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'DBD 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Development 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'DBM 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Database Management 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'PRG 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'PRG 252',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Programming 252',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'WPR 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'WPR 252',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Web Programming 252',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'ERP 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Enterprise Resource Planning 251',
         year: 1,
         course: 'CIT'
     },
     {
         code: 'IOT 251',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, tenetur?',
+        description: 'Internet of Things 251',
         year: 1,
         course: 'CIT'
     }
@@ -1193,7 +1229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectElement = document.createElement('select');
         selectElement.id = 'yearFilter';
         
-        const years = ['all', 1, 2, 3];
+        const years = ['all', 1, 2, 3, 4];
         years.forEach(year => {
             const optionElement = document.createElement('option');
             optionElement.value = year;
@@ -1225,7 +1261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h1>${module.code}</h1>
                         </div>
                         <div class="card-content">
-                        <p>${module.description}</p>
+                        <p>${module.description}</p> 
                         <button>View More</button>
                         </div>
                     </div>
@@ -1233,6 +1269,55 @@ document.addEventListener('DOMContentLoaded', () => {
                 moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
             }
         });
+    }
+
+    function displayOverview(course, description){
+        description.innerHTML = ''
+        let heading = document.createElement('h1')
+        heading.textContent = 'Course Description'
+        let coursePara = document.createElement('p')
+        switch (course) {
+            case 'BCOMP':
+                
+                coursePara.textContent = `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
+                                        computer science and its applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or 
+                                        internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+            case 'BIT':
+                
+                coursePara.textContent = `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
+                                        development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
+                                        with both theoretical knowledge and practical skills needed to excel in the IT industry.`
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+            case 'DIT':
+                
+                coursePara.textContent = `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
+                                        skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
+                                        in the IT industry. `
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+            case 'CIT':
+                
+                coursePara.textContent = `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
+                                        skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
+                                        or prepare for further education in IT.`
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+                
+        
+            default:
+                break;
+        }
     }
 
   
@@ -1250,9 +1335,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.sideNav-button').forEach(button => {
         button.addEventListener('click', () => {
             currentCourse = button.getAttribute('data-course');
+            const courseDescription = document.querySelector('.description')
             const selectedYear = document.getElementById('yearFilter').value;
             const searchQuery = searchInput.value.toLowerCase();
             displayModules(currentCourse, selectedYear, searchQuery);
+            displayOverview(currentCourse, courseDescription)
         });
     });
 
