@@ -1319,7 +1319,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
             }
         });
-    }
+     }
 
 
     function displayOverview(course, description) {
