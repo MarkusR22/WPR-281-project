@@ -9,13 +9,13 @@ const lecturers = [
         name: 'Tendai Mkwaira',
         email: 'mkwaira.t@belgiumcampus.ac.za',
         imgSrc: './Images/TendaiMkwaira.png',
-        modules: ['ACW 181', 'ACW 171','PRG 371', 'PRG 261', 'PRG 262',]
+        modules: ['ACW 181', 'ACW 171', 'PRG 371', 'PRG 261', 'PRG 262',]
     },
     {
         name: 'Alfred Mazorodze',
         email: 'mazorodze.a@belgiumcampus.ac.za',
         imgSrc: './Images/AlfredMazorodze.png',
-        modules: ['COA 181', 'COA 171', 'COA 161','MAT 181', 'MAT 281']
+        modules: ['COA 181', 'COA 171', 'COA 161', 'MAT 181', 'MAT 281']
     },
     {
         name: 'Anila Mundackal',
@@ -27,7 +27,7 @@ const lecturers = [
         name: 'Charmaine Tavagwisa',
         email: 'tavagwisa.p@belgiumcampus.ac.za',
         imgSrc: './Images/CharmaineTavagwisa.png',
-        modules: ['INF 181', 'INF 271', 'INF 281','WPR 252', 'WPR 161']
+        modules: ['INF 181', 'INF 271', 'INF 281', 'WPR 252', 'WPR 161']
     },
     {
         name: 'Edward Van Niekerk',
@@ -39,13 +39,13 @@ const lecturers = [
         name: 'Raymond Hood',
         email: 'hood.r@belgiumcampus.ac.za',
         imgSrc: './Images/RaymondHood.png',
-        modules: ['LPR 181', 'LPR 271', 'LPR 381','PRG 181', 'PRG 182', 'PRG 281',]
+        modules: ['LPR 181', 'LPR 271', 'LPR 381', 'PRG 181', 'PRG 182', 'PRG 281',]
     },
     {
         name: 'Francois Smit',
         email: 'smit.f@belgiumcampus.ac.za',
         imgSrc: './Images/FrancoisSmit.png',
-        modules: ['NWD 181', 'NWD 171', 'NWD 361','WPR 271', 'WPR 381',]
+        modules: ['NWD 181', 'NWD 171', 'NWD 361', 'WPR 271', 'WPR 381',]
     },
     {
         name: 'Gift Mudare',
@@ -75,13 +75,13 @@ const lecturers = [
         name: 'Catharina Boshoff',
         email: 'boshoff.c@belgiumcampus.ac.za',
         imgSrc: './Images/CatharinaBoshoff.png',
-        modules: ['BUM 181', 'BUM 171','DBA 361']
+        modules: ['BUM 181', 'BUM 171', 'DBA 361']
     },
     {
         name: 'Caviner Ruiters',
         email: 'ruiters.c@belgiumcampus.ac.za',
         imgSrc: './Images/CavinerRuiters.png',
-        modules: ['ENT 181', 'ENT 171','PRJ 371', 'PRJ 381',]
+        modules: ['ENT 181', 'ENT 171', 'PRJ 371', 'PRJ 381',]
     },
     {
         name: 'Desire Sundire',
@@ -93,19 +93,19 @@ const lecturers = [
         name: 'Dino Giovannoni',
         email: 'giovannoni.d@belgiumcampus.ac.za',
         imgSrc: './Images/DinoGiovannoni.png',
-        modules: ['ERP 261', 'ERP 271', 'ERP 251','PMM 251', 'PRJ 371', 'PRJ 381',]
+        modules: ['ERP 261', 'ERP 271', 'ERP 251', 'PMM 251', 'PRJ 371', 'PRJ 381',]
     },
     {
         name: 'Elaine Rynners',
         email: 'rynners.e@belgiumcampus.ac.za',
         imgSrc: './Images/ElaineRynners.png',
-        modules: ['PMM 261', 'PMM 271','SEC 261', 'SEC 251']
+        modules: ['PMM 261', 'PMM 271', 'SEC 261', 'SEC 251']
     },
     {
         name: 'Evangelistars Shayamano',
         email: 'shayamano.e@belgiumcampus.ac.za',
         imgSrc: './Images/EvangelistarsShayamano.png',
-        modules: ['ENT 181', 'ENT 171',, 'SWT 271','IOT 281', 'IOT 271',]
+        modules: ['ENT 181', 'ENT 171', , 'SWT 271', 'IOT 281', 'IOT 271',]
     },
     {
         name: 'Galaletsang Modimola',
@@ -123,7 +123,7 @@ const lecturers = [
         name: 'Masimba Zengeni',
         email: 'zengeni.s@belgiumcampus.ac.za',
         imgSrc: './Images/MasimbaZengeni.png',
-        modules: ['PRJ 361', 'PRJ 371', 'PRJ 381', 'PRJ 251','PMM 371', 'PMM 251']
+        modules: ['PRJ 361', 'PRJ 371', 'PRJ 381', 'PRJ 251', 'PMM 371', 'PMM 251']
     },
     {
         name: 'Michael Combrinck',
@@ -135,31 +135,31 @@ const lecturers = [
         name: 'Philip van Huyssteen',
         email: 'vanhuyssteen.p@belgiumcampus.ac.za',
         imgSrc: './Images/PhilipvanHuyssteen.png',
-        modules: ['AIT 481', 'AIT 482', 'AIT 361','WPR 381',]
+        modules: ['AIT 481', 'AIT 482', 'AIT 361', 'WPR 381',]
     },
     {
         name: 'Sannie Zwane',
         email: 'zwane.s@belgiumcampus.ac.za',
         imgSrc: './Images/SannieZwane.png',
-        modules: ['DST 481', 'DBD 381','PRG 371', 'PRG 261', 'PRG 262',]
+        modules: ['DST 481', 'DBD 381', 'PRG 371', 'PRG 261', 'PRG 262',]
     },
     {
         name: 'Shakeng Thamaga',
         email: 'thamaga.s@belgiumcampus.ac.za',
         imgSrc: './Images/ShakengThamaga.png',
-        modules: ['COA 161', 'COA 171','WPR 271', 'WPR 381', 'WPR 251',]
+        modules: ['COA 161', 'COA 171', 'WPR 271', 'WPR 381', 'WPR 251',]
     },
     {
         name: 'Stanley Makweche',
         email: 'makweche.s@belgiumcampus.ac.za',
         imgSrc: './Images/StanleyMakweche.png',
-        modules: ['PRG 261', 'PRG 262','ENT 181', 'ENT 171',]
+        modules: ['PRG 261', 'PRG 262', 'ENT 181', 'ENT 171',]
     },
     {
         name: 'Tshegofatso Hutang',
         email: 'hutang.t@belgiumcampus.ac.za',
         imgSrc: './Images/TshegofatsoHutang.png',
-        modules: ['MAT 171', 'MAT 161','INL 202', 'INL 321', 'INL 161']
+        modules: ['MAT 171', 'MAT 161', 'INL 202', 'INL 321', 'INL 161']
     },
     {
         name: 'Raymond Hood',
@@ -177,19 +177,19 @@ const lecturers = [
         name: 'Philip van Huyssteen',
         email: 'vanhuyssteen.p@belgiumcampus.ac.za',
         imgSrc: './Images/PhilipvanHuyssteen.png',
-        modules: ['EUC 161', 'MLG 381', 'MLG 382', 'SAD 281', 'SAD 371', ]
+        modules: ['EUC 161', 'MLG 381', 'MLG 382', 'SAD 281', 'SAD 371',]
     },
     {
         name: 'Tshegofatso Hutang',
         email: 'hutang.t@belgiumcampus.ac.za',
         imgSrc: './Images/TshegofatsoHutang.png',
-        modules: ['ENG 171', 'ENG 161','ENT 181', 'ENT 171',]
+        modules: ['ENG 171', 'ENG 161', 'ENT 181', 'ENT 171',]
     },
     {
         name: 'Raymond Hood',
         email: 'hood.r@belgiumcampus.ac.za',
         imgSrc: './Images/RaymondHood.png',
-        modules: ['RSH 381','BIN 371', 'BIN 381']
+        modules: ['RSH 381', 'BIN 371', 'BIN 381']
     }
 ];
 
@@ -1223,12 +1223,12 @@ document.addEventListener('DOMContentLoaded', () => {
         lecturerContainer.insertAdjacentHTML('beforeend', lecturerCard);
     });
 
-   
+
     function createFilterDropdown() {
         const filterContainer = document.getElementById('filterContainer');
         const selectElement = document.createElement('select');
         selectElement.id = 'yearFilter';
-        
+
         const years = ['all', 1, 2, 3, 4];
         years.forEach(year => {
             const optionElement = document.createElement('option');
@@ -1240,19 +1240,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const label = document.createElement('label');
         label.htmlFor = 'yearFilter';
         label.innerText = 'Select Year: ';
-        
+
         filterContainer.appendChild(label);
         filterContainer.appendChild(selectElement);
     }
-    
-   
+
+
     function displayModules(course = 'all', filterYear = 'all', searchQuery = '') {
         moduleContainer.innerHTML = '';
         modules.forEach(module => {
             const isCourseMatch = course === 'all' || module.course === course;
             const isYearMatch = filterYear === 'all' || module.year == filterYear;
             const isSearchMatch = module.code.toLowerCase().includes(searchQuery) ||
-                                   module.description.toLowerCase().includes(searchQuery);
+                module.description.toLowerCase().includes(searchQuery);
 
             if (isCourseMatch && isYearMatch && isSearchMatch) {
                 const moduleCard = `
@@ -1271,14 +1271,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function displayOverview(course, description){
+    function displayOverview(course, description) {
         description.innerHTML = ''
         let heading = document.createElement('h1')
         heading.textContent = 'Course Description'
         let coursePara = document.createElement('p')
         switch (course) {
             case 'BCOMP':
-                
+
                 coursePara.textContent = `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
                                         computer science and its applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or 
                                         internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`
@@ -1287,7 +1287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
 
             case 'BIT':
-                
+
                 coursePara.textContent = `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
                                         development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
                                         with both theoretical knowledge and practical skills needed to excel in the IT industry.`
@@ -1296,7 +1296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
 
             case 'DIT':
-                
+
                 coursePara.textContent = `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
                                         skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
                                         in the IT industry. `
@@ -1305,7 +1305,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
 
             case 'CIT':
-                
+
                 coursePara.textContent = `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
                                         skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
                                         or prepare for further education in IT.`
@@ -1313,24 +1313,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 description.appendChild(coursePara)
                 break;
 
-                
-        
+
+
             default:
                 break;
         }
     }
 
-  
+
     createFilterDropdown();
     displayModules();
 
-    document.getElementById('yearFilter').addEventListener('change', function() {
+    document.getElementById('yearFilter').addEventListener('change', function () {
         const selectedYear = this.value;
         const searchQuery = searchInput.value.toLowerCase();
         displayModules(currentCourse, selectedYear, searchQuery);
     });
 
-   
+
     let currentCourse = 'all';
     document.querySelectorAll('.sideNav-button').forEach(button => {
         button.addEventListener('click', () => {
