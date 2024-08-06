@@ -14,12 +14,34 @@ const filePath = path.join(__dirname, 'enrollData.json');
 let sName = '';
 let sSurname = '';
 let sID = '';
+let sAdr = '';
+let sCity = '';
+let sZip = '';
+let sProvince = '';
+let sGender = '';
+let sEmail = '';
+let sCourse = '';
+let sAttendance = '';
+let sStudentId = '';
+let sPassword = '';
 
 app.get('/getStudentDetails', (req, res) => {
+
+    // Respond with the updated values
     res.json({
         name: sName,
         surname: sSurname,
-        id: sID
+        id: sID,
+        adr: sAdr,
+        city: sCity,
+        zip: sZip,
+        province: sProvince,
+        gender: sGender,
+        email: sEmail,
+        course: sCourse,
+        attendance: sAttendance,
+        studentId: sStudentId,
+        password: sPassword
     });
 });
 
@@ -63,6 +85,17 @@ app.post('/login', (req, res) => {
             sName = student.name;
             sSurname = student.surname;
             sID = student.studentId;
+            sAdr = student.adr;
+            sCity = student.city;
+            sZip = student.zip;
+            sProvince = student.province;
+            sGender = student.gender;
+            sEmail = student.email;
+            sCourse = student.course;
+            sAttendance = student.attendance;
+            sStudentId = student.studentId;
+            sPassword = student.password;
+
             res.json({ message: 'Login successful' });
         } else {
             res.json({ message: 'Invalid Student ID or password' });
