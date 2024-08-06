@@ -4,7 +4,7 @@ let sName = '';
 let sSurname = '';
 let sID = '';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async() => {
     // Intersection Observer for sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -76,9 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (password === 'BelgiumCampus') {
                             if (passwordChangeModal) passwordChangeModal.style.display = 'flex';
                         }
-                        sID = data.studentID;
-                        sName = data.studentName;
-                        sSurname = data.studentSurname;
+                        await getStudentDetails()
                         console.log(`${sID} ${sName} ${sSurname}`); // Ensure values are correctly assigned
 
                         // Additional code if needed
@@ -411,29 +409,35 @@ function createHome() {
     dashContent.appendChild(table);
 }
 
-const DashboardLink = document.querySelector(`#dashboardLink`);
-DashboardLink.style.backgroundColor = 'blue';
-getStudentDetails();
-console.log(`sID: ${sID} ${sName} ${sSurname}`); // Log to check the value of sID
-
-if (sID && sID !== '') {
-    DashboardLink.classList.add('visible');
-} else {
-    DashboardLink.classList.add('notVisible');
-}
-
-async function getStudentDetails() {
-    try {
-        console.log(`GET StudentDetails executed`);
-        const response = await fetch(`http://localhost:${port}/getStudentDetails`);
-        const data = await response.json();
-        console.log(data);
-        sName = data.name;
-        sID = data.id;
-        sSurname = data.surname;
-        console.log(`sID: ${sID} ${sName} ${sSurname}`);
-    } catch (error) {
-        console.error('Error fetching student details:', error);
-        return null;
+document.addEventListener('DOMContentLoaded', async () => {
+    // Function to fetch and handle student details
+    async function getStudentDetails() {
+        try {
+            console.log(`GET StudentDetails executed`);
+            const response = await fetch(`http://localhost:${port}/getStudentDetails`);
+            const data = await response.json();
+            console.log(data);
+            sName = data.name;
+            sID = data.id;
+            sSurname = data.surname;
+            console.log(`sID: ${sID} ${sName} ${sSurname}`);
+        } catch (error) {
+            console.error('Error fetching student details:', error);
+            return null;
+        }
     }
-}
+
+    const DashboardLink = document.querySelector(`#dashboardLink`);
+    DashboardLink.style.backgroundColor = 'blue';
+
+    // Await the completion of getStudentDetails
+    await getStudentDetails();
+    
+    console.log(`sID: ${sID} ${sName} ${sSurname}`); // Log to check the value of sID
+
+    if (sID && sID !== '') {
+        DashboardLink.classList.add('visible');
+    } else {
+        DashboardLink.classList.add('notVisible');
+    }
+});

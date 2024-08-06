@@ -11,9 +11,9 @@ app.use(express.static('public'));
 
 const filePath = path.join(__dirname, 'enrollData.json');
 
-let sName = 'John';
-let sSurname = 'Doe';
-let sID = '12345';
+let sName = '';
+let sSurname = '';
+let sID = '';
 
 app.get('/getStudentDetails', (req, res) => {
     res.json({
@@ -60,8 +60,10 @@ app.post('/login', (req, res) => {
         const student = students.find(s => s.studentId === studentId && s.password === password);
 
         if (student) {
-            console.log(`${Object.keys(student)}`);
-            res.json({ message: 'Login successful', studentID: student.studentId, studentName: student.name, studentSurname: student.surname });
+            sName = student.name;
+            sSurname = student.surname;
+            sID = student.studentId;
+            res.json({ message: 'Login successful' });
         } else {
             res.json({ message: 'Invalid Student ID or password' });
         }

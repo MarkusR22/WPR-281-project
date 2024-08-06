@@ -1262,7 +1262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="card-content">
                         <p>${module.description}</p> 
-                        <button>View More</button>
+                        <button id='${module.code}'>View More</button>
                         </div>
                     </div>
                 `;
