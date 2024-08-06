@@ -163,5 +163,20 @@
     "attendance": "face-to-face",
     "studentId": "600994",
     "password": "1234"
+  },
+  {
+    "name": "Markus",
+    "surname": "uib",
+    "id": "uyhbv",
+    "adr": "uyhvb",
+    "city": "iuhyblv",
+    "zip": "uyhbv",
+    "province": "MP",
+    "gender": "Male",
+    "email": "that@MAIL.COM",
+    "course": "Diploma in IT",
+    "attendance": "face-to-face",
+    "studentId": "600995",
+    "password": "BelgiumCampus"
   }
 ]
