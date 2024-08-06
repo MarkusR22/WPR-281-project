@@ -1271,6 +1271,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function displayOverview(course, description){
+        description.innerHTML = ''
+        let heading = document.createElement('h1')
+        heading.textContent = 'Course Description'
+        let coursePara = document.createElement('p')
+        switch (course) {
+            case 'BCOMP':
+                
+                coursePara.textContent = `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
+                                        computer science and its applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or 
+                                        internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+            case 'BIT':
+                
+                coursePara.textContent = `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
+                                        development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
+                                        with both theoretical knowledge and practical skills needed to excel in the IT industry.`
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+            case 'DIT':
+                
+                coursePara.textContent = `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
+                                        skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
+                                        in the IT industry. `
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+            case 'CIT':
+                
+                coursePara.textContent = `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
+                                        skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
+                                        or prepare for further education in IT.`
+                description.appendChild(heading)
+                description.appendChild(coursePara)
+                break;
+
+                
+        
+            default:
+                break;
+        }
+    }
+
   
     createFilterDropdown();
     displayModules();
@@ -1286,9 +1335,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.sideNav-button').forEach(button => {
         button.addEventListener('click', () => {
             currentCourse = button.getAttribute('data-course');
+            const courseDescription = document.querySelector('.description')
             const selectedYear = document.getElementById('yearFilter').value;
             const searchQuery = searchInput.value.toLowerCase();
             displayModules(currentCourse, selectedYear, searchQuery);
+            displayOverview(currentCourse, courseDescription)
         });
     });
 

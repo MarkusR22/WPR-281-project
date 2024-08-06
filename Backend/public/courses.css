@@ -879,10 +879,16 @@ label[for=sideNav-footer-toggle] {
 .description{
     grid-area: description;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: 0;
     padding: 20px;
+}
+
+.description p{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 5% 0
 }
 
 .info-box {
