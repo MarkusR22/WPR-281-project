@@ -148,5 +148,20 @@
     "attendance": "face-to-face",
     "studentId": "600993",
     "password": "789"
+  },
+  {
+    "name": "iubiuybi",
+    "surname": "uyb",
+    "id": "iuyb",
+    "adr": "iluyb",
+    "city": "ilkuyhb",
+    "zip": "kljbh",
+    "province": "LP",
+    "gender": "Male",
+    "email": "Erick@mail.com",
+    "course": "BA of Computing",
+    "attendance": "face-to-face",
+    "studentId": "600994",
+    "password": "1234"
   }
 ]

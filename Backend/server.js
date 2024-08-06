@@ -11,6 +11,18 @@ app.use(express.static('public'));
 
 const filePath = path.join(__dirname, 'enrollData.json');
 
+let sName = 'John';
+let sSurname = 'Doe';
+let sID = '12345';
+
+app.get('/getStudentDetails', (req, res) => {
+    res.json({
+        name: sName,
+        surname: sSurname,
+        id: sID
+    });
+});
+
 // Function to generate a sequential Student ID starting from 700984
 function generateStudentId(existingData) {
     const startId = 700984;
@@ -46,10 +58,10 @@ app.post('/login', (req, res) => {
 
         const students = JSON.parse(data);
         const student = students.find(s => s.studentId === studentId && s.password === password);
-        console.log(`${Object.keys(student)}`)
 
         if (student) {
-            res.json({ message: 'Login successful', studentID : student.studentId, studentName: student.name, studentSurname : student.surname});
+            console.log(`${Object.keys(student)}`);
+            res.json({ message: 'Login successful', studentID: student.studentId, studentName: student.name, studentSurname: student.surname });
         } else {
             res.json({ message: 'Invalid Student ID or password' });
         }
