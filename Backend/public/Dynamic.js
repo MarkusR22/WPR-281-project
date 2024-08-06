@@ -1229,7 +1229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectElement = document.createElement('select');
         selectElement.id = 'yearFilter';
         
-        const years = ['all', 1, 2, 3];
+        const years = ['all', 1, 2, 3, 4];
         years.forEach(year => {
             const optionElement = document.createElement('option');
             optionElement.value = year;
