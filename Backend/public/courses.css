@@ -747,7 +747,7 @@ label[for=sideNav-footer-toggle] {
     grid-area: search;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 20px;
 }
 
@@ -755,10 +755,11 @@ label[for=sideNav-footer-toggle] {
     display: flex;
     align-items: center;
     background: #f6f6f6;
-    padding: 14px;
+    padding:0 14px;
     border-radius: 28px;
+    height: 50px;
     width: 70%;
-    transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s,height 0.25s;
 }
 
 .searchBar:focus-within{
@@ -783,9 +784,8 @@ label[for=sideNav-footer-toggle] {
     grid-area: search;
     align-items: center;
     justify-content: center;
-    background: #fcfbfb; 
     border-radius: 5px;
-    width: 35%;
+    width: 20%;
 }
 
 #filterContainer label {
