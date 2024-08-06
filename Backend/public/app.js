@@ -300,6 +300,38 @@ function createHome() {
           <h2>Starts 1 December 2024</h2>
           <div id="countdown" class="countdown"></div>
         </div>
+        <div class = "info-container">
+            <div class="info-box">
+                <div class="info-item">
+                    <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                    <span class="label">Duration:</span>
+                    <span class="value">3 years academic<br>1 year workplace training</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                    <span class="label">NQF:</span>
+                    <span class="value">Level 8</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon"><i class="fa fa-folder" aria-hidden="true"></i></span>
+                    <span class="label">Credits:</span>
+                    <span class="value">506</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
+                    <span class="label">SAQA ID:</span>
+                    <span class="value">62689</span>
+                </div>
+                <div class="info-item">
+                    <span class="icon"><i class="fa fa-map-pin" aria-hidden="true"></i></span>
+                    <span class="label">Location:</span>
+                    <span class="value">Pretoria Campus<br>Kempton Park Campus</span>
+                </div>
+            </div>
+            <p>The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in computer science and its 
+            applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or internship. The curriculum 
+            combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries. </p>
+        </div>
     `  
 
     let courseHeading = document.createElement('h1')
