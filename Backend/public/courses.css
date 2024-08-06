@@ -403,6 +403,7 @@ label[for=sideNav-toggle] {
 }
 
 #sideNav-content {
+    left: 7%;
     margin: -16px 0;
     padding: 16px 0;
     position: relative;
@@ -469,6 +470,11 @@ label[for=sideNav-toggle] {
     cursor: pointer;
     z-index: 1;
     transition: color 0.2s;
+}
+
+#sideNav-button-logo{
+    padding-right: 9%;
+    color: #bb2626;
 }
 
 .sideNav-button span {
