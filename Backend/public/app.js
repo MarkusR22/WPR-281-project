@@ -4,7 +4,7 @@ let sName = '';
 let sSurname = '';
 let sID = '';
 
-document.addEventListener('DOMContentLoaded', async() => {
+document.addEventListener('DOMContentLoaded', async () => {
     // Intersection Observer for sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Await the completion of getStudentDetails
     await getStudentDetails();
-    
+
     console.log(`sID: ${sID} ${sName} ${sSurname}`); // Log to check the value of sID
 
     if (sID && sID !== '') {
