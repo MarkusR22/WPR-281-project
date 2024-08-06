@@ -1167,6 +1167,8 @@ const modules = [
 document.addEventListener('DOMContentLoaded', () => {
     const lecturerContainer = document.querySelector('.lecturer');
     const moduleContainer = document.querySelector('.modules');
+    const searchInput = document.querySelector('.search-input');
+
 
     lecturers.forEach(lecturer => {
         const lecturerCard = `
@@ -1185,9 +1187,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lecturerContainer.insertAdjacentHTML('beforeend', lecturerCard);
     });
 
-
+   
     function createFilterDropdown() {
-        
         const filterContainer = document.getElementById('filterContainer');
         const selectElement = document.createElement('select');
         selectElement.id = 'yearFilter';
@@ -1208,19 +1209,24 @@ document.addEventListener('DOMContentLoaded', () => {
         filterContainer.appendChild(selectElement);
     }
     
-
-    function displayModules(course = 'all', filterYear = 'all') {
+   
+    function displayModules(course = 'all', filterYear = 'all', searchQuery = '') {
         moduleContainer.innerHTML = '';
         modules.forEach(module => {
-            if ((course === 'all' || module.course === course) && (filterYear === 'all' || module.year == filterYear)) {
+            const isCourseMatch = course === 'all' || module.course === course;
+            const isYearMatch = filterYear === 'all' || module.year == filterYear;
+            const isSearchMatch = module.code.toLowerCase().includes(searchQuery) ||
+                                   module.description.toLowerCase().includes(searchQuery);
+
+            if (isCourseMatch && isYearMatch && isSearchMatch) {
                 const moduleCard = `
                     <div class="module-card ${module.course} year${module.year}">
                         <div class="module-header">
                             <h1>${module.code}</h1>
                         </div>
                         <div class="card-content">
-                            <p>${module.description}</p>
-                            <button>View More</button>
+                        <p>${module.description}</p>
+                        <button>View More</button>
                         </div>
                     </div>
                 `;
@@ -1229,25 +1235,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+  
     createFilterDropdown();
     displayModules();
 
     document.getElementById('yearFilter').addEventListener('change', function() {
         const selectedYear = this.value;
-        displayModules(currentCourse, selectedYear);
+        const searchQuery = searchInput.value.toLowerCase();
+        displayModules(currentCourse, selectedYear, searchQuery);
     });
 
+   
     let currentCourse = 'all';
     document.querySelectorAll('.sideNav-button').forEach(button => {
         button.addEventListener('click', () => {
             currentCourse = button.getAttribute('data-course');
             const selectedYear = document.getElementById('yearFilter').value;
-            displayModules(currentCourse, selectedYear);
+            const searchQuery = searchInput.value.toLowerCase();
+            displayModules(currentCourse, selectedYear, searchQuery);
         });
     });
 
-    
-    displayModules();
+    searchInput.addEventListener('input', () => {
+        const searchQuery = searchInput.value.toLowerCase();
+        displayModules(currentCourse, document.getElementById('yearFilter').value, searchQuery);
+    });
 });
 
 
