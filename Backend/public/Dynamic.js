@@ -1185,21 +1185,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lecturerContainer.insertAdjacentHTML('beforeend', lecturerCard);
     });
 
-  /*  modules.forEach(module => {
-        const moduleCard = `
-            <div class="module-card ${module.course} year${module.year}">
-                <div class="module-header">
-                    <h1>${module.code}</h1>
-                </div>
-                <div class="card-content">
-                    <p>${module.description}</p>
-                    <button>View More</button>
-                </div>
-            </div>
-        `;
-        moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
-    });*/
-
 
     function createFilterDropdown() {
         
@@ -1224,10 +1209,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 
-    function displayModules(filterYear = 'all') {
+    function displayModules(course = 'all', filterYear = 'all') {
         moduleContainer.innerHTML = '';
         modules.forEach(module => {
-            if (filterYear === 'all' || module.year == filterYear) {
+            if ((course === 'all' || module.course === course) && (filterYear === 'all' || module.year == filterYear)) {
                 const moduleCard = `
                     <div class="module-card ${module.course} year${module.year}">
                         <div class="module-header">
@@ -1248,10 +1233,23 @@ document.addEventListener('DOMContentLoaded', () => {
     displayModules();
 
     document.getElementById('yearFilter').addEventListener('change', function() {
-        displayModules(this.value);
+        const selectedYear = this.value;
+        displayModules(currentCourse, selectedYear);
     });
 
+    let currentCourse = 'all';
+    document.querySelectorAll('.sideNav-button').forEach(button => {
+        button.addEventListener('click', () => {
+            currentCourse = button.getAttribute('data-course');
+            const selectedYear = document.getElementById('yearFilter').value;
+            displayModules(currentCourse, selectedYear);
+        });
+    });
+
+    
+    displayModules();
 });
+
 
 
 
