@@ -3,8 +3,19 @@ const port = 3000;
 let sName = '';
 let sSurname = '';
 let sID = '';
+let sAdr = '';
+let sCity = '';
+let sZip = '';
+let sProvince = '';
+let sGender = '';
+let sEmail = '';
+let sCourse = '';
+let sAttendance = '';
+let sStudentId = '';
+let sPassword = '';
 
-document.addEventListener('DOMContentLoaded', async () => {
+
+document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -58,36 +69,55 @@ document.addEventListener('DOMContentLoaded', async () => {
     const formLogin = document.getElementById('FormLogin');
 
     if (formLogin) {
-        formLogin.addEventListener('submit', function (event) {
+        formLogin.addEventListener('submit', async function (event) {
             event.preventDefault();
             const studentId = document.getElementById('StudentID').value;
             const password = document.getElementById('password').value;
 
-            fetch(`http://localhost:${port}/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ studentId, password })
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.message === 'Login successful') {
-                        if (password === 'BelgiumCampus') {
-                            if (passwordChangeModal) passwordChangeModal.style.display = 'flex';
-                        }
-                        getStudentDetails()
-                        console.log(`${sID} ${sName} ${sSurname}`); // Ensure values are correctly assigned
+            try {
+                const response = await fetch(`http://localhost:${port}/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ studentId, password })
+                });
 
-                        // Additional code if needed
-                    } else {
-                        alert(data.message);
+                const data = await response.json();
+                if (data.message === 'Login successful') {
+                    if (password === 'BelgiumCampus') {
+                        if (passwordChangeModal) passwordChangeModal.style.display = 'flex';
                     }
-                })
-                .catch(error => console.error('Error:', error));
+                    await getStudentDetails();
+                    console.log(`${sID} ${sName} ${sSurname}`);
+                    window.location.href = './Dashboard.html'
+
+                    // Additional code if needed
+                } else {
+                    alert(data.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
         });
     }
 });
+
+async function getStudentDetails() {
+    try {
+        console.log(`GET StudentDetails executed`);
+        const response = await fetch(`http://localhost:${port}/getStudentDetails`);
+        const data = await response.json();
+        console.log(data);
+        sName = data.name;
+        sID = data.id;
+        sSurname = data.surname;
+    } catch (error) {
+        console.error('Error fetching student details:', error);
+        return null;
+    }
+}
+
 
 // Courses side nav
 function toggleNav() {
@@ -417,10 +447,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             const response = await fetch(`http://localhost:${port}/getStudentDetails`);
             const data = await response.json();
             console.log(data);
+
+            // Update all global variables
             sName = data.name;
-            sID = data.id;
             sSurname = data.surname;
-            console.log(`sID: ${sID} ${sName} ${sSurname}`);
+            sID = data.id;
+            sAdr = data.adr;
+            sCity = data.city;
+            sZip = data.zip;
+            sProvince = data.province;
+            sGender = data.gender;
+            sEmail = data.email;
+            sCourse = data.course;
+            sAttendance = data.attendance;
+            sStudentId = data.studentId;
+            sPassword = data.password;
+
         } catch (error) {
             console.error('Error fetching student details:', error);
             return null;
@@ -428,16 +470,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const DashboardLink = document.querySelector(`#dashboardLink`);
-    DashboardLink.style.backgroundColor = 'blue';
 
-    // Await the completion of getStudentDetails
     await getStudentDetails();
 
-    console.log(`sID: ${sID} ${sName} ${sSurname}`); // Log to check the value of sID
+    console.log(`sName: ${sName}`);
+    console.log(`sSurname: ${sSurname}`);
+    console.log(`sID: ${sID}`);
+    console.log(`sAdr: ${sAdr}`);
+    console.log(`sCity: ${sCity}`);
+    console.log(`sZip: ${sZip}`);
+    console.log(`sProvince: ${sProvince}`);
+    console.log(`sGender: ${sGender}`);
+    console.log(`sEmail: ${sEmail}`);
+    console.log(`sCourse: ${sCourse}`);
+    console.log(`sAttendance: ${sAttendance}`);
+    console.log(`sStudentId: ${sStudentId}`);
+    console.log(`sPassword: ${sPassword}`);
+
 
     if (sID && sID !== '') {
         DashboardLink.classList.add('visible');
     } else {
         DashboardLink.classList.add('notVisible');
     }
+    
 });
