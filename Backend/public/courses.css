@@ -8,12 +8,12 @@ body {
     display: grid;
     grid-template-areas:  "navbar navbar navbar"
                           "course search search"
-                          "course module lecturer"
                           "course description lecturer"
+                          "course module lecturer"
                           "footer footer footer"
                           ;
     
-    grid-template-rows: 6vh 11vh 70vh 35vh 15vh;
+    grid-template-rows: 6vh 11vh 23vh 70vh 15vh;
     grid-template-columns: 0.30fr 1fr 0.40fr;
 }
 
@@ -97,146 +97,6 @@ body {
     align-items: center;
     margin-right: 30px;
 }
-
-/* SideNav */
-/* .sidebar {
-    height: calc(87% - 120px);
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 60px; 
-    left: 0;
-    background-color: whitesmoke;
-    overflow-y: auto; 
-    transition: 0.5s;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.sidebar h1 {
-    color: rgb(124, 16, 16);
-    text-align: center;
-    margin-bottom: 10px;
-    padding-top: 10px; 
-}
-
-.sidebar .card {
-    width: 80%;
-    margin: 0.5em 0;
-    padding: 0.5em; 
-}
-
-.toggle-strip {
-    width: 20px; 
-    height: calc(91.80% - 120px); 
-    background-color: #111;
-    position: fixed;
-    top: 60px; 
-    left: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.toggle-strip i {
-    color: white;
-    font-size: 20px;
-    transition: transform 0.5s;
-}
-
-.courses h1 {
-    margin-bottom: 10px;
-}
-
-.CourseIcon {
-    width: 30px;
-    height: 30px; 
-    background: #DA0037;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.card:hover .CourseIcon {
-    box-shadow: 0 0 10px red;
-}
-
-.CourseIcon i {
-    font-size: 1em; 
-}
-
-.card p {
-    margin: 0.5em 0;
-    font-size: 0.7em; 
-    display: none;
-    opacity: 0;
-    transition: all .4s;
-    z-index: 1;
-}
-
-.card:hover p {
-    display: block;
-    opacity: 1;
-}
-
-.card h3 {
-    margin-top: 0.5em;
-    z-index: 1;
-    font-size: 1em;
-}
-
-.card::before, .card::after {
-    content: "";
-    position: absolute;
-    background: #171717;
-    width: 100%;
-    height: 40%;
-    z-index: 0;
-    border-radius: 15px 15px 0 0;
-    transition: all .4s;
-}
-
-.card::before {
-    top: 0;
-}
-
-.card:hover::before {
-    transform: translateY(-20px);
-}
-
-.card::after {
-    bottom: 10px;
-    height: 60%;
-    border-radius: 0 0 15px 15px;
-}
-
-.card {
-    width: 150px; 
-    height: 120px; 
-    color: white;
-    margin: 0.5em 0;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 1em; 
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-} */
-
-
-
 
 :root {
     --background: #f5f5f5;
@@ -896,7 +756,7 @@ label[for=sideNav-footer-toggle] {
 .description p{
     text-align: center;
     font-size: 1.2em;
-    margin: 5% 0
+    margin: 2% 0
 }
 
 .info-box {

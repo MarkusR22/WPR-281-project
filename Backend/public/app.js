@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         if (password === 'BelgiumCampus') {
                             if (passwordChangeModal) passwordChangeModal.style.display = 'flex';
                         }
-                        await getStudentDetails()
+                        getStudentDetails()
                         console.log(`${sID} ${sName} ${sSurname}`); // Ensure values are correctly assigned
 
                         // Additional code if needed
