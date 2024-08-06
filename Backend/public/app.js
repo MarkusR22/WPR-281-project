@@ -14,6 +14,37 @@ let sAttendance = '';
 let sStudentId = '';
 let sPassword = '';
 
+const courseDescriptions = {
+    BCOMP: {
+        cName: 'BA of Computer Science', cDescription: `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
+                                    computer science and its applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or 
+                                    internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`, 
+                                    Duration: `3 years academic
+                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
+                                    Location:`Pretoria Campus
+                                    Kempton Park Campus`},
+    BIT: {
+        cName: 'BA in IT', cDescription: `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
+                                    development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
+                                    with both theoretical knowledge and practical skills needed to excel in the IT industry.`,Duration: `3 years academic
+                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
+                                    Location:`Pretoria Campus
+                                    Kempton Park Campus`},
+    DIT: {
+        cName: 'Diploma in IT', cDescription: `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
+                                    skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
+                                    in the IT industry. `,Duration: `3 years academic
+                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
+                                    Location:`Pretoria Campus
+                                    Kempton Park Campus`},
+    CIT: {
+        cName: 'Certificate in IT', cDescription: `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
+                                    skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
+                                    or prepare for further education in IT.`,Duration: `3 years academic
+                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
+                                    Location:`Pretoria Campus
+                                    Kempton Park Campus`},
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for sections
@@ -304,37 +335,58 @@ async function createHome() {
                 <div class="info-item">
                     <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                     <span class="label">Duration:</span>
-                    <span class="value">3 years academic<br>1 year workplace training</span>
+                    <span ID="Duration" class="value"></span>
                 </div>
                 <div class="info-item">
                     <span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span>
                     <span class="label">NQF:</span>
-                    <span class="value">Level 8</span>
+                    <span ID="NQF" class="value"></span>
                 </div>
                 <div class="info-item">
                     <span class="icon"><i class="fa fa-folder" aria-hidden="true"></i></span>
                     <span class="label">Credits:</span>
-                    <span class="value">506</span>
+                    <span ID="Credits" class="value"></span>
                 </div>
                 <div class="info-item">
                     <span class="icon"><i class="fa fa-id-badge" aria-hidden="true"></i></span>
                     <span class="label">SAQA ID:</span>
-                    <span class="value">62689</span>
+                    <span ID="SAQAID" class="value"></span>
                 </div>
                 <div class="info-item">
                     <span class="icon"><i class="fa fa-map-pin" aria-hidden="true"></i></span>
                     <span class="label">Location:</span>
-                    <span class="value">Pretoria Campus<br>Kempton Park Campus</span>
+                    <span ID="Location" class="value"></span>
                 </div>
             </div>
-            <p>The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in computer science and its 
+            <p id ="cDesc">The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in computer science and its 
             applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or internship. The curriculum 
             combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries. </p>
         </div>
     `
 
-    let courseHeading = document.createElement('h1')
-    courseHeading.textContent = `${sCourse}`
+    let courseHeading = document.createElement('h1');
+    let courseDesc = document.querySelector('#cDesc');
+    let Duration = document.querySelector('#Duration');
+    let NQF = document.querySelector('#NQF');
+    let Credits = document.querySelector('#Credits');
+    let SAQAID = document.querySelector('#SAQAID');
+    let Location = document.querySelector('#Location');
+
+
+    Object.keys(courseDescriptions).forEach(course => {
+        if (sCourse == course) {
+
+            courseHeading.textContent = courseDescriptions[course].cName;
+            courseDesc.textContent = courseDescriptions[course].cDescription;
+            Duration.textContent = courseDescriptions[course].Duration;
+            NQF.textContent = courseDescriptions[course].NQF;
+            Credits.textContent = courseDescriptions[course].Credits;
+            SAQAID.textContent = courseDescriptions[course].SAQAID;
+            Location.textContent = courseDescriptions[course].Location;
+            
+        }
+    });
+
 
     let course = document.querySelector('.course')
     course.appendChild(courseHeading)
@@ -451,8 +503,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         DashboardLink.classList.add('notVisible');
     }
-    
+    console.log(`Dynamic generate : ${sName} `)
+
+    let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
+    let StudentName = document.createElement('a');
+    StudentName.textContent = `${sName} ${sSurname}`;
+    let StudentID = document.createElement('span');
+    StudentID.textContent = `${sID}`;
+
+    StudentDetailsdiv.appendChild(StudentName);
+    StudentDetailsdiv.appendChild(StudentID);
+
 });
+
+
 
 async function getStudentDetails() {
     try {
@@ -1758,7 +1822,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayOverview(course, description) {
         description.innerHTML = ''
         let heading = document.createElement('h1')
-        
+
         let coursePara = document.createElement('p')
         switch (course) {
             case 'BCOMP':

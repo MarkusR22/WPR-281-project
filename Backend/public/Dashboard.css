@@ -338,7 +338,7 @@ label[for=sideNav-toggle] {
     transition: opacity 1s;
 }
 
-#sideNav-footer-subtitle {
+.sideNav-footer-subtitle {
     color: var(--sideNavbar-light-secondary);
     font-size: 0.6rem;
 }

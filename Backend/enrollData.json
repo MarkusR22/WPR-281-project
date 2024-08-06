@@ -9,7 +9,7 @@
     "province": "Gau",
     "gender": "Male",
     "email": "erickknoetze06@gmail.com",
-    "course": "BA of Computing",
+    "course": "BCOMP",
     "attendance": "face-to-face",
     "studentId": "600984",
     "password": "P@ssw0rd"
@@ -24,10 +24,10 @@
     "province": "Gau",
     "gender": "Male",
     "email": "Marco@mail.com",
-    "course": "Certificate in IT",
+    "course": "CIT",
     "attendance": "online",
     "studentId": "600985",
-    "password": "Ballas123"
+    "password": "123"
   },
   {
     "name": "IUHBO8IUY",
