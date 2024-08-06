@@ -292,7 +292,48 @@ async function handleSubmit(event) {
 //Creating table for course
 function createHome() {
     let dashContent = document.querySelector(".dashboardContent");
-    dashContent.innerHTML = ''  
+    dashContent.innerHTML = `
+        <div class="course">
+          
+        </div>
+        <div class="countdown-container">
+          <h2>Starts 1 December 2024</h2>
+          <div id="countdown" class="countdown"></div>
+        </div>
+    `  
+
+    let courseHeading = document.createElement('h1')
+    courseHeading.textContent = 'BA of Computer Science'
+    
+    let course = document.querySelector('.course')
+    course.appendChild(courseHeading)
+
+
+    function startCountdown() {
+        let eventDate = new Date("November 1, 2024 00:00:00").getTime();;
+
+      
+        const timerInterval = setInterval(function() {
+          const now = new Date().getTime();
+          const timeRemaining = eventDate - now;
+      
+          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      
+          document.querySelector("#countdown").innerHTML = `
+            ${days}d ${hours}h ${minutes}m ${seconds}s
+          `;
+      
+          if (timeRemaining < 0) {
+            clearInterval(timerInterval);
+            document.querySelector("#countdown").innerHTML = "The event has started!";
+          }
+        }, 1000);
+      }
+
+      startCountdown()
 
     let tHead = document.createElement("thead");
     let tBody = document.createElement("tbody");
@@ -372,7 +413,8 @@ function createHome() {
     // table.style.all = "1px solid black";
     // table.style.borderCollapse = "collapse";
     table.style.width = '70%';
-    table.style.margin = '0 auto';
+    table.style.height = '30%';
+    // table.style.margin = '0 auto';
     table.style.borderCollapse = 'collapse';
     table.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
    
