@@ -1,4 +1,7 @@
-let sName, sSurname;
+const port = 3000;
+
+let sName = '';
+let sSurname = '';
 let sID = '';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const studentId = document.getElementById('StudentID').value;
             const password = document.getElementById('password').value;
 
-            fetch('http://localhost:3000/login', {
+            fetch(`http://localhost:${port}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -138,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            fetch('http://localhost:3000/changePassword', {
+            fetch(`http://localhost:${port}/changePassword`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -164,7 +167,7 @@ if (signUpForm) {
         const username = document.getElementById('signUpUsername').value;
         const password = document.getElementById('signUpPassword').value;
 
-        fetch('http://localhost:3000/signup', {
+        fetch(`http://localhost:${port}/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -229,7 +232,7 @@ async function handleSubmit(event) {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/saveForm', {
+        const response = await fetch(`http://localhost:${port}/saveForm`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -410,11 +413,27 @@ function createHome() {
 
 const DashboardLink = document.querySelector(`#dashboardLink`);
 DashboardLink.style.backgroundColor = 'blue';
-
-console.log(`sID: ${sID}`); // Log to check the value of sID
+getStudentDetails();
+console.log(`sID: ${sID} ${sName} ${sSurname}`); // Log to check the value of sID
 
 if (sID && sID !== '') {
     DashboardLink.classList.add('visible');
 } else {
     DashboardLink.classList.add('notVisible');
+}
+
+async function getStudentDetails() {
+    try {
+        console.log(`GET StudentDetails executed`);
+        const response = await fetch(`http://localhost:${port}/getStudentDetails`);
+        const data = await response.json();
+        console.log(data);
+        sName = data.name;
+        sID = data.id;
+        sSurname = data.surname;
+        console.log(`sID: ${sID} ${sName} ${sSurname}`);
+    } catch (error) {
+        console.error('Error fetching student details:', error);
+        return null;
+    }
 }

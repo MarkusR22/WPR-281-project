@@ -858,6 +858,7 @@ label[for=sideNav-footer-toggle] {
 
 .frontCard img {
     width: 75%;
+    border-radius: 100%;
 }
 
 .backCard {
