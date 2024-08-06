@@ -1249,23 +1249,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const moduleContainer = document.querySelector('.modules');
     const searchInput = document.querySelector('.search-input');
 
+    function displayLecturers(course = 'all') {
+        lecturerContainer.innerHTML = '';
+        lecturers.forEach(lecturer => {
+            const isCourseMatch = course === 'all' || lecturer.modules.some(module => modules.find(m => m.code === module && m.course === course));
+            if (isCourseMatch) {
+                const lecturerCard = `
+                    <div class="container">
+                        <div class="lecturerCard">
+                            <div class="frontCard">
+                                <img src="${lecturer.imgSrc}" alt="${lecturer.name}">
+                                <h3>${lecturer.name}</h3>
+                            </div>
+                            <div class="backCard">
+                                <p>${lecturer.email}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                lecturerContainer.insertAdjacentHTML('beforeend', lecturerCard);
+            }
+        });
+    }
 
-    lecturers.forEach(lecturer => {
-        const lecturerCard = `
-            <div class="container">
-                <div class="lecturerCard">
-                    <div class="frontCard">
-                        <img src="${lecturer.imgSrc}" alt="${lecturer.name}">
-                        <h3>${lecturer.name}</h3>
-                    </div>
-                    <div class="backCard">
-                        <p>${lecturer.email}</p>
-                    </div>
-                </div>
-            </div>
-        `;
-        lecturerContainer.insertAdjacentHTML('beforeend', lecturerCard);
-    });
 
 
     function createFilterDropdown() {
@@ -1288,8 +1294,8 @@ document.addEventListener('DOMContentLoaded', () => {
         filterContainer.appendChild(label);
         filterContainer.appendChild(selectElement);
     }
-
-
+    
+ 
     function displayModules(course = 'all', filterYear = 'all', searchQuery = '') {
         moduleContainer.innerHTML = '';
         modules.forEach(module => {
@@ -1314,6 +1320,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
 
     function displayOverview(course, description) {
         description.innerHTML = ''
@@ -1364,9 +1371,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     createFilterDropdown();
     displayModules();
+    displayLecturers(); 
 
     document.getElementById('yearFilter').addEventListener('change', function () {
         const selectedYear = this.value;
@@ -1383,6 +1390,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedYear = document.getElementById('yearFilter').value;
             const searchQuery = searchInput.value.toLowerCase();
             displayModules(currentCourse, selectedYear, searchQuery);
+            displayLecturers(currentCourse);
             displayOverview(currentCourse, courseDescription)
         });
     });
@@ -1391,6 +1399,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchQuery = searchInput.value.toLowerCase();
         displayModules(currentCourse, document.getElementById('yearFilter').value, searchQuery);
     });
+   
 });
 
 
