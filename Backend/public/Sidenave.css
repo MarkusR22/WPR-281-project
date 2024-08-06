@@ -12,6 +12,8 @@ html,
 body {
     margin: 0;
     background: var(--background);
+
+    
 }
 
 #sideNav-toggle:checked~#sideNav-header {
@@ -397,10 +399,5 @@ label[for=sideNav-footer-toggle] {
     background-color: #D62929;
 }
 
-.dashboardContent{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: black; */
-}
+
+

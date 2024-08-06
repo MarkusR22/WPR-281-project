@@ -289,6 +289,7 @@ async function handleSubmit(event) {
 //     }
 // });
 
+//Creating table for course
 function createHome() {
     let dashContent = document.querySelector(".dashboardContent");
     dashContent.innerHTML = ''  
@@ -313,10 +314,20 @@ function createHome() {
       "Lecturers",
     ];
 
+    // Create and append the heading
+    // const heading = document.createElement('h1');
+    // heading.textContent = 'Belgium Campus Home Dashboard';
+    // heading.style.textAlign = 'center';
+    // heading.style.color = '#333';
+    // document.getElementsByClassName('dashboardContent').appendChild(heading);
+
     Heading.forEach((data) => {
       let th = document.createElement("th");
-      th.style.border = "1px solid black";
-      th.style.padding = "5px";
+    th.style.padding = '10px';
+    th.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+    th.style.color = 'white';
+    th.style.textAlign = 'center';
+    th.style.fontSize = '1.3em';
 
       th.textContent = data;
       tHead.appendChild(th);
@@ -337,8 +348,33 @@ function createHome() {
       tBody.appendChild(row);
     });
 
+    const rows = table.querySelectorAll('tr');
+            for (let i = 1; i < rows.length; i++) {
+                if (i % 2 === 0) {
+                    rows[i].style.backgroundColor = '#f2f2f2';
+                }
+            }
+
+            // Add hover effect
+            rows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    row.style.backgroundColor = '#ddd';
+                });
+                row.addEventListener('mouseout', () => {
+                    row.style.backgroundColor = '';
+                    if (Array.from(rows).indexOf(row) % 2 === 0 && row !== headerRow) {
+                        row.style.backgroundColor = '#f2f2f2';
+                    }
+                });
+            });
+
     table.appendChild(tBody);
-    table.style.all = "1px solid black";
-    table.style.borderCollapse = "collapse";
+    // table.style.all = "1px solid black";
+    // table.style.borderCollapse = "collapse";
+    table.style.width = '70%';
+    table.style.margin = '0 auto';
+    table.style.borderCollapse = 'collapse';
+    table.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+   
     dashContent.appendChild(table);
   }
