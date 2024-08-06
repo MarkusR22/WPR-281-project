@@ -9,11 +9,11 @@ body {
     grid-template-areas:  "navbar navbar navbar"
                           "course search search"
                           "course module lecturer"
-                          "course description lecturer"
+                          "course module lecturer"
                           "footer footer footer"
                           ;
     
-    grid-template-rows: 6vh 7vh 70vh 35vh 15vh;
+    grid-template-rows: 6vh 7vh 70vh 20vh 15vh;
     grid-template-columns: 0.30fr 1fr 0.40fr;
 }
 
@@ -875,7 +875,7 @@ label[for=sideNav-footer-toggle] {
 }
 
 /* Course description */
-.description{
+/* .description{
     grid-area: description;
     display: flex;
     justify-content: center;
@@ -883,7 +883,7 @@ label[for=sideNav-footer-toggle] {
     background-color: #f6f6f6;
     margin: 0;
     padding: 20px;
-}
+} */
 
 .info-box {
     background-color: #222;
