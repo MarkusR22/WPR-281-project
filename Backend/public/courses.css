@@ -28,12 +28,13 @@ body {
     justify-content: space-between;
     padding: 10px 20px; 
     z-index: 3;    
-}
 
+}
 .navbar a {
     color: #fff;
     padding: 10px;
     border-radius: 4px;
+    text-decoration: none;
 }
 
 .navbar a:hover {
