@@ -46,9 +46,10 @@ app.post('/login', (req, res) => {
 
         const students = JSON.parse(data);
         const student = students.find(s => s.studentId === studentId && s.password === password);
+        console.log(`${Object.keys(student)}`)
 
         if (student) {
-            res.json({ message: 'Login successful' });
+            res.json({ message: 'Login successful', studentID : student.studentId, studentName: student.name, studentSurname : student.surname});
         } else {
             res.json({ message: 'Invalid Student ID or password' });
         }
