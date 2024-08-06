@@ -1185,7 +1185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lecturerContainer.insertAdjacentHTML('beforeend', lecturerCard);
     });
 
-    modules.forEach(module => {
+  /*  modules.forEach(module => {
         const moduleCard = `
             <div class="module-card ${module.course} year${module.year}">
                 <div class="module-header">
@@ -1198,7 +1198,59 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
         moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
+    });*/
+
+
+    function createFilterDropdown() {
+        
+        const filterContainer = document.getElementById('filterContainer');
+        const selectElement = document.createElement('select');
+        selectElement.id = 'yearFilter';
+        
+        const years = ['all', 1, 2, 3];
+        years.forEach(year => {
+            const optionElement = document.createElement('option');
+            optionElement.value = year;
+            optionElement.text = year === 'all' ? 'All Years' : `Year ${year}`;
+            selectElement.appendChild(optionElement);
+        });
+
+        const label = document.createElement('label');
+        label.htmlFor = 'yearFilter';
+        label.innerText = 'Select Year: ';
+        
+        filterContainer.appendChild(label);
+        filterContainer.appendChild(selectElement);
+    }
+    
+
+    function displayModules(filterYear = 'all') {
+        moduleContainer.innerHTML = '';
+        modules.forEach(module => {
+            if (filterYear === 'all' || module.year == filterYear) {
+                const moduleCard = `
+                    <div class="module-card ${module.course} year${module.year}">
+                        <div class="module-header">
+                            <h1>${module.code}</h1>
+                        </div>
+                        <div class="card-content">
+                            <p>${module.description}</p>
+                            <button>View More</button>
+                        </div>
+                    </div>
+                `;
+                moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
+            }
+        });
+    }
+
+    createFilterDropdown();
+    displayModules();
+
+    document.getElementById('yearFilter').addEventListener('change', function() {
+        displayModules(this.value);
     });
+
 });
 
 

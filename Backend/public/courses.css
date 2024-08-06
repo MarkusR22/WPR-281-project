@@ -236,7 +236,6 @@ body {
 
 
 
-
 :root {
     --background: #f5f5f5;
     --sideNavbar-width: 256px;
@@ -608,15 +607,6 @@ label[for=sideNav-footer-toggle] {
 
 
 
-
-
-
-
-
-
-
-
-
 /*Modules*/
 .modules{
     grid-area: module;
@@ -755,18 +745,18 @@ label[for=sideNav-footer-toggle] {
 .search{
     grid-area: search;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .searchBar{
-    width: max-content;
     display: flex;
     align-items: center;
     background: #f6f6f6;
     padding: 14px;
     border-radius: 28px;
-    width: 600px;
+    width: 70%;
     transition: box-shadow 0.25s;
 }
 
@@ -787,6 +777,30 @@ label[for=sideNav-footer-toggle] {
 .search-input::placeholder, .search-icon{
     color: rgba(0, 0, 0, 0.5) ;
 }
+
+#filterContainer {
+    grid-area: search;
+    align-items: center;
+    justify-content: center;
+    background: #fcfbfb; 
+    border-radius: 5px;
+    width: 35%;
+}
+
+#filterContainer label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #000;
+}
+
+#filterContainer select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #e41c1c;
+    border-radius: 5px;
+}
+
+
 
 /*Lecturers*/
 .lecturer{
