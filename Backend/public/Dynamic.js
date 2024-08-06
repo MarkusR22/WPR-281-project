@@ -1,3 +1,47 @@
+const port = 3000;
+
+let sName = '';
+let sSurname = '';
+let sID = '';
+let sAdr = '';
+let sCity = '';
+let sZip = '';
+let sProvince = '';
+let sGender = '';
+let sEmail = '';
+let sCourse = '';
+let sAttendance = '';
+let sStudentId = '';
+let sPassword = '';
+
+async function getStudentDetails() {
+    try {
+        console.log(`GET StudentDetails executed`);
+        const response = await fetch(`http://localhost:${port}/getStudentDetails`);
+        const data = await response.json();
+        console.log(data);
+
+        // Update all global variables
+        sName = data.name;
+        sSurname = data.surname;
+        sID = data.id;
+        sAdr = data.adr;
+        sCity = data.city;
+        sZip = data.zip;
+        sProvince = data.province;
+        sGender = data.gender;
+        sEmail = data.email;
+        sCourse = data.course;
+        sAttendance = data.attendance;
+        sStudentId = data.studentId;
+        sPassword = data.password;
+
+    } catch (error) {
+        console.error('Error fetching student details:', error);
+        return null;
+    }
+}
+
 const lecturers = [
     {
         name: 'Francois Venter',
