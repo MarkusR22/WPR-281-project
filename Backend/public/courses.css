@@ -13,7 +13,7 @@ body {
                           "footer footer footer"
                           ;
     
-    grid-template-rows: 6vh 7vh 70vh 35vh 15vh;
+    grid-template-rows: 6vh 11vh 70vh 35vh 15vh;
     grid-template-columns: 0.30fr 1fr 0.40fr;
 }
 
@@ -22,7 +22,7 @@ body {
     grid-area: navbar;
     position: fixed;
     top: 0;
-    width: 97.1%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: space-between;
