@@ -1713,7 +1713,7 @@ const venues = [
     },
     {
         course: ['BIT', 'DIT'],
-        modules: ['PRG 172', 'STA 271', 'PRJ 371', 'AIT 4712', 'NWD 161', 'SEC 261', 'DBD 361','MAT 381'],
+        modules: ['PRG 172', 'STA 271', 'PRJ 371', 'AIT 4712', 'NWD 161', 'SEC 261', 'DBD 361', 'MAT 381'],
         name: "Gamma",
         seats: 50,
         location: "main campus",
@@ -1737,7 +1737,7 @@ const venues = [
     },
     {
         course: ['BCOMP', 'DIT'],
-        modules: ['PRG 181', 'PRG 282', 'MLG 381', 'AIT 481', 'PRP 161', 'SWA 261', 'WDB 361','MAT 381'],
+        modules: ['PRG 181', 'PRG 282', 'MLG 381', 'AIT 481', 'PRP 161', 'SWA 261', 'WDB 361', 'MAT 381'],
         name: "Lambda",
         seats: 30,
         location: "south campus",
@@ -1745,7 +1745,7 @@ const venues = [
     },
     {
         course: ['BIT', 'DIT'],
-        modules: ['BUM 171', 'SAD 271', 'SEN 371', 'WPR 161', 'SWT 261', 'WFS 361','DBD 381'],
+        modules: ['BUM 171', 'SAD 271', 'SEN 371', 'WPR 161', 'SWT 261', 'WFS 361', 'DBD 381'],
         name: "Theta",
         seats: 45,
         location: "south campus",
@@ -1846,7 +1846,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (passwordChangeModal) passwordChangeModal.style.display = "flex";
                     }
                     await getStudentDetails();
-                    
+
                     if (sPassword !== 'BelgiumCampus') {
                         window.location.href = "./Dashboard.html";
                     }
@@ -2036,6 +2036,10 @@ async function handleSubmit(event) {
 }
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    createHome();
+})
+
 
 async function createHome() {
     let dashContent = document.querySelector(".dashboardContent");
@@ -2173,7 +2177,7 @@ async function createHome() {
         });
 
         const cellVenues = document.createElement("td");
-        venues.forEach(venue => {  
+        venues.forEach(venue => {
             venue.modules.forEach(vmodule => {
                 console.log(`${module.code}`)
                 if (vmodule == module.code) {
@@ -2229,12 +2233,12 @@ async function createHome() {
     tableContainer.appendChild(table);
     dashContent.appendChild(tableContainer);
 
-    let button=document.createElement('button');
+    let button = document.createElement('button');
     button.id = 'printTableButton';
     button.innerText = 'Print Table';
     button.style.display = 'block';
     button.style.marginLeft = 'auto';
-    button.style.marginTop='0.5vw';
+    button.style.marginTop = '0.5vw';
     button.style.marginRight = '4.1vw';
     button.style.padding = '10px 30px';
     button.style.backgroundColor = "grey";
@@ -2242,7 +2246,7 @@ async function createHome() {
     button.style.border = 'none';
     button.style.borderRadius = '5px';
     button.style.cursor = 'pointer';
-    button.onclick=function(){
+    button.onclick = function () {
         window.print()
     }
     dashContent.appendChild(button);
@@ -2329,7 +2333,7 @@ async function createMyModules() {
 
     let pageHeading = document.createElement('h1')
     pageHeading.textContent = "My modules"
-  let filteredModules = modules.filter(module => module.course === sCourse);
+    let filteredModules = modules.filter(module => module.course === sCourse);
 
     let moduleTable = document.createElement('table');
     moduleTable.className = 'moduleTable';
@@ -2384,22 +2388,22 @@ async function createMyModules() {
     completedTable.appendChild(completedTableHeader);
     completedTable.appendChild(completedTableBody);
 
-  // container for the tables
-  let bigContainer = document.createElement('div');
-  let container1 = document.createElement('div');
-  let container2 = document.createElement('div');
-  
-  container1.appendChild(moduleTable);
-  container2.appendChild(completedTable);
-  bigContainer.classList.add('bigContainer');
-  container1.classList.add('table');
-  container2.classList.add('table');
-  
-  dashContent.appendChild(pageHeading)
+    // container for the tables
+    let bigContainer = document.createElement('div');
+    let container1 = document.createElement('div');
+    let container2 = document.createElement('div');
 
-  bigContainer.appendChild(container1);
-  bigContainer.appendChild(container2);
-  dashContent.appendChild(bigContainer)
+    container1.appendChild(moduleTable);
+    container2.appendChild(completedTable);
+    bigContainer.classList.add('bigContainer');
+    container1.classList.add('table');
+    container2.classList.add('table');
+
+    dashContent.appendChild(pageHeading)
+
+    bigContainer.appendChild(container1);
+    bigContainer.appendChild(container2);
+    dashContent.appendChild(bigContainer)
 
 }
 
@@ -2439,18 +2443,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Get the modal
     let modal = document.getElementById("studentModal");
 
-let span = document.getElementsByClassName("close")[0];
+    let span = document.getElementsByClassName("close")[0];
 
-let form = document.getElementById("studentForm");
+    let form = document.getElementById("studentForm");
 
-btn.onclick = function() {
-            document.getElementById('name').value = sName;
-            document.getElementById('surname').value = sSurname;
-            document.getElementById('adr1').value = sAdr;
-            document.getElementById('city').value = sCity;
-            document.getElementById('zip').value = sZip;
-            document.getElementById('province').value = sProvince;
-            document.getElementById('email').value = sEmail;
+    btn.onclick = function () {
+        document.getElementById('name').value = sName;
+        document.getElementById('surname').value = sSurname;
+        document.getElementById('adr1').value = sAdr;
+        document.getElementById('city').value = sCity;
+        document.getElementById('zip').value = sZip;
+        document.getElementById('province').value = sProvince;
+        document.getElementById('email').value = sEmail;
         modal.style.display = "block";
     }
 
@@ -2717,32 +2721,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const calendarBtn = document.getElementById('calendarBtn');
     calendarBtn.addEventListener('click', createCalendar);
-  });
-  
-  let currentMonth = new Date().getMonth(); 
-  let currentYear = new Date().getFullYear(); 
-  
-  function createCalendar() {
-  
-      calendarContainer = document.createElement('div');
-      calendarContainer.id = 'calendarContainer';
-      
-      const monthDiv = document.createElement('div');
-      monthDiv.className = 'month';
-      monthDiv.innerHTML = `
+});
+
+let currentMonth = new Date().getMonth();
+let currentYear = new Date().getFullYear();
+
+function createCalendar() {
+
+    calendarContainer = document.createElement('div');
+    calendarContainer.id = 'calendarContainer';
+
+    const monthDiv = document.createElement('div');
+    monthDiv.className = 'month';
+    monthDiv.innerHTML = `
         <ul>
           <li class="prev" onclick="changeMonth(-1)">&#10094;</li>
           <li class="next" onclick="changeMonth(1)">&#10095;</li>
           <li id="monthYear"></li>
         </ul>
       `;
-  
-      const weekdaysUl = document.createElement('ul');
-      weekdaysUl.className = 'weekdays';
-      weekdaysUl.innerHTML = `
+
+    const weekdaysUl = document.createElement('ul');
+    weekdaysUl.className = 'weekdays';
+    weekdaysUl.innerHTML = `
         <li>Mo</li>
         <li>Tu</li>
         <li>We</li>
@@ -2751,60 +2755,59 @@ document.addEventListener('DOMContentLoaded', function() {
         <li>Sa</li>
         <li>Su</li>
       `;
-  
-      const daysUl = document.createElement('ul');
-      daysUl.className = 'days';
-      daysUl.id = 'days';
-  
-      calendarContainer.appendChild(monthDiv);
-      calendarContainer.appendChild(weekdaysUl);
-      calendarContainer.appendChild(daysUl);
-  
-      // Append calendar container to dashboardContent
-      document.querySelector('.dashboardContent').appendChild(calendarContainer);
-    }
-  
-    // Display the calendar
-    calendarContainer.style.display = 'block';
-    generateCalendar(currentMonth, currentYear);
-  
-  
-  function generateCalendar(month, year) {
+
+    const daysUl = document.createElement('ul');
+    daysUl.className = 'days';
+    daysUl.id = 'days';
+
+    calendarContainer.appendChild(monthDiv);
+    calendarContainer.appendChild(weekdaysUl);
+    calendarContainer.appendChild(daysUl);
+
+    // Append calendar container to dashboardContent
+    document.querySelector('.dashboardContent').appendChild(calendarContainer);
+}
+
+// Display the calendar
+calendarContainer.style.display = 'block';
+generateCalendar(currentMonth, currentYear);
+
+
+function generateCalendar(month, year) {
     const daysContainer = document.getElementById('days');
     const monthYearContainer = document.getElementById('monthYear');
-  
+
     daysContainer.innerHTML = '';
     const firstDay = new Date(year, month, 1).getDay();
     const lastDate = new Date(year, month + 1, 0).getDate();
-    
+
     // Adjust for days of the week, Sunday is 0
     const offset = (firstDay === 0) ? 6 : firstDay - 1;
-  
+
     for (let i = 0; i < offset; i++) {
-      daysContainer.innerHTML += '<li></li>';
+        daysContainer.innerHTML += '<li></li>';
     }
-  
+
     for (let i = 1; i <= lastDate; i++) {
-      daysContainer.innerHTML += `<li>${i}</li>`;
+        daysContainer.innerHTML += `<li>${i}</li>`;
     }
-  
+
     monthYearContainer.innerHTML = `${getMonthName(month)}<br><span style="font-size:18px">${year}</span>`;
-  }
-  
-  function getMonthName(month) {
+}
+
+function getMonthName(month) {
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return monthNames[month];
-  }
-  
-  function changeMonth(change) {
+}
+
+function changeMonth(change) {
     currentMonth += change;
     if (currentMonth > 11) {
-      currentMonth = 0;
-      currentYear++;
+        currentMonth = 0;
+        currentYear++;
     } else if (currentMonth < 0) {
-      currentMonth = 11;
-      currentYear--;
+        currentMonth = 11;
+        currentYear--;
     }
     generateCalendar(currentMonth, currentYear);
-  }
-  
+}

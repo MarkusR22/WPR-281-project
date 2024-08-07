@@ -418,12 +418,16 @@ max-width: 60%;
 #StudentEnroll label{
     text-align: right;
     padding-right: 20px;
+    align-content: center;
 }
 
 #formGroup {
     display: grid;
     grid-template-columns: 3fr 6fr;
-
+}
+#studentForm{
+    display: grid;
+    grid-template-columns: 3fr 6fr;
 }
 
 #formGroup label {
