@@ -808,9 +808,7 @@ label[for=sideNav-footer-toggle] {
 .overview {
     height: 100%;
     margin: 20px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
+  
 }
 
 .overview h1 {
