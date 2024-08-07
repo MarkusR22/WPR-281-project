@@ -558,3 +558,19 @@ label[for=sideNav-footer-toggle] {
 .bigContainer{
     display: flex;
 }
+
+/*/////////////////////////////////*/
+@media print {
+    body * {
+        visibility:hidden;
+    }
+    .Print *{
+        visibility: visible;
+    }
+    .Print {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}

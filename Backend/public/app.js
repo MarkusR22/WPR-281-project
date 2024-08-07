@@ -2078,8 +2078,7 @@ async function createHome() {
                 </div>
             </div>
             <p id ="cDesc"> </p>
-        </div>
-    `;
+        </div>`;
 
     let courseHeading = document.createElement("h1");
     let courseDesc = document.querySelector("#cDesc");
@@ -2218,10 +2217,29 @@ async function createHome() {
     table.style.width = "100%";
     table.style.borderCollapse = "collapse";
     table.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+    table.classList.add("Print")
 
 
     tableContainer.appendChild(table);
     dashContent.appendChild(tableContainer);
+
+    let button=document.createElement('button');
+    button.id = 'printTableButton';
+    button.innerText = 'Print Table';
+    button.style.display = 'block';
+    button.style.marginLeft = 'auto';
+    button.style.marginTop='0.5vw';
+    button.style.marginRight = '4.1vw';
+    button.style.padding = '10px 30px';
+    button.style.backgroundColor = "grey";
+    button.style.color = 'white';
+    button.style.border = 'none';
+    button.style.borderRadius = '5px';
+    button.style.cursor = 'pointer';
+    button.onclick=function(){
+        window.print()
+    }
+    dashContent.appendChild(button);
 }
 
 //Create Venues tab on Dashboard
