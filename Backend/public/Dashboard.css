@@ -560,7 +560,7 @@ label[for=sideNav-footer-toggle] {
 }
 
 
-.moduleTable, .completedTable {
+/* .moduleTable, .completedTable {
     width: 100%;
     border-collapse: collapse;
 }
@@ -602,4 +602,4 @@ label[for=sideNav-footer-toggle] {
     color: white;
     font-weight: 500;
     z-index: 1;
-}
+} */
