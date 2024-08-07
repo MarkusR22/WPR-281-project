@@ -280,5 +280,20 @@
     "attendance": "face-to-face",
     "studentId": "601002",
     "password": "102"
+  },
+  {
+    "name": "Johan",
+    "surname": "Swannepoel",
+    "email": "Johan@mail.com",
+    "id": "4582369452123",
+    "adr": "Brooklyn",
+    "city": "Pretoria",
+    "zip": "156",
+    "province": "Gau",
+    "gender": "Male",
+    "course": "BCOMP",
+    "attendance": "face-to-face",
+    "studentId": "601003",
+    "password": "123"
   }
 ]
