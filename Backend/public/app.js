@@ -2226,7 +2226,8 @@ async function createHome() {
 }
 
 //Create Venues tab on Dashboard
-function createVenues(){
+async function createVenues(){
+    await getStudentDetails()
     let pageHeading = document.createElement('h1')
     pageHeading.textContent = "Venues"
     let tHead = document.createElement('thead')
@@ -2235,7 +2236,7 @@ function createVenues(){
     let dashContent = document.querySelector('.dashboardContent')
     dashContent.innerHTML = ''
     dashContent.appendChild(pageHeading)
-    let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs', 'Map']
+    let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs']
 
     tableHeadings.forEach(heading => {
         let th = document.createElement('th')
@@ -2245,7 +2246,18 @@ function createVenues(){
 
     table.appendChild(tHead)
 
+    
     venues.forEach(data => {
+        let bFound = false
+        for (let i = 0; i < data.course.length; i++) {
+          
+          
+            if (sCourse === data.course[i]) {
+              bFound = true
+            }
+          
+        }
+        if (bFound){
         let tRow = document.createElement('tr')
         let cellName = document.createElement('td')
         cellName.textContent = data.name
@@ -2260,12 +2272,12 @@ function createVenues(){
         else {
           cellHasPcs.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
         }
-        // cellHasPcs.textContent = data.hasPCs
         tRow.appendChild(cellName)
         tRow.appendChild(cellSeats)
         tRow.appendChild(cellLocations)
         tRow.appendChild(cellHasPcs)
         tBody.appendChild(tRow)
+        }
     });
     table.appendChild(tBody)
     dashContent.appendChild(table)
@@ -2283,6 +2295,7 @@ function createVenues(){
         });
     });
 }
+
 async function createMyModules() {
   let dashContent = document.querySelector(".dashboardContent");
   dashContent.innerHTML = ''; // Clear any existing content
