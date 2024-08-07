@@ -45,7 +45,7 @@
       <div id="HomeButton" class="sideNav-button" onclick="createHome()">
         <i class="fas fa-home"></i><span>Home</span>
       </div>
-      <div  id="modButton" class="sideNav-button" onclick="createMyModules()">
+      <div id="modButton" class="sideNav-button" onclick="createMyModules()">
         <i class="fas fa-palette"></i><span>My Modules</span>
       </div>
       <div class="sideNav-button">
@@ -64,13 +64,11 @@
           <img src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547" />
         </div>
         <div id="sideNav-footer-titlebox">
-          
+
         </div>
         <label for="sideNav-footer-toggle"><i class="fas fa-caret-up"></i></label>
       </div>
       <div id="nav-footer-content">
-        <Lorem>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.</Lorem>
       </div>
     </div>
   </div>
@@ -105,39 +103,82 @@
       <a href="https://www.youtube.com/@BelgiumCampusIT"><i class="fa-brands fa-youtube"></i></a>
     </div>
   </div>
-  
+
   <div id="modal" class="modal">
     <div class="modalContent">
-        <span class="close">&times;</span>
-        <div class="modalBody">
-            <div class="loginForm">
-                <h3>Login</h3>
-                <form id="FormLogin">
-                    <label for="StudentID">StudentID:</label>
-                    <input type="StudentID" id="StudentID" name="StudentID" required>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit">Login</button>
-                </form>
-            </div>
-            <hr>
+      <span class="close">&times;</span>
+      <div class="modalBody">
+        <div class="loginForm">
+          <h3>Login</h3>
+          <form id="FormLogin">
+            <label for="StudentID">StudentID:</label>
+            <input type="StudentID" id="StudentID" name="StudentID" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+          </form>
         </div>
+        <hr>
+      </div>
     </div>
-</div>
-<div id="passwordChangeModal" class="modal">
+  </div>
+  <div id="passwordChangeModal" class="modal">
     <div class="modalContent">
-        <span class="close" id="closePasswordChange">&times;</span>
-        <h3>Change Password</h3>
-        <p>Please change you password form the temp password provide</p>
-        <form id="changePasswordForm">
-            <label for="newPassword">New Password:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-            <label for="confirmPassword">Confirm New Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-            <button type="submit">Change Password</button>
-        </form>
+      <span class="close" id="closePasswordChange">&times;</span>
+      <h3>Change Password</h3>
+      <p>Please change you password form the temp password provide</p>
+      <form id="changePasswordForm">
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <label for="confirmPassword">Confirm New Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <button type="submit">Change Password</button>
+      </form>
     </div>
-</div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="studentModal" class="modal">
+    <div id="StudentEnroll">
+      <h1>Student Details</h1>
+      <form id="formGroup" onsubmit="handleSubmit(event)">
+
+        <label>Name:</label>
+        <input type="text" id="name" name="name" placeholder="Full Name">
+        <input type="text" id="surname" name="surname" placeholder="Surname">
+        <br>
+
+        <label>ID number:</label>
+        <input type="text" id="id" name="id">
+        <br><br>
+
+
+        <label>Address:</label>
+        <input type="text" id="adr1" name="adr" placeholder="Address line 1">
+        <input type="text" id="adr2" name="adr" placeholder="Address line 2">
+        <input type="text" id="city" name="city" placeholder="City">
+        <input type="text" id="zip" name="zip" placeholder="Postal/Zip Code">
+
+        <select name="province" id="province">
+          <option value="" selected="selected">Select Province</option>
+          <option value="Gau">Gauteng</option>
+          <option value="MP">Mpumalanga</option>
+          <option value="LP">Limpopo</option>
+          <option value="NW">Northwest</option>
+          <option value="F">Freestate</option>
+          <option value="KZN">Kwazulu-Natal</option>
+          <option value="EC">Eastern Cape</option>
+          <option value="WC">Western Cape</option>
+          <option value="NC">Northern Cape</option>
+        </select>
+        <br><br>
+        <label>Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <button type="submit">Change</button>
+      </form>
+    </div>
+  </div>
+
 
   <script src="app.js"></script>
 </body>

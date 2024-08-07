@@ -400,6 +400,24 @@ label[for=sideNav-footer-toggle] {
     border-radius: 99px;
     background-color: #D62929;
 }
+#nav-footer-content div{
+    background-color: #222;
+    border-radius: 5px;
+    color: #ddd;
+    font-size: 20px;
+    margin-left: 5%;
+    width: fit-content;
+    text-align: center;
+    margin-top: 25%;
+}
+#nav-footer-content p{
+    padding: 9px;
+    
+}
+#nav-footer-content div :hover{
+    background-color: #413f3f;
+    cursor: pointer;
+}
 
 /*.dashboardContent{
     min-height: 100vh;

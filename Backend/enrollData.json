@@ -238,5 +238,20 @@
     "attendance": "face-to-face",
     "studentId": "600999",
     "password": "BelgiumCampus"
+  },
+  {
+    "name": "llewellyn",
+    "surname": "Fourie",
+    "id": "040928508965",
+    "adr": "Centurion",
+    "city": "Pretoria",
+    "zip": "1255",
+    "province": "Gau",
+    "gender": "Male",
+    "email": "Llewellyn@mail",
+    "course": "BCOMP",
+    "attendance": "face-to-face",
+    "studentId": "601000",
+    "password": "601000"
   }
 ]
