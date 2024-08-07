@@ -2717,94 +2717,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const calendarBtn = document.getElementById('calendarBtn');
-    calendarBtn.addEventListener('click', createCalendar);
-  });
-  
-  let currentMonth = new Date().getMonth(); 
-  let currentYear = new Date().getFullYear(); 
-  
-  function createCalendar() {
-  
-      calendarContainer = document.createElement('div');
-      calendarContainer.id = 'calendarContainer';
-      
-      const monthDiv = document.createElement('div');
-      monthDiv.className = 'month';
-      monthDiv.innerHTML = `
-        <ul>
-          <li class="prev" onclick="changeMonth(-1)">&#10094;</li>
-          <li class="next" onclick="changeMonth(1)">&#10095;</li>
-          <li id="monthYear"></li>
-        </ul>
-      `;
-  
-      const weekdaysUl = document.createElement('ul');
-      weekdaysUl.className = 'weekdays';
-      weekdaysUl.innerHTML = `
-        <li>Mo</li>
-        <li>Tu</li>
-        <li>We</li>
-        <li>Th</li>
-        <li>Fr</li>
-        <li>Sa</li>
-        <li>Su</li>
-      `;
-  
-      const daysUl = document.createElement('ul');
-      daysUl.className = 'days';
-      daysUl.id = 'days';
-  
-      calendarContainer.appendChild(monthDiv);
-      calendarContainer.appendChild(weekdaysUl);
-      calendarContainer.appendChild(daysUl);
-  
-      // Append calendar container to dashboardContent
-      document.querySelector('.dashboardContent').appendChild(calendarContainer);
+function createCalendar() {
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://calendar.google.com/calendar/embed?src=12fddcdb616b374a52f5f59f79cd45328de027555d061173deab764ae88da984%40group.calendar.google.com&ctz=Africa%2FJohannesburg';
+    iframe.style.border = '0';
+    iframe.width = '100%';
+    iframe.height = '600'; 
+    iframe.id = 'calendarIframe'; 
+    var container = document.querySelector('.dashboardContent');      
+    if (container) {
+        container.innerHTML = '';
+        container.appendChild(iframe);
+    } else {
+        console.error('Container with class "dashboardContent" not found.');
     }
-  
-    // Display the calendar
-    calendarContainer.style.display = 'block';
-    generateCalendar(currentMonth, currentYear);
-  
-  
-  function generateCalendar(month, year) {
-    const daysContainer = document.getElementById('days');
-    const monthYearContainer = document.getElementById('monthYear');
-  
-    daysContainer.innerHTML = '';
-    const firstDay = new Date(year, month, 1).getDay();
-    const lastDate = new Date(year, month + 1, 0).getDate();
-    
-    // Adjust for days of the week, Sunday is 0
-    const offset = (firstDay === 0) ? 6 : firstDay - 1;
-  
-    for (let i = 0; i < offset; i++) {
-      daysContainer.innerHTML += '<li></li>';
-    }
-  
-    for (let i = 1; i <= lastDate; i++) {
-      daysContainer.innerHTML += `<li>${i}</li>`;
-    }
-  
-    monthYearContainer.innerHTML = `${getMonthName(month)}<br><span style="font-size:18px">${year}</span>`;
-  }
-  
-  function getMonthName(month) {
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return monthNames[month];
-  }
-  
-  function changeMonth(change) {
-    currentMonth += change;
-    if (currentMonth > 11) {
-      currentMonth = 0;
-      currentYear++;
-    } else if (currentMonth < 0) {
-      currentMonth = 11;
-      currentYear--;
-    }
-    generateCalendar(currentMonth, currentYear);
-  }
+}
+
   
