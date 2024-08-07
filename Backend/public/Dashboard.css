@@ -24,6 +24,13 @@ body, html {
     margin: 5%;
 }
 
+.dashboardContent table{
+   
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* margin: 5%; */
+}
+
 .dashboardContent .contentContainer table th{
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.85);
@@ -32,7 +39,22 @@ body, html {
     font-size: 1.3em;
 }
 
+.dashboardContent table th{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+
 .dashboardContent .contentContainer table td{
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+.dashboardContent table td{
     padding: 5px;
     border: 1px solid black;
     text-align: center;
