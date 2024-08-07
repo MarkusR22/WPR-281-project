@@ -2767,7 +2767,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Display the calendar
     calendarContainer.style.display = 'block';
     generateCalendar(currentMonth, currentYear);
-  }
+  
   
   function generateCalendar(month, year) {
     const daysContainer = document.getElementById('days');
