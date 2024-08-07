@@ -323,6 +323,9 @@ main {
     border-radius: 8px;
     color: white;
 }
+.modal label, h1{
+    color: white;
+}
 
 .close {
     color: #aaa;

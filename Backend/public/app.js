@@ -1847,8 +1847,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     await getStudentDetails();
                     console.log(`${sID} ${sName} ${sSurname}`);
-                    window.location.href = "./Dashboard.html";
-
+                    if (sPassword !== 'BelgiumCampus') {
+                        window.location.href = "./Dashboard.html";
+                    }
                     // Additional code if needed
                 } else {
                     alert(data.message);
@@ -1859,21 +1860,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-async function getStudentDetails() {
-    try {
-        console.log(`GET StudentDetails executed`);
-        const response = await fetch(`http://localhost:${port}/getStudentDetails`);
-        const data = await response.json();
-        console.log(data);
-        sName = data.name;
-        sID = data.id;
-        sSurname = data.surname;
-    } catch (error) {
-        console.error("Error fetching student details:", error);
-        return null;
-    }
-}
 
 // Courses side nav
 function toggleNav() {
@@ -1937,6 +1923,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     alert(data.message);
                     if (passwordChangeModal) passwordChangeModal.style.display = "none";
                     if (modal) modal.style.display = "none";
+                    window.location.href = "./Dashboard.html";
                 })
                 .catch((error) => console.error("Error:", error));
         });
@@ -2238,7 +2225,8 @@ async function createHome() {
 }
 
 //Create Venues tab on Dashboard
-function createVenues(){
+async function createVenues(){
+    await getStudentDetails()
     let pageHeading = document.createElement('h1')
     pageHeading.textContent = "Venues"
     let tHead = document.createElement('thead')
@@ -2247,7 +2235,7 @@ function createVenues(){
     let dashContent = document.querySelector('.dashboardContent')
     dashContent.innerHTML = ''
     dashContent.appendChild(pageHeading)
-    let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs', 'Map']
+    let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs']
 
     tableHeadings.forEach(heading => {
         let th = document.createElement('th')
@@ -2257,7 +2245,18 @@ function createVenues(){
 
     table.appendChild(tHead)
 
+    
     venues.forEach(data => {
+        let bFound = false
+        for (let i = 0; i < data.course.length; i++) {
+          
+          
+            if (sCourse === data.course[i]) {
+              bFound = true
+            }
+          
+        }
+        if (bFound){
         let tRow = document.createElement('tr')
         let cellName = document.createElement('td')
         cellName.textContent = data.name
@@ -2277,6 +2276,7 @@ function createVenues(){
         tRow.appendChild(cellLocations)
         tRow.appendChild(cellHasPcs)
         tBody.appendChild(tRow)
+        }
     });
     table.appendChild(tBody)
     dashContent.appendChild(table)
@@ -2294,6 +2294,7 @@ function createVenues(){
         });
     });
 }
+
 async function createMyModules() {
   let dashContent = document.querySelector(".dashboardContent");
   dashContent.innerHTML = ''; 
@@ -2393,9 +2394,88 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(`Dynamic generate : ${sName} `);
 
     let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
-
     StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
-    console.log('Add Logged in user run');
+
+    let EditUserSection = document.querySelector('#nav-footer-content')
+    let btn = document.createElement('div');
+    btn.innerHTML = `<p>Student details</p>`;
+    EditUserSection.appendChild(btn);
+
+    // Get the modal
+let modal = document.getElementById("studentModal");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// Get the form in the modal
+let form = document.getElementById("studentForm");
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    fetch('/getStudentDetails')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('name').value = data.name;
+            document.getElementById('surname').value = data.surname;
+            document.getElementById('adr').value = data.adr;
+            document.getElementById('city').value = data.city;
+            document.getElementById('zip').value = data.zip;
+            document.getElementById('province').value = data.province;
+            document.getElementById('gender').value = data.gender;
+            document.getElementById('email').value = data.email;
+            document.getElementById('course').value = data.course;
+            document.getElementById('attendance').value = data.attendance;
+        })
+        .catch(error => console.error('Error:', error));
+
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// When the form is submitted, update the student details
+form.onsubmit = function(event) {
+    event.preventDefault();
+
+    let updatedData = {
+        studentId: sStudentId,
+        name: document.getElementById('name').value,
+        surname: document.getElementById('surname').value,
+        adr: document.getElementById('adr').value,
+        city: document.getElementById('city').value,
+        zip: document.getElementById('zip').value,
+        province: document.getElementById('province').value,
+        gender: document.getElementById('gender').value,
+        email: document.getElementById('email').value,
+        course: document.getElementById('course').value,
+        attendance: document.getElementById('attendance').value,
+    };
+
+    fetch('/updateStudentDetails', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        modal.style.display = "none";
+    })
+    .catch(error => console.error('Error:', error));
+};
+    
 });
 
 async function getStudentDetails() {
