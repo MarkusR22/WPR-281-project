@@ -7,13 +7,13 @@
 body {
     display: grid;
     grid-template-areas:  "navbar navbar navbar"
-                          "course search search"
-                          "course description lecturer"
+                          "course description description"
+                          "course search lecturer"
                           "course module lecturer"
                           "footer footer footer"
                           ;
     
-    grid-template-rows: 6vh 11vh 23vh 70vh 15vh;
+    grid-template-rows: 6vh 35vh 11vh 70vh 15vh;
     grid-template-columns: 0.30fr 1fr 0.40fr;
 }
 
@@ -759,6 +759,10 @@ label[for=sideNav-footer-toggle] {
     margin: 2% 0
 }
 
+.description h1{
+    text-align: center;
+}
+
 .info-box {
     background-color: #222;
     color: #fff;
@@ -951,4 +955,57 @@ form button {
 
 form button:hover {
     background-color: rgb(168, 43, 43);
+}
+
+.info-container{
+    display: flex;
+    margin: 10px auto 30px auto ;
+    width: 80%;
+  }
+
+  .info-container p{
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+  }
+
+  .info-box {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px white solid;
+}
+
+.info-item .icon {
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-item .label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.info-item .value {
+    flex: 1;
+}
+
+.info-box .info-item:last-child {
+    margin-bottom: 0;
 }
