@@ -2179,7 +2179,6 @@ async function createHome() {
         const cellVenues = document.createElement("td");
         venues.forEach(venue => {
             venue.modules.forEach(vmodule => {
-                console.log(`${module.code}`)
                 if (vmodule == module.code) {
                     cellVenues.textContent = `${venue.name}`
                     row.appendChild(cellVenues);
