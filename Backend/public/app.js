@@ -2359,16 +2359,19 @@ async function createMyModules() {
   completedTable.appendChild(completedTableBody);
 
   // container for the tables
+  let bigContainer = document.createElement('div');
   let container1 = document.createElement('div');
   let container2 = document.createElement('div');
   
   container1.appendChild(moduleTable);
   container2.appendChild(completedTable);
+  bigContainer.classList.add('bigContainer');
   container1.classList.add('table');
   container2.classList.add('table');
 
-  dashContent.appendChild(container1);
-  dashContent.appendChild(container2);
+  bigContainer.appendChild(container1);
+  bigContainer.appendChild(container2);
+  dashContent.appendChild(bigContainer)
 
 }
 

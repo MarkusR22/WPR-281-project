@@ -24,6 +24,13 @@ body, html {
     margin: 5%;
 }
 
+.dashboardContent .table{
+    margin-right: 5%;
+    max-height: 80vh;
+    overflow: auto;
+    width: 30vw;
+}
+
 .dashboardContent table{
    
     border-collapse: collapse;
@@ -45,6 +52,7 @@ body, html {
     color: white;
     text-align: center;
     font-size: 1.3em;
+    height: 50px;
 }
 
 .dashboardContent .contentContainer table td{
@@ -603,3 +611,9 @@ label[for=sideNav-footer-toggle] {
     font-weight: 500;
     z-index: 1;
 } */
+
+.bigContainer{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
