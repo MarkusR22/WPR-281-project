@@ -223,5 +223,20 @@
     "attendance": "face-to-face",
     "studentId": "600998",
     "password": "BelgiumCampus"
+  },
+  {
+    "name": "yhv",
+    "surname": "kughv",
+    "id": "kjuy",
+    "adr": "v",
+    "city": "iuyv",
+    "zip": "luyv",
+    "province": "Gau",
+    "gender": "Male",
+    "email": "Erick@mail.com",
+    "course": "CIT",
+    "attendance": "face-to-face",
+    "studentId": "600999",
+    "password": "BelgiumCampus"
   }
 ]
