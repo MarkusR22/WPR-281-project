@@ -496,45 +496,51 @@ label[for=sideNav-footer-toggle] {
     background-color: #f4f4f4; 
 }*/
 
-.moduleList {
-    list-style-type: none; 
-    padding: 0;
-}
-
-.moduleItem {
-    border: 1px solid #ddd; 
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #fff;
-}
-
-.moduleItem h2 {
-    margin: 0;
-    font-size: 1.2em; 
-}
-
-.moduleItem p {
-    margin: 5px 0 0;
-    font-size: 0.9em; 
-}
-
 .modulesContainer {
-    max-width: 800px; 
-       margin: auto; 
-    background-color: #fff; 
+    max-width: 100%; 
+    margin: auto; 
     padding: 20px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
 }
+
+.moduleTable tbody tr:hover, .completedTable tbody tr:hover, .moduleTable tbody td a:hover, .completedTable tbody td a:hover {
+    cursor: pointer;
+}
+
 .moduleTable, .completedTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    width: 100%; 
+    border-collapse: collapse; 
 }
-.moduleTable th, .moduleTable td, .completedTable th, .completedTable td {
-    border: 1px solid #ddd;
+
+.moduleTable thead, .completedTable thead {
+    display: table;
+    width: 100%; 
+}
+
+.moduleTable tbody, .completedTable tbody {
+    display: block; 
+    height: 600px; 
+    overflow-y: auto;
+}
+
+.moduleTable tbody td, .completedTable tbody td, .moduleTable thead th, .completedTable thead th {
     padding: 8px;
-}
-.moduleTable th, .completedTable th {
-    background-color: #333;
-    color: white;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #fff;
     text-align: left;
+    width: 25%;
 }
+
+.moduleTable thead th, .completedTable thead th {
+    position: sticky;
+    top: 0; 
+    background-color: #bf2c2c; 
+    color: white;
+    font-weight: 500;
+    z-index: 1;
+    width: 25;
+}
+
