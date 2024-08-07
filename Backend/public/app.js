@@ -1330,7 +1330,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     await getStudentDetails();
                     console.log(`${sID} ${sName} ${sSurname}`);
-                    window.location.href = './Dashboard.html'
+                    if (sPassword !== 'BelgiumCampus') {
+                        window.location.href = './Dashboard.html'
+                    }
+
 
                     // Additional code if needed
                 } else {
@@ -1421,6 +1424,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert(data.message);
                     if (passwordChangeModal) passwordChangeModal.style.display = 'none';
                     if (modal) modal.style.display = 'none';
+                    window.location.href = './Dashboard.html'
                 })
                 .catch(error => console.error('Error:', error));
         });
@@ -1711,7 +1715,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const DashboardLink = document.querySelector(`#dashboardLink`);
 
     await getStudentDetails();
-
+    createHome()
     if (sID && sID !== '') {
         DashboardLink.classList.add('visible');
     } else {
@@ -1723,13 +1727,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
     console.log('Add Logged in user run');
-    // let StudentName = document.createElement('a');
-    // StudentName.textContent = `${sName} ${sSurname}`;
-    // let StudentID = document.createElement('span');
-    // StudentID.textContent = `${sID}`;
-    
-    // StudentDetailsdiv.appendChild(StudentName);
-    // StudentDetailsdiv.appendChild(StudentID);
+
 
 });
 
@@ -1838,11 +1836,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
-                
-                let button =document.getElementById(module.code);
-                button.addEventListener("click",function(){
-                let modal=document.getElementById("ModuleModal");
-                modal.innerHTML = `
+
+                let button = document.getElementById(module.code);
+                button.addEventListener("click", function () {
+                    let modal = document.getElementById("ModuleModal");
+                    modal.innerHTML = `
                     <div class="modal-content">
                         <span class="close-btn">&times;</span>
                         <h1>${module.code}</h1>
@@ -1853,13 +1851,13 @@ document.addEventListener('DOMContentLoaded', () => {
                          </video>
                     </div>
                      `;
-                     modal.style.display = 'block';
-                     let closeBtn = modal.querySelector('.close-btn');
-                     closeBtn.addEventListener("click", function() {
-                          modal.style.display = 'none';
-                  });
+                    modal.style.display = 'block';
+                    let closeBtn = modal.querySelector('.close-btn');
+                    closeBtn.addEventListener("click", function () {
+                        modal.style.display = 'none';
+                    });
                 })
-                
+
             }
         });
     }

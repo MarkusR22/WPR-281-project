@@ -208,5 +208,50 @@
     "attendance": "face-to-face",
     "studentId": "600997",
     "password": "BelgiumCampus"
+  },
+  {
+    "name": "IL:UYbgO*IUghIOUYbghbiuybgu",
+    "surname": "iybvujyh",
+    "id": "vhku",
+    "adr": "ukybv",
+    "city": "jukyhbv",
+    "zip": "jhyvb",
+    "province": "MP",
+    "gender": "Male",
+    "email": "that@MAIL.COM",
+    "course": "BCOMP",
+    "attendance": "face-to-face",
+    "studentId": "600998",
+    "password": "BelgiumCampus"
+  },
+  {
+    "name": "Johan",
+    "surname": "Swannepoel",
+    "id": "uoyb",
+    "adr": "uy",
+    "city": "buy",
+    "zip": "bu",
+    "province": "MP",
+    "gender": "Male",
+    "email": "Johan@mail.com",
+    "course": "DIT",
+    "attendance": "face-to-face",
+    "studentId": "600999",
+    "password": "Johan"
+  },
+  {
+    "name": "ihu",
+    "surname": "buy",
+    "id": "bvyut",
+    "adr": "vy",
+    "city": "tv",
+    "zip": "ytgv",
+    "province": "MP",
+    "gender": "Male",
+    "email": "Erick@mail.com",
+    "course": "BCOMP",
+    "attendance": "face-to-face",
+    "studentId": "601000",
+    "password": "This"
   }
 ]
