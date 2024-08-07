@@ -208,5 +208,20 @@
     "attendance": "face-to-face",
     "studentId": "600997",
     "password": "BelgiumCampus"
+  },
+  {
+    "name": "Mat",
+    "surname": "Burn",
+    "id": "78945612",
+    "adr": "c",
+    "city": "Pretoria",
+    "zip": "0186",
+    "province": "NC",
+    "gender": "Male",
+    "email": "onet02@gmail.com",
+    "course": "BIT",
+    "attendance": "online",
+    "studentId": "600998",
+    "password": "BelgiumCampus"
   }
 ]
