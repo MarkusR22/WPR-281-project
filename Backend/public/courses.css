@@ -1009,3 +1009,10 @@ form button:hover {
 .info-box .info-item:last-child {
     margin-bottom: 0;
 }
+.visible {
+    display: contents;
+}
+
+.notVisible {
+    display: none;
+}
