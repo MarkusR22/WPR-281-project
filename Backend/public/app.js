@@ -2233,6 +2233,8 @@ async function createVenues(){
     let tBody = document.createElement('tbody')
     let table = document.createElement('table')
     let dashContent = document.querySelector('.dashboardContent')
+    let contentContainer = document.createElement('div')
+    contentContainer.classList.add('contentContainer')
     dashContent.innerHTML = ''
     dashContent.appendChild(pageHeading)
     let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs']
@@ -2279,8 +2281,9 @@ async function createVenues(){
         }
     });
     table.appendChild(tBody)
-    dashContent.appendChild(table)
-
+    contentContainer.innerHTML = `<img src="Images/Map.png" alt="">`
+    contentContainer.appendChild(table)
+    dashContent.appendChild(contentContainer)
     const rows = table.querySelectorAll("tr");
     rows.forEach((row) => {
         row.addEventListener("mouseover", () => {
