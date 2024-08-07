@@ -1710,6 +1710,44 @@ async function createHome() {
     dashContent.appendChild(table);
 }
 
+async function createMyModules() {
+    let dashContent = document.querySelector(".dashboardContent")
+    await getStudentDetails();
+
+    console.log(`Student Course: ${sCourse}`);
+
+    let filteredModules = modules.filter(module => module.course === sCourse);
+
+    let moduleList = document.createElement('ul')
+    moduleList.className = 'moduleList';
+
+    filteredModules.forEach(module => {
+        let listItem = document.createElement('li')
+        listItem.className = 'moduleItem';
+
+        let moduleHeading = document.createElement('h2')
+        moduleHeading.textContent = module.description
+
+        ///pdf and video here
+        let moduleDesc = document.createElement('p')
+        moduleDesc.textContent = `Code: ${module.code} | Year: ${module.year}`;
+
+        listItem.appendChild(moduleHeading)
+        listItem.appendChild(moduleDesc)
+
+        moduleList.appendChild(listItem)
+    });
+
+    let modulesContainer = document.createElement('div')
+    modulesContainer.className = 'modulesContainer'
+    modulesContainer.appendChild(moduleList)
+
+    dashContent.innerHTML = '';
+    dashContent.appendChild(modulesContainer);
+    console.log('Modules updated successfully.');
+
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     // Function to fetch and handle student details
     const DashboardLink = document.querySelector(`#dashboardLink`);
