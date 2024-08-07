@@ -557,7 +557,18 @@ label[for=sideNav-footer-toggle] {
     display: flex;
     flex-direction: column; 
 }
+#studentForm input[type="text"],
+#studentForm input[type="email"],
+#studentForm select {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
 
+}
 
 /* .moduleTable, .completedTable {
     width: 100%;

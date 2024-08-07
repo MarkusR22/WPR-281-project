@@ -1846,7 +1846,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (passwordChangeModal) passwordChangeModal.style.display = "flex";
                     }
                     await getStudentDetails();
-                    console.log(`${sID} ${sName} ${sSurname}`);
+                    
                     if (sPassword !== 'BelgiumCampus') {
                         window.location.href = "./Dashboard.html";
                     }
@@ -2396,7 +2396,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await getStudentDetails();
 
-    if (sID && sID !== "") {
+    if (sStudentId && sStudentId !== "") {
         DashboardLink.classList.add("visible");
     } else {
         DashboardLink.classList.add("notVisible");
@@ -2404,7 +2404,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
-    StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
+    StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sStudentId}</span>`;
 
     let EditUserSection = document.querySelector('#nav-footer-content')
     let btn = document.createElement('div');
@@ -2419,22 +2419,13 @@ let span = document.getElementsByClassName("close")[0];
 let form = document.getElementById("studentForm");
 
 btn.onclick = function() {
-    fetch('/getStudentDetails')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('name').value = data.name;
-            document.getElementById('surname').value = data.surname;
-            document.getElementById('adr').value = data.adr;
-            document.getElementById('city').value = data.city;
-            document.getElementById('zip').value = data.zip;
-            document.getElementById('province').value = data.province;
-            document.getElementById('gender').value = data.gender;
-            document.getElementById('email').value = data.email;
-            document.getElementById('course').value = data.course;
-            document.getElementById('attendance').value = data.attendance;
-        })
-        .catch(error => console.error('Error:', error));
-
+            document.getElementById('name').value = sName;
+            document.getElementById('surname').value = sSurname;
+            document.getElementById('adr1').value = sAdr;
+            document.getElementById('city').value = sCity;
+            document.getElementById('zip').value = sZip;
+            document.getElementById('province').value = sProvince;
+            document.getElementById('email').value = sEmail;
         modal.style.display = "block";
     }
 
@@ -2468,7 +2459,7 @@ btn.onclick = function() {
             attendance: document.getElementById('attendance').value,
         };
 
-        fetch('/updateStudentDetails', {
+        fetch('http://localhost:${port}/updateStudentDetails', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

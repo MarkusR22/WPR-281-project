@@ -58,18 +58,6 @@ function generateStudentId(existingData) {
     return (maxId + 1).toString();
 }
 
-app.post('/signup', (req, res) => {
-    const { username, password } = req.body;
-    const userData = `${username}:${password}\n`;
-
-    fs.appendFile('users.txt', userData, (err) => {
-        if (err) {
-            return res.json({ message: 'Error signing up' });
-        }
-        res.json({ message: 'Sign up successful' });
-    });
-});
-
 app.post('/login', (req, res) => {
     const { studentId, password } = req.body;
 
@@ -84,7 +72,7 @@ app.post('/login', (req, res) => {
         if (student) {
             sName = student.name;
             sSurname = student.surname;
-            sID = student.studentId;
+            sID = student.id;
             sAdr = student.adr;
             sCity = student.city;
             sZip = student.zip;

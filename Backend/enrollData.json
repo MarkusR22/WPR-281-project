@@ -253,5 +253,17 @@
     "attendance": "face-to-face",
     "studentId": "601000",
     "password": "601000"
+  },
+  {
+    "name": "Erick",
+    "surname": "Knoetze",
+    "id": "600984",
+    "adr": "123",
+    "city": "Pretoria",
+    "zip": "652",
+    "province": "Gau",
+    "email": "erickknoetze06@gmail.com",
+    "studentId": "601001",
+    "password": "BelgiumCampus"
   }
 ]
