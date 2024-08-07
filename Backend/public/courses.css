@@ -824,25 +824,29 @@ label[for=sideNav-footer-toggle] {
 
 /* course button modal */
 #ModuleModal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-    padding-top: 60px; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.521);
+    padding-top: 60px;
+    font-family: 'Arial', sans-serif;
 }
 
 #ModuleModal .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; 
+    background-color: #2c2c2c;
+    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.534);
+    width: 80%;
+    max-width: 600px;
+    animation: fadeIn 0.3s ease-in-out;
+    color: #ffffff;
 }
 
 #ModuleModal .close-btn {
@@ -854,10 +858,45 @@ label[for=sideNav-footer-toggle] {
 
 #ModuleModal .close-btn:hover,
 #ModuleModal .close-btn:focus {
-    color: black;
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
 }
+
+#ModuleModal h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+#ModuleModal p {
+    font-size: 19px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#ModuleModal .video-container {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#ModuleModal .video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
 
 
 /*Footer*/
