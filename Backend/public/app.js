@@ -2159,9 +2159,9 @@ async function createMyModules() {
   let moduleTable = document.createElement('table')
   moduleTable.className = 'moduleTable';
 
-  let moduleTblHeader=document.createElement('thead')
-  let headerRow=document.createElement('tr');
-  let headers=['Description','Code','Completed']
+ let moduleTblHeader = document.createElement('thead')
+ let headerRow = document.createElement('tr')
+ let headers = ['Description', 'Code', 'More Info','Completed']
 
   headers.forEach(text=>{
       const th=document.createElement('th')
@@ -2172,11 +2172,12 @@ async function createMyModules() {
 
   let moduleTblBody= document.createElement('tbody')
 
-  filteredModules.forEach(module => {
-      let row = document.createElement('tr')
-      row.innerHTML = `<td>${module.description}</td>
-                      <td>${module.code}</td>
-                      <td><input type="checkbox" class="completedMod"></td>`;
+ filteredModules.forEach(module => {
+     let row = document.createElement('tr');
+     row.innerHTML = `<td>${module.description}</td>
+                 <td>${module.code}</td>
+                  <td><a href="${module.pdfUrl}" target="_blank">View PDF</a></td> <!-- Added PDF link -->
+                  <td><input type="checkbox" class="completedMod"></td>`;
 
                       moduleTblBody.appendChild(row);
       
