@@ -2303,6 +2303,8 @@ async function createMyModules() {
   dashContent.innerHTML = ''; 
   await getStudentDetails();
 
+    let pageHeading = document.createElement('h1')
+    pageHeading.textContent = "My modules"
   let filteredModules = modules.filter(module => module.course === sCourse);
 
   let moduleTable = document.createElement('table');
@@ -2366,6 +2368,8 @@ async function createMyModules() {
   container2.appendChild(completedTable);
   container1.classList.add('table');
   container2.classList.add('table');
+  
+  dashContent.appendChild(pageHeading)
 
   dashContent.appendChild(container1);
   dashContent.appendChild(container2);

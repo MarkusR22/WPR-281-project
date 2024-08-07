@@ -560,46 +560,4 @@ label[for=sideNav-footer-toggle] {
 }
 
 
-/* .moduleTable, .completedTable {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-.moduleTable thead, .completedTable thead {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-    top: 0;
-    position: sticky;
-    background-color: #222;
-    color: white;
-}
-
-.moduleTable tbody, .completedTable tbody {
-    display: block;
-    height: 600px;
-    overflow-y: auto;
-    width: 100%;
-}
-
-.moduleTable tbody td, .completedTable tbody td, .moduleTable thead th, .completedTable thead th {
-    padding: 12px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    background-color: #fff;
-    text-align: left;
-}
-
-.moduleTable tbody tr:hover, .completedTable tbody tr:hover, .moduleTable tbody td a:hover, .completedTable tbody td a:hover {
-    cursor: pointer;
-    background-color: #f5f5f5;
-}
-
-.moduleTable thead th, .completedTable thead th {
-    position: sticky;
-    top: 0;
-    background-color: #222;
-    color: white;
-    font-weight: 500;
-    z-index: 1;
-} */
