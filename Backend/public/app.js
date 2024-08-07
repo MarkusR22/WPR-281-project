@@ -2364,6 +2364,7 @@ async function createMyModules() {
   container.appendChild(completedTable);
 
   dashContent.appendChild(container);
+  container.classList.add('table');
 }
 
 function completeModule(module, row) {
