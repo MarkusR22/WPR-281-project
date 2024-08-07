@@ -39,7 +39,7 @@
     "province": "LP",
     "gender": "Male",
     "email": "Erick@mail.com",
-    "course": "Diploma in IT",
+    "course": "DIT",
     "attendance": "face-to-face",
     "studentId": "600986",
     "password": "123"
@@ -174,7 +174,7 @@
     "province": "MP",
     "gender": "Male",
     "email": "that@MAIL.COM",
-    "course": "Diploma in IT",
+    "course": "BIT",
     "attendance": "face-to-face",
     "studentId": "600995",
     "password": "BelgiumCampus"
@@ -222,7 +222,7 @@
     "course": "BCOMP",
     "attendance": "face-to-face",
     "studentId": "600998",
-    "password": "BelgiumCampus"
+    "password": "123"
   },
   {
     "name": "yhv",

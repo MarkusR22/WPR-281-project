@@ -538,3 +538,16 @@ form button:hover {
 .notVisible {
     display: none;
 }
+.table::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: #1d1b1b;
+}
+
+.table:-webkit-scrollbar-button {
+    height: 16px;
+}
