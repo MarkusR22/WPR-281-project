@@ -1780,7 +1780,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
-        { threshold: 0.5 }                                                                      /*/////// VRA ERICK /////*/
+        { threshold: 0.5 }                                                                    
     );
 
     document.querySelectorAll(".section").forEach((section) => {
@@ -2163,9 +2163,9 @@ async function createHome() {
     tHead.style.top = "0";
 
     table.appendChild(tHead);
-    table.appendChild(tBody); // Add tbody to the table
+    table.appendChild(tBody); 
 
-    // Filter the modules based on the selected course
+    
     const filteredModules = modules.filter((module) => module.course === sCourse);
 
     filteredModules.forEach((module) => {
@@ -2180,15 +2180,15 @@ async function createHome() {
         row.appendChild(cellCode);
 
         const cellNQF = document.createElement("td");
-        cellNQF.textContent = "NQF Level"; // Replace with actual NQF level if available
+        cellNQF.textContent = "NQF Level"; 
         row.appendChild(cellNQF);
 
         const cellCredits = document.createElement("td");
-        cellCredits.textContent = "Credits"; // Replace with actual credits if available
+        cellCredits.textContent = "Credits"; 
         row.appendChild(cellCredits);
 
         const cellVenues = document.createElement("td");
-        cellVenues.textContent = "Venues"; // Replace with actual venues if available
+        cellVenues.textContent = "Venues"; 
         row.appendChild(cellVenues);
 
         const cellLecturers = document.createElement("td");
@@ -2221,7 +2221,6 @@ async function createHome() {
         });
     });
 
-    // Set table and its parent container styles for max height and overflow hidden
     let tableContainer = document.createElement("div");
     tableContainer.style.maxHeight = "50vh";
     tableContainer.style.overflow = "auto";
@@ -2273,7 +2272,6 @@ function createVenues(){
         else {
           cellHasPcs.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
         }
-        // cellHasPcs.textContent = data.hasPCs
         tRow.appendChild(cellName)
         tRow.appendChild(cellSeats)
         tRow.appendChild(cellLocations)
@@ -2298,8 +2296,7 @@ function createVenues(){
 }
 async function createMyModules() {
   let dashContent = document.querySelector(".dashboardContent");
-  dashContent.innerHTML = ''; // Clear any existing content
-
+  dashContent.innerHTML = ''; 
   await getStudentDetails();
 
   let filteredModules = modules.filter(module => module.course === sCourse);
