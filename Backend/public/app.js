@@ -1639,134 +1639,134 @@ const modules = [
 ];
 
 const venues = [
-  { 
-    course: ['BCOMP', 'BIT', 'DIT'], 
-    modules: ['MAT 181', 'WPR 181', 'WPR 281', 'PRG 381', 'ACW 171', 'ENT 171', 'DWH 271', 'WPR 371', 'BUC 161', 'ERP 261', 'CNA 361', 'SSX 361'],
-    name: "Iota", 
-    seats: 30, 
-    location: "main campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BCOMP', 'BIT', 'DIT'], 
-    modules: ['ACW 181', 'BUM 181', 'SAD 281', 'SEN 381', 'COA 171', 'DBD 271', 'IOT 271', 'BIN 371', 'BME 161', 'INL 261', 'EHA 361', 'SWA 361'],
-    name: "Phi", 
-    seats: 40, 
-    location: "main campus", 
-    hasPCs: false 
-  },
-  { 
-    course: ['BCOMP', 'BIT', 'DIT'], 
-    modules: ['COA 181', 'ENT 181', 'DWH 281', 'WPR 381', 'DBD 171', 'MAT 271', 'SWT 271', 'DBA 371', 'COA 161', 'ILE 261', 'PET 361', 'PMM 361'],
-    name: "Omega", 
-    seats: 50, 
-    location: "main campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BIT', 'DIT', 'CIT'], 
-    modules: ['ENG 171', 'INF 271', 'MAT 371', 'STA 371', 'DBC 161', 'PMM 261', 'DOP 361', 'AIT 361', 'INF 251', 'SEC 251', 'PRG 251', 'ERP 251'],
-    name: "Sigma", 
-    seats: 60, 
-    location: "main campus", 
-    hasPCs: false 
-  },
-  { 
-    course: ['BCOMP', 'BIT', 'DIT', 'CIT'], 
-    modules: ['INF 181', 'DBD 281', 'IOT 281', 'BIN 381', 'INF 171', 'INL 221', 'DBD 371', 'INM 371', 'DBF 161', 'CNA 261', 'MFR 361', 'WSP 361', 'OPS 251', 'MAT 251', 'PRG 252', 'IOT 251'],
-    name: "Kappa", 
-    seats: 35, 
-    location: "south campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BCOMP', 'DIT'], 
-    modules: ['INL 101', 'MAT 281', 'SWT 281', 'DBA 381', 'EUC 161', 'IOT 261', 'NWD 361'],
-    name: "Pi", 
-    seats: 45, 
-    location: "south campus", 
-    hasPCs: false 
-  },
-  { 
-    course: ['BIT', 'DIT'], 
-    modules: ['MAT 171', 'PRG 271', 'INL 321', 'MLG 372', 'INL 161', 'OPS 261', 'OPS 361'],
-    name: "Roh", 
-    seats: 25, 
-    location: "south campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BCOMP', 'BIT', 'DIT'], 
-    modules: ['DBD 181', 'INF 281', 'RSH 381', 'STA 381', 'NWD 171', 'PRG 272', 'LPR 371', 'UAX 371', 'IOT 161', 'OPS 262', 'DBA 361'],
-    name: "Tau", 
-    seats: 55, 
-    location: "south campus", 
-    hasPCs: false 
-  },
-  { 
-    course: ['BCOMP', 'BIT', 'DIT', 'CIT', 'DBD 381'], 
-    modules: ['INL 102', 'INL 201', 'INM 381', 'PRG 171', 'PMM 271', 'MLG 371', 'AIT 471', 'MAT 161', 'OPS 263', 'DBC 361', 'PRJ 251', 'DBD 251', 'WPR 251'],
-    name: "Eta", 
-    seats: 40, 
-    location: "main campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BIT', 'DIT'], 
-    modules: ['PRG 172', 'STA 271', 'PRJ 371', 'AIT 4712', 'NWD 161', 'SEC 261', 'DBD 361'],
-    name: "Gamma", 
-    seats: 50, 
-    location: "main campus", 
-    hasPCs: false 
-  },
-  { 
-    course: ['BCOMP', 'BIT', 'DIT', 'CIT'], 
-    modules: ['LPR 181', 'INL 202', 'INL 321', 'MLG 382', 'STA 171', 'WPR 271', 'PMM 371', 'DST 471', 'PRS 161', 'PRG 261', 'DBR 361', 'PMM 251', 'DBM 251', 'WPR 252'],
-    name: "Zeta", 
-    seats: 60, 
-    location: "main campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BCOMP', 'BIT', 'DIT'], 
-    modules: ['NWD 181', 'PRG 281', 'LPR 381', 'UAX 381', 'WPR 171', 'SAD 271', 'PRG 371', 'PRG 161', 'PRG 262', 'DDB 361'],
-    name: "Omnikron", 
-    seats: 70, 
-    location: "south campus", 
-    hasPCs: false 
-  },
-  { 
-    course: ['BCOMP', 'DIT'], 
-    modules: ['PRG 181', 'PRG 282', 'MLG 381', 'AIT 481', 'PRP 161', 'SWA 261', 'WDB 361'],
-    name: "Lambda", 
-    seats: 30, 
-    location: "south campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BIT', 'DIT'], 
-    modules: ['BUM 171', 'SAD 271', 'SEN 371', 'WPR 161', 'SWT 261', 'WFS 361'],
-    name: "Theta", 
-    seats: 45, 
-    location: "south campus", 
-    hasPCs: false 
-  },
-  { 
-    course: ['BCOMP', 'DIT'], 
-    modules: ['PRG 182', 'PMM 281', 'PRJ 381', 'AIT 482', 'STA 161', 'UXD 261', 'WSE 361'],
-    name: "Delta", 
-    seats: 55, 
-    location: "main campus", 
-    hasPCs: true 
-  },
-  { 
-    course: ['BCOMP', 'DIT'], 
-    modules: ['STA 181', 'STA 281', 'PMM 381', 'DST 481', 'DBD 261', 'WPR 261', 'PRG 361'],
-    name: "Alpha", 
-    seats: 35, 
-    location: "main campus", 
-    hasPCs: false 
-  },
+    {
+        course: ['BCOMP', 'BIT', 'DIT'],
+        modules: ['MAT 181', 'WPR 181', 'WPR 281', 'PRG 381', 'ACW 171', 'ENT 171', 'DWH 271', 'WPR 371', 'BUC 161', 'ERP 261', 'CNA 361', 'SSX 361'],
+        name: "Iota",
+        seats: 30,
+        location: "main campus",
+        hasPCs: true
+    },
+    {
+        course: ['BCOMP', 'BIT', 'DIT'],
+        modules: ['ACW 181', 'BUM 181', 'SAD 281', 'SEN 381', 'COA 171', 'DBD 271', 'IOT 271', 'BIN 371', 'BME 161', 'INL 261', 'EHA 361', 'SWA 361'],
+        name: "Phi",
+        seats: 40,
+        location: "main campus",
+        hasPCs: false
+    },
+    {
+        course: ['BCOMP', 'BIT', 'DIT'],
+        modules: ['COA 181', 'ENT 181', 'DWH 281', 'WPR 381', 'DBD 171', 'MAT 271', 'SWT 271', 'DBA 371', 'COA 161', 'ILE 261', 'PET 361', 'PMM 361'],
+        name: "Omega",
+        seats: 50,
+        location: "main campus",
+        hasPCs: true
+    },
+    {
+        course: ['BIT', 'DIT', 'CIT'],
+        modules: ['ENG 171', 'INF 271', 'MAT 371', 'STA 371', 'DBC 161', 'PMM 261', 'DOP 361', 'AIT 361', 'INF 251', 'SEC 251', 'PRG 251', 'ERP 251'],
+        name: "Sigma",
+        seats: 60,
+        location: "main campus",
+        hasPCs: false
+    },
+    {
+        course: ['BCOMP', 'BIT', 'DIT', 'CIT'],
+        modules: ['INF 181', 'DBD 281', 'IOT 281', 'BIN 381', 'INF 171', 'INL 221', 'DBD 371', 'INM 371', 'DBF 161', 'CNA 261', 'MFR 361', 'WSP 361', 'OPS 251', 'MAT 251', 'PRG 252', 'IOT 251'],
+        name: "Kappa",
+        seats: 35,
+        location: "south campus",
+        hasPCs: true
+    },
+    {
+        course: ['BCOMP', 'DIT'],
+        modules: ['INL 101', 'MAT 281', 'SWT 281', 'DBA 381', 'EUC 161', 'IOT 261', 'NWD 361'],
+        name: "Pi",
+        seats: 45,
+        location: "south campus",
+        hasPCs: false
+    },
+    {
+        course: ['BIT', 'DIT'],
+        modules: ['MAT 171', 'PRG 271', 'INL 321', 'MLG 372', 'INL 161', 'OPS 261', 'OPS 361'],
+        name: "Roh",
+        seats: 25,
+        location: "south campus",
+        hasPCs: true
+    },
+    {
+        course: ['BCOMP', 'BIT', 'DIT'],
+        modules: ['DBD 181', 'INF 281', 'RSH 381', 'STA 381', 'NWD 171', 'PRG 272', 'LPR 371', 'UAX 371', 'IOT 161', 'OPS 262', 'DBA 361'],
+        name: "Tau",
+        seats: 55,
+        location: "south campus",
+        hasPCs: false
+    },
+    {
+        course: ['BCOMP', 'BIT', 'DIT', 'CIT', 'DBD 381'],
+        modules: ['INL 102', 'INL 201', 'INM 381', 'PRG 171', 'PMM 271', 'MLG 371', 'AIT 471', 'MAT 161', 'OPS 263', 'DBC 361', 'PRJ 251', 'DBD 251', 'WPR 251'],
+        name: "Eta",
+        seats: 40,
+        location: "main campus",
+        hasPCs: true
+    },
+    {
+        course: ['BIT', 'DIT'],
+        modules: ['PRG 172', 'STA 271', 'PRJ 371', 'AIT 4712', 'NWD 161', 'SEC 261', 'DBD 361'],
+        name: "Gamma",
+        seats: 50,
+        location: "main campus",
+        hasPCs: false
+    },
+    {
+        course: ['BCOMP', 'BIT', 'DIT', 'CIT'],
+        modules: ['LPR 181', 'INL 202', 'INL 321', 'MLG 382', 'STA 171', 'WPR 271', 'PMM 371', 'DST 471', 'PRS 161', 'PRG 261', 'DBR 361', 'PMM 251', 'DBM 251', 'WPR 252'],
+        name: "Zeta",
+        seats: 60,
+        location: "main campus",
+        hasPCs: true
+    },
+    {
+        course: ['BCOMP', 'BIT', 'DIT'],
+        modules: ['NWD 181', 'PRG 281', 'LPR 381', 'UAX 381', 'WPR 171', 'SAD 271', 'PRG 371', 'PRG 161', 'PRG 262', 'DDB 361'],
+        name: "Omnikron",
+        seats: 70,
+        location: "south campus",
+        hasPCs: false
+    },
+    {
+        course: ['BCOMP', 'DIT'],
+        modules: ['PRG 181', 'PRG 282', 'MLG 381', 'AIT 481', 'PRP 161', 'SWA 261', 'WDB 361'],
+        name: "Lambda",
+        seats: 30,
+        location: "south campus",
+        hasPCs: true
+    },
+    {
+        course: ['BIT', 'DIT'],
+        modules: ['BUM 171', 'SAD 271', 'SEN 371', 'WPR 161', 'SWT 261', 'WFS 361'],
+        name: "Theta",
+        seats: 45,
+        location: "south campus",
+        hasPCs: false
+    },
+    {
+        course: ['BCOMP', 'DIT'],
+        modules: ['PRG 182', 'PMM 281', 'PRJ 381', 'AIT 482', 'STA 161', 'UXD 261', 'WSE 361'],
+        name: "Delta",
+        seats: 55,
+        location: "main campus",
+        hasPCs: true
+    },
+    {
+        course: ['BCOMP', 'DIT'],
+        modules: ['STA 181', 'STA 281', 'PMM 381', 'DST 481', 'DBD 261', 'WPR 261', 'PRG 361'],
+        name: "Alpha",
+        seats: 35,
+        location: "main campus",
+        hasPCs: false
+    },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1780,7 +1780,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
-        { threshold: 0.5 }                                                                    
+        { threshold: 0.5 }
     );
 
     document.querySelectorAll(".section").forEach((section) => {
@@ -2105,7 +2105,6 @@ async function createHome() {
     course.appendChild(courseHeading);
 
     Object.keys(CourseStartDates).forEach((course) => {
-        console.log(sCourse);
         if (sCourse == course) {
             let eventDate = new Date(CourseStartDates[course]).getTime();
             const timerInterval = setInterval(function () {
@@ -2139,7 +2138,7 @@ async function createHome() {
     let tBody = document.createElement("tbody");
     let table = document.createElement("table");
 
-    let Heading = ["Module", "Module Code", "NQF", "Credits", "Venues", "Lecturers"];
+    let Heading = ["Module", "Module Code", "NQF", "Venues", "Lecturers"];
 
     Heading.forEach((data) => {
         let th = document.createElement("th");
@@ -2150,9 +2149,9 @@ async function createHome() {
     tHead.style.top = "0";
 
     table.appendChild(tHead);
-    table.appendChild(tBody); 
+    table.appendChild(tBody);
 
-    
+
     const filteredModules = modules.filter((module) => module.course === sCourse);
 
     filteredModules.forEach((module) => {
@@ -2167,16 +2166,23 @@ async function createHome() {
         row.appendChild(cellCode);
 
         const cellNQF = document.createElement("td");
-        cellNQF.textContent = "NQF Level"; 
-        row.appendChild(cellNQF);
-
-        const cellCredits = document.createElement("td");
-        cellCredits.textContent = "Credits"; 
-        row.appendChild(cellCredits);
+        Object.keys(courseDescriptions).forEach(course => {
+            if (course == sCourse) {
+                cellNQF.textContent = `${courseDescriptions[course].NQF}`;
+                row.appendChild(cellNQF);
+            }
+        });
 
         const cellVenues = document.createElement("td");
-        cellVenues.textContent = "Venues"; 
-        row.appendChild(cellVenues);
+        venues.forEach(venue => {  
+            venue.modules.forEach(vmodule => {
+                console.log(`${module.code}`)
+                if (vmodule == module.code) {
+                    cellVenues.textContent = `${venue.name}`
+                    row.appendChild(cellVenues);
+                }
+            })
+        });
 
         const cellLecturers = document.createElement("td");
         const lecturerNames = lecturers
@@ -2225,7 +2231,7 @@ async function createHome() {
 }
 
 //Create Venues tab on Dashboard
-async function createVenues(){
+async function createVenues() {
     await getStudentDetails()
     let pageHeading = document.createElement('h1')
     pageHeading.textContent = "Venues"
@@ -2245,37 +2251,37 @@ async function createVenues(){
 
     table.appendChild(tHead)
 
-    
+
     venues.forEach(data => {
         let bFound = false
         for (let i = 0; i < data.course.length; i++) {
-          
-          
+
+
             if (sCourse === data.course[i]) {
-              bFound = true
+                bFound = true
             }
-          
+
         }
-        if (bFound){
-        let tRow = document.createElement('tr')
-        let cellName = document.createElement('td')
-        cellName.textContent = data.name
-        let cellSeats = document.createElement('td')
-        cellSeats.textContent = data.seats
-        let cellLocations = document.createElement('td')
-        cellLocations.textContent = data.location
-        let cellHasPcs = document.createElement('td')
-        if (data.hasPCs) {
-          cellHasPcs.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>'
-        }
-        else {
-          cellHasPcs.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
-        }
-        tRow.appendChild(cellName)
-        tRow.appendChild(cellSeats)
-        tRow.appendChild(cellLocations)
-        tRow.appendChild(cellHasPcs)
-        tBody.appendChild(tRow)
+        if (bFound) {
+            let tRow = document.createElement('tr')
+            let cellName = document.createElement('td')
+            cellName.textContent = data.name
+            let cellSeats = document.createElement('td')
+            cellSeats.textContent = data.seats
+            let cellLocations = document.createElement('td')
+            cellLocations.textContent = data.location
+            let cellHasPcs = document.createElement('td')
+            if (data.hasPCs) {
+                cellHasPcs.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>'
+            }
+            else {
+                cellHasPcs.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>'
+            }
+            tRow.appendChild(cellName)
+            tRow.appendChild(cellSeats)
+            tRow.appendChild(cellLocations)
+            tRow.appendChild(cellHasPcs)
+            tBody.appendChild(tRow)
         }
     });
     table.appendChild(tBody)
@@ -2296,54 +2302,54 @@ async function createVenues(){
 }
 
 async function createMyModules() {
-  let dashContent = document.querySelector(".dashboardContent");
-  dashContent.innerHTML = ''; 
-  await getStudentDetails();
+    let dashContent = document.querySelector(".dashboardContent");
+    dashContent.innerHTML = '';
+    await getStudentDetails();
 
-  let filteredModules = modules.filter(module => module.course === sCourse);
+    let filteredModules = modules.filter(module => module.course === sCourse);
 
-  let moduleTable = document.createElement('table');
-  moduleTable.className = 'moduleTable';
+    let moduleTable = document.createElement('table');
+    moduleTable.className = 'moduleTable';
 
-  let moduleTblHeader = document.createElement('thead');
-  let headerRow = document.createElement('tr');
-  let headers = ['Description', 'Code', 'More Info', 'Completed'];
+    let moduleTblHeader = document.createElement('thead');
+    let headerRow = document.createElement('tr');
+    let headers = ['Description', 'Code', 'More Info', 'Completed'];
 
-  headers.forEach(text => {
-      const th = document.createElement('th');
-      th.textContent = text;
-      headerRow.appendChild(th);
-  });
-  moduleTblHeader.appendChild(headerRow);
+    headers.forEach(text => {
+        const th = document.createElement('th');
+        th.textContent = text;
+        headerRow.appendChild(th);
+    });
+    moduleTblHeader.appendChild(headerRow);
 
-  let moduleTblBody = document.createElement('tbody');
+    let moduleTblBody = document.createElement('tbody');
 
-  filteredModules.forEach(module => {
-      let row = document.createElement('tr');
-      row.innerHTML = `<td>${module.description}</td>
+    filteredModules.forEach(module => {
+        let row = document.createElement('tr');
+        row.innerHTML = `<td>${module.description}</td>
                <td>${module.code}</td>
                 <td><a href="https://www.belgiumcampus.ac.za/wp-content/uploads/2023/11/Mathematics-181-MAT181.pdf" target="_blank">View PDF</a></td>  
                 <td><input type="checkbox" class="completedMod"></td>`;
 
-      moduleTblBody.appendChild(row);
+        moduleTblBody.appendChild(row);
 
-      let checkbox = row.querySelector('.completedMod');
+        let checkbox = row.querySelector('.completedMod');
 
-      checkbox.addEventListener('change', (e) => {
-          if (e.target.checked) {
-              completeModule(module, row);
-          }
-      });
-  });
+        checkbox.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                completeModule(module, row);
+            }
+        });
+    });
 
-  moduleTable.appendChild(moduleTblHeader);
-  moduleTable.appendChild(moduleTblBody);
+    moduleTable.appendChild(moduleTblHeader);
+    moduleTable.appendChild(moduleTblBody);
 
-  let completedTable = document.createElement('table');
-  completedTable.className = 'completedTable';
+    let completedTable = document.createElement('table');
+    completedTable.className = 'completedTable';
 
-  let completedTableHeader = document.createElement('thead');
-  completedTableHeader.innerHTML = `
+    let completedTableHeader = document.createElement('thead');
+    completedTableHeader.innerHTML = `
             <tr>
                 <th>Description</th>
                 <th>Code</th>
@@ -2351,30 +2357,30 @@ async function createMyModules() {
             </tr>
         `;
 
-  let completedTableBody = document.createElement('tbody');
-  completedTable.appendChild(completedTableHeader);
-  completedTable.appendChild(completedTableBody);
+    let completedTableBody = document.createElement('tbody');
+    completedTable.appendChild(completedTableHeader);
+    completedTable.appendChild(completedTableBody);
 
-  // container for the tables
-  let container = document.createElement('div');
-  container.className = 'modulesContainer';
-  container.appendChild(moduleTable);
-  container.appendChild(completedTable);
+    // container for the tables
+    let container = document.createElement('div');
+    container.className = 'modulesContainer';
+    container.appendChild(moduleTable);
+    container.appendChild(completedTable);
 
-  dashContent.appendChild(container);
-  container.classList.add('table');
+    dashContent.appendChild(container);
+    container.classList.add('table');
 }
 
 function completeModule(module, row) {
-  let completedTableBody = document.querySelector('.completedTable tbody');
-  let completedRow = document.createElement('tr');
-  completedRow.innerHTML = `
+    let completedTableBody = document.querySelector('.completedTable tbody');
+    let completedRow = document.createElement('tr');
+    completedRow.innerHTML = `
     <td>${module.description}</td>
     <td>${module.code}</td>
     <td>${module.year}</td>
 `;
-  completedTableBody.appendChild(completedRow);
-  row.remove();
+    completedTableBody.appendChild(completedRow);
+    row.remove();
 }
 
 
@@ -2391,7 +2397,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
         DashboardLink.classList.add("notVisible");
     }
-    console.log(`Dynamic generate : ${sName} `);
+
 
     let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
     StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
@@ -2402,88 +2408,86 @@ document.addEventListener("DOMContentLoaded", async () => {
     EditUserSection.appendChild(btn);
 
     // Get the modal
-let modal = document.getElementById("studentModal");
+    let modal = document.getElementById("studentModal");
 
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    let span = document.getElementsByClassName("close")[0];
 
-// Get the form in the modal
-let form = document.getElementById("studentForm");
+    // Get the form in the modal
+    let form = document.getElementById("studentForm");
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    fetch('/getStudentDetails')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('name').value = data.name;
-            document.getElementById('surname').value = data.surname;
-            document.getElementById('adr').value = data.adr;
-            document.getElementById('city').value = data.city;
-            document.getElementById('zip').value = data.zip;
-            document.getElementById('province').value = data.province;
-            document.getElementById('gender').value = data.gender;
-            document.getElementById('email').value = data.email;
-            document.getElementById('course').value = data.course;
-            document.getElementById('attendance').value = data.attendance;
-        })
-        .catch(error => console.error('Error:', error));
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        fetch('/getStudentDetails')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('name').value = data.name;
+                document.getElementById('surname').value = data.surname;
+                document.getElementById('adr').value = data.adr;
+                document.getElementById('city').value = data.city;
+                document.getElementById('zip').value = data.zip;
+                document.getElementById('province').value = data.province;
+                document.getElementById('gender').value = data.gender;
+                document.getElementById('email').value = data.email;
+                document.getElementById('course').value = data.course;
+                document.getElementById('attendance').value = data.attendance;
+            })
+            .catch(error => console.error('Error:', error));
 
-    modal.style.display = "block";
-}
+        modal.style.display = "block";
+    }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
         modal.style.display = "none";
     }
-}
 
-// When the form is submitted, update the student details
-form.onsubmit = function(event) {
-    event.preventDefault();
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
-    let updatedData = {
-        studentId: sStudentId,
-        name: document.getElementById('name').value,
-        surname: document.getElementById('surname').value,
-        adr: document.getElementById('adr').value,
-        city: document.getElementById('city').value,
-        zip: document.getElementById('zip').value,
-        province: document.getElementById('province').value,
-        gender: document.getElementById('gender').value,
-        email: document.getElementById('email').value,
-        course: document.getElementById('course').value,
-        attendance: document.getElementById('attendance').value,
+    // When the form is submitted, update the student details
+    form.onsubmit = function (event) {
+        event.preventDefault();
+
+        let updatedData = {
+            studentId: sStudentId,
+            name: document.getElementById('name').value,
+            surname: document.getElementById('surname').value,
+            adr: document.getElementById('adr').value,
+            city: document.getElementById('city').value,
+            zip: document.getElementById('zip').value,
+            province: document.getElementById('province').value,
+            gender: document.getElementById('gender').value,
+            email: document.getElementById('email').value,
+            course: document.getElementById('course').value,
+            attendance: document.getElementById('attendance').value,
+        };
+
+        fetch('/updateStudentDetails', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedData),
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                modal.style.display = "none";
+            })
+            .catch(error => console.error('Error:', error));
     };
 
-    fetch('/updateStudentDetails', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(updatedData),
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-        modal.style.display = "none";
-    })
-    .catch(error => console.error('Error:', error));
-};
-    
 });
 
 async function getStudentDetails() {
     try {
-        console.log(`GET StudentDetails executed`);
         const response = await fetch(`http://localhost:${port}/getStudentDetails`);
         const data = await response.json();
-        console.log(data);
 
         // Update all global variables
         sName = data.name;
