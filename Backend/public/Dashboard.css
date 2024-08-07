@@ -502,12 +502,12 @@ label[for=sideNav-footer-toggle] {
     margin: auto; 
     padding: 20px; 
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px; 
 }
-.modulesContainer:hover{
-    cursor: pointer;
 
+.moduleTable tbody tr:hover, .completedTable tbody tr:hover, .moduleTable tbody td a:hover, .completedTable tbody td a:hover {
+    cursor: pointer;
 }
 
 .moduleTable, .completedTable {
@@ -517,12 +517,12 @@ label[for=sideNav-footer-toggle] {
 
 .moduleTable thead, .completedTable thead {
     display: table;
-    width: calc(100% - 17px); 
+    width: 100%; 
 }
 
 .moduleTable tbody, .completedTable tbody {
     display: block; 
-    height: 600px;
+    height: 600px; 
     overflow-y: auto;
 }
 
@@ -532,15 +532,16 @@ label[for=sideNav-footer-toggle] {
     box-sizing: border-box;
     background-color: #fff;
     text-align: left;
+    width: 25%;
 }
 
 .moduleTable thead th, .completedTable thead th {
-    
     position: sticky;
     top: 0; 
     background-color: #bf2c2c; 
     color: white;
     font-weight: 500;
     z-index: 1;
+    width: 25;
 }
 
