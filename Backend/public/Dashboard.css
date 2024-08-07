@@ -497,45 +497,51 @@ label[for=sideNav-footer-toggle] {
     background-color: #f4f4f4; 
 }*/
 
-.moduleList {
-    list-style-type: none; 
-    padding: 0;
-}
-
-.moduleItem {
-    border: 1px solid #ddd; 
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #fff;
-}
-
-.moduleItem h2 {
-    margin: 0;
-    font-size: 1.2em; 
-}
-
-.moduleItem p {
-    margin: 5px 0 0;
-    font-size: 0.9em; 
-}
-
 .modulesContainer {
-    max-width: 800px; 
-       margin: auto; 
-    background-color: #fff; 
+    max-width: 100%; 
+    margin: auto; 
     padding: 20px; 
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 4fr 1fr; 
+    gap: 50px; 
 }
+
 .moduleTable, .completedTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    width: 100%; 
+    display: grid;
 }
-.moduleTable th, .moduleTable td, .completedTable th, .completedTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
+
+.moduleTable tbody, .completedTable tbody {
+    height: 600px;
+    overflow-y: auto;
+    width: 500px;
 }
-.moduleTable th, .completedTable th {
-    background-color: #333;
+.moduleTable thead th, .completedTable thead th {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0; 
+    background-color: #bf2c2c; 
     color: white;
+    font-weight: 500;
+    padding: 8px;
+    border: 1px solid #ddd;
+    z-index: 1;
     text-align: left;
+   
+}
+
+.moduleTable tbody td, .completedTable tbody td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.moduleTable td, .completedTable td {
+    background-color: #fff;
+    text-align: left;
+}
+
+.moduleTable, .completedTable {
+    grid-template-rows: auto 2fr; 
 }
