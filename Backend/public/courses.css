@@ -23,7 +23,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0);
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -907,7 +907,7 @@ label[for=sideNav-footer-toggle] {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: #333;
+    background: rgb(0, 0, 0);
     color: #fff;
     padding: 10px;
     flex-wrap: wrap;
@@ -951,7 +951,7 @@ label[for=sideNav-footer-toggle] {
 }
 
 .socialIcons a:hover {
-    background-color: #bb2626;
+    background-color: red;
     transition: 0.5s;
 
 }
