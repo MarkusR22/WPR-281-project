@@ -707,6 +707,7 @@ label[for=sideNav-footer-toggle] {
     width: 45%;
     height: 20%;
     margin: 10px;
+    margin-bottom: 25px;
 }
 
 .container:hover .lecturerCard {
