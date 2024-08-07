@@ -26,22 +26,20 @@ const courseDescriptions = {
     BIT: {
         cName: 'BA in IT', cDescription: `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
                                     development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
-                                    with both theoretical knowledge and practical skills needed to excel in the IT industry.`,Duration: `3 years academic
-                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
+                                    with both theoretical knowledge and practical skills needed to excel in the IT industry.`,Duration: `3 years academic`, NQF:'Level 7', Credits:'360', SAQAID: '94121',
                                     Location:`Pretoria Campus
                                     Kempton Park Campus`},
     DIT: {
         cName: 'Diploma in IT', cDescription: `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
                                     skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
-                                    in the IT industry. `,Duration: `3 years academic
-                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
+                                    in the IT industry. `,Duration: `2½ years of academic training
+                                    6 months of workplace training`, NQF:'Level 6', Credits:'360', SAQAID: '120097',
                                     Location:`Pretoria Campus
                                     Kempton Park Campus`},
     CIT: {
         cName: 'Certificate in IT', cDescription: `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
                                     skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
-                                    or prepare for further education in IT.`,Duration: `3 years academic
-                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
+                                    or prepare for further education in IT.`,Duration: `1 year academic`, NQF:'Level 6', Credits:'120', SAQAID: '71850',
                                     Location:`Pretoria Campus
                                     Kempton Park Campus`},
 }
