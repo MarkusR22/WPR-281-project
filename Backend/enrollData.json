@@ -265,5 +265,20 @@
     "email": "erickknoetze06@gmail.com",
     "studentId": "601001",
     "password": "BelgiumCampus"
+  },
+  {
+    "name": "Johan",
+    "surname": "wd",
+    "id": "uytv",
+    "adr": "ef",
+    "city": "efe",
+    "zip": "f",
+    "province": "MP",
+    "gender": "Male",
+    "email": "Johan@mail.com",
+    "course": "BCOMP",
+    "attendance": "face-to-face",
+    "studentId": "601002",
+    "password": "102"
   }
 ]
