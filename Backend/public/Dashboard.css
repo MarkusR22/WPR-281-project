@@ -562,4 +562,18 @@ label[for=sideNav-footer-toggle] {
     font-weight: 500;
     z-index: 1;
 }
-
+/*/////////////////////////////////*/
+@media print {
+    body * {
+        visibility:hidden;
+    }
+    .Print *{
+        visibility: visible;
+    }
+    .Print {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
