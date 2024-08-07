@@ -472,3 +472,36 @@ label[for=sideNav-footer-toggle] {
 .info-box .info-item:last-child {
     margin-bottom: 0;
 }
+/*.dashboardContent {
+    padding: 20px;
+    background-color: #f4f4f4; 
+}*/
+
+.moduleList {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.moduleItem {
+    border: 1px solid #ddd; 
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.moduleItem h2 {
+    margin: 0;
+    font-size: 1.2em; 
+}
+
+.moduleItem p {
+    margin: 5px 0 0;
+    font-size: 0.9em; 
+}
+
+.modulesContainer {
+    max-width: 800px; 
+       margin: auto; 
+    background-color: #fff; 
+    padding: 20px; 
+}
