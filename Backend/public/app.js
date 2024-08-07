@@ -2177,81 +2177,85 @@ function createVenues() {
     });
 }
 async function createMyModules() {
-    let dashContent = document.querySelector(".dashboardContent");
-    dashContent.innerHTML = ``;
-    await getStudentDetails();
+  let dashContent = document.querySelector(".dashboardContent");
+  dashContent.innerHTML = ''; // Clear any existing content
 
-    let filteredModules = modules.filter(module => module.course === sCourse);
+  await getStudentDetails();
 
-    let moduleTable = document.createElement('table')
-    moduleTable.className = 'moduleTable';
+  let filteredModules = modules.filter(module => module.course === sCourse);
 
-    let moduleTblHeader = document.createElement('thead')
-    let headerRow = document.createElement('tr')
-    let headers = ['Description', 'Code', 'More Info', 'Completed']
+  let moduleTable = document.createElement('table');
+  moduleTable.className = 'moduleTable';
 
-    headers.forEach(text => {
-        const th = document.createElement('th')
-        th.textContent = text;
-        headerRow.appendChild(th)
-    });
-    moduleTblHeader.appendChild(headerRow)
+  let moduleTblHeader = document.createElement('thead');
+  let headerRow = document.createElement('tr');
+  let headers = ['Description', 'Code', 'More Info', 'Completed'];
 
-    let moduleTblBody = document.createElement('tbody')
+  headers.forEach(text => {
+      const th = document.createElement('th');
+      th.textContent = text;
+      headerRow.appendChild(th);
+  });
+  moduleTblHeader.appendChild(headerRow);
 
-    filteredModules.forEach(module => {
-        let row = document.createElement('tr');
-        row.innerHTML = `<td>${module.description}</td>
-                 <td>${module.code}</td>
-                  <td><a href="${module.pdfUrl}" target="_blank">View PDF</a></td> <!-- Added PDF link -->
-                  <td><input type="checkbox" class="completedMod"></td>`;
+  let moduleTblBody = document.createElement('tbody');
 
-        moduleTblBody.appendChild(row);
+  filteredModules.forEach(module => {
+      let row = document.createElement('tr');
+      row.innerHTML = `<td>${module.description}</td>
+               <td>${module.code}</td>
+                <td><a href="https://www.belgiumcampus.ac.za/wp-content/uploads/2023/11/Mathematics-181-MAT181.pdf" target="_blank">View PDF</a></td>  
+                <td><input type="checkbox" class="completedMod"></td>`;
 
-        let checkbox = row.querySelector('.completedMod');
+      moduleTblBody.appendChild(row);
 
-        checkbox.addEventListener('change', (e) => {
-            if (e.target.checked) {
-                completeModule(module, row)
-            }
-        })
+      let checkbox = row.querySelector('.completedMod');
 
-    });
-    moduleTable.appendChild(moduleTblHeader)
-    moduleTable.appendChild(moduleTblBody);
+      checkbox.addEventListener('change', (e) => {
+          if (e.target.checked) {
+              completeModule(module, row);
+          }
+      });
+  });
 
-    let completedTable = document.createElement('table');
-    completedTable.className = 'completedTable';
+  moduleTable.appendChild(moduleTblHeader);
+  moduleTable.appendChild(moduleTblBody);
 
-    let completedTableHeader = document.createElement('thead');
-    completedTableHeader.innerHTML = `
-              <tr>
-                  <th>Description</th>
-                  <th>Code</th>
-                  <th>Year</th>
-              </tr>
-          `;
+  let completedTable = document.createElement('table');
+  completedTable.className = 'completedTable';
 
-    let completedTableBody = document.createElement('tbody');
-    completedTable.appendChild(completedTableHeader);
-    completedTable.appendChild(completedTableBody);
+  let completedTableHeader = document.createElement('thead');
+  completedTableHeader.innerHTML = `
+            <tr>
+                <th>Description</th>
+                <th>Code</th>
+                <th>Year</th>
+            </tr>
+        `;
 
-    dashContent.innerHTML = '';
-    dashContent.appendChild(moduleTable);
-    dashContent.appendChild(completedTable);
+  let completedTableBody = document.createElement('tbody');
+  completedTable.appendChild(completedTableHeader);
+  completedTable.appendChild(completedTableBody);
 
+  // container for the tables
+  let container = document.createElement('div');
+  container.className = 'modulesContainer';
+  container.appendChild(moduleTable);
+  container.appendChild(completedTable);
+
+  dashContent.appendChild(container);
 }
 
 function completeModule(module, row) {
-    let completedTableBody = document.querySelector('.completedTable tbody');
-    let completedRow = document.createElement('tr');
-    completedRow.innerHTML = `
-      <td>${module.description}</td>
-      <td>${module.code}</td>
-      <td>${module.year}</td>
-  `;
-    completedTableBody.appendChild(completedRow);
-    row.remove();
+  let completedTableBody = document.querySelector('.completedTable tbody');
+  let completedRow = document.createElement('tr');
+  completedRow.innerHTML = `
+    <td>${module.description}</td>
+    <td>${module.code}</td>
+    <td>${module.year}</td>
+`;
+  completedTableBody.appendChild(completedRow);
+  row.remove();
 }
 
 
