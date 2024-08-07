@@ -961,6 +961,9 @@ label[for=sideNav-footer-toggle] {
     transition: 0.5s;
 
 }
+.footerImg{
+    height: 10vh;
+}
 
 /* Modal */
 .modal {

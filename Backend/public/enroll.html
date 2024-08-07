@@ -23,7 +23,7 @@
                 </div>
             </div>
             <a href="home.html">Home</a>
-            <a id="dashboardLink" href="Dashboard.html">Dashboard</a>
+            <a id="dashboardLink" href="Dashboard.html" onclick="createHome()">Dashboard</a>
             <a href="courses.html">Courses</a>
             <a href="Enroll.html" class="active">Enroll Now</a>
         </div>
@@ -39,20 +39,24 @@
 
             <label>Name:</label>
             <input type="text" id="name" name="name" placeholder="Full Name">
-            <input type="text" id="surname" name="surname" placeholder="Surname">
             <br>
-
+            <input type="text" id="surname" name="surname" placeholder="Surname">
+            <label>Email:</label>
+            <input type="email" id="email" name="email">
             <label>ID number:</label>
             <input type="text" id="id" name="id">
-            <br><br>
 
+            <p><br></p><p><br></p>
 
-            <label>Address:</label>
-            <input type="text" id="adr1" name="adr" placeholder="Address line 1">
+            <label>Address1:</label>
+            <span><input type="text" id="adr1" name="adr" placeholder="Address line 1"></span>
+            <label>Address2:</label>
             <input type="text" id="adr2" name="adr" placeholder="Address line 2">
+            <label>City:</label>
             <input type="text" id="city" name="city" placeholder="City">
+            <label>Zip Code:</label>
             <input type="text" id="zip" name="zip" placeholder="Postal/Zip Code">
-
+            <label>Province:</label>
             <select name="province" id="province">
                 <option value="" selected="selected">Select Province</option>
                 <option value="Gau">Gauteng</option>
@@ -65,7 +69,7 @@
                 <option value="WC">Western Cape</option>
                 <option value="NC">Northern Cape</option>
             </select>
-            <br><br>
+            <p><br></p><p><br></p>
 
             <label>Gender:</label>
             <div class="gender-group">
@@ -74,11 +78,9 @@
                 <input type="radio" id="male" name="gender" value="Male">
                 <label for="male">Male</label>
             </div>
-            <br><br>
+            <p><br></p><p><br></p>
 
-            <label>Email:</label>
-            <input type="email" id="email" name="email">
-            <br><br>
+            
 
             <label for="course">Enroll in this course:</label>
             <select name="course" id="course" required>
@@ -87,8 +89,8 @@
                 <option value="DIT">Diploma in IT</option>
                 <option value="CIT">Certificate in IT</option>
             </select>
-            <br><br>
-            <label for="attendance">Please select your preferred model of attendance:</label>
+       
+            <label for="attendance">Course of attendance:</label>
             <div class="attendance">
                 <input type="radio" id="online" name="attendance" value="online">
                 <label for="online">Online</label>
@@ -117,6 +119,7 @@
             <a href="https://twitter.com/BelgiumCampus"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://www.youtube.com/@BelgiumCampusIT"><i class="fa-brands fa-youtube"></i></a>
         </div>
+        <img src="./Images/BelgiumFooter.png" alt="Student Activities" class="footerImg">
     </div>
 
     <div id="modal" class="modal">
