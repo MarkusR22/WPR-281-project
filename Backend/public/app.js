@@ -300,7 +300,7 @@ const modules = [
         code: 'MAT 181',
         description: 'Mathematics 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module provides an introduction to fundamental mathematical concepts and techniques. Topics include algebra, calculus, and basic statistical methods, which are essential for solving problems in computer science and engineering.',
         video: 'MAT-Introduction.mp4'
     },
@@ -308,7 +308,7 @@ const modules = [
         code: 'ACW 181',
         description: 'Academic Writing 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'Academic Writing 181 focuses on improving students\' writing skills in an academic context. The module covers essay writing, research papers, citation styles, and effective communication techniques, helping students to articulate their ideas clearly and persuasively.',
         video: 'ACW-Introduction.mp4'
     },
@@ -316,7 +316,7 @@ const modules = [
         code: 'COA 181',
         description: 'Computer Architecture 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introduction to the fundamental concepts of computer architecture. This module covers the structure and function of computer systems, including hardware components, instruction sets, and the basics of assembly language programming.',
         video: 'COA-Introduction.mp4'
     },
@@ -324,7 +324,7 @@ const modules = [
         code: 'DBD 181',
         description: 'Database Development 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module introduces students to the principles of database design and development. Topics include relational database concepts, SQL, and basic database management, providing a foundation for managing and manipulating data effectively.',
         video: 'DBD-Introduction.mp4'
     },
@@ -332,7 +332,7 @@ const modules = [
         code: 'INF 181',
         description: 'Information Systems 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'Information Systems 181 provides an overview of how information systems are used in organizations. The module covers system components, data management, and the role of information systems in decision-making and operational processes.',
         video: 'INF-Introduction.mp4'
     },
@@ -340,7 +340,7 @@ const modules = [
         code: 'INL 101',
         description: 'Innovation and Leadership 101',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module focuses on the fundamentals of innovation and leadership. Students will explore theories and practices related to creativity, strategic thinking, and leadership skills necessary for driving innovation in various contexts.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -348,7 +348,7 @@ const modules = [
         code: 'INL 102',
         description: 'Innovation and Leadership 102',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'Building on the concepts from INL 101, this module delves deeper into innovation strategies and leadership skills. Students will engage in case studies and projects to apply these concepts in real-world scenarios.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -356,7 +356,7 @@ const modules = [
         code: 'LPR 181',
         description: 'Linear Programming 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introductory module in linear programming, covering techniques and applications in optimization. Students will learn about problem formulation, the simplex method, and duality, with applications in various fields such as economics and engineering.',
         video: 'LPR-Introduction.mp4'
     },
@@ -364,7 +364,7 @@ const modules = [
         code: 'NWD 181',
         description: 'Networking Development 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module covers the basics of networking concepts and development. Topics include network topologies, protocols, and the OSI model, providing students with the knowledge to understand and work with computer networks.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -372,7 +372,7 @@ const modules = [
         code: 'PRG 181',
         description: 'Programming 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introductory module to programming, focusing on fundamental concepts and practices. Students will learn to write and debug programs using a high-level programming language, covering topics such as variables, control structures, and functions.',
         video: 'PRG-Introduction.mp4'
     },
@@ -380,7 +380,7 @@ const modules = [
         code: 'PRG 182',
         description: 'Programming 182',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'A continuation of Programming 181, this module focuses on advanced programming techniques and concepts. Topics include data structures, algorithms, and object-oriented programming, preparing students for more complex programming challenges.',
         video: 'PRG-Introduction.mp4'
     },
@@ -388,7 +388,7 @@ const modules = [
         code: 'STA 181',
         description: 'Statistics 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introductory module in statistics, covering basic statistical methods and applications. Students will learn about descriptive statistics, probability, and inferential statistics, with a focus on practical applications in data analysis.',
         video: 'STA-Introduction.mp4'
     },
@@ -396,7 +396,7 @@ const modules = [
         code: 'WPR 181',
         description: 'Web Programming 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module introduces students to web programming, including HTML, CSS, and JavaScript. Students will learn to create and style web pages, and implement interactive features, providing a foundation for web development.',
         video: 'PRG-Introduction.mp4'
     },
@@ -404,7 +404,7 @@ const modules = [
         code: 'BUM 181',
         description: 'Business Management 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introduction to the principles of business management. Topics include organizational structure, management theories, and business strategy, equipping students with the knowledge to understand and manage business operations.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -412,7 +412,7 @@ const modules = [
         code: 'ENT 181',
         description: 'Entrepreneurship 181',
         year: 1,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module provides an introduction to entrepreneurship and the development of business ideas. Students will explore the entrepreneurial process, including opportunity recognition, business planning, and venture creation.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -420,7 +420,7 @@ const modules = [
         code: 'DBD 281',
         description: 'Database Development 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in database design, development, and management. Students will explore complex database concepts, including normalization, indexing, and transaction management, building on the foundations of Database Development 181.',
         video: 'DBD-Introduction.mp4'
     },
@@ -428,7 +428,7 @@ const modules = [
         code: 'MAT 281',
         description: 'Mathematics 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'A continuation of Mathematics 181, this module covers more advanced mathematical concepts and techniques. Topics include advanced calculus, linear algebra, and differential equations, essential for higher-level problem-solving in computer science.',
         video: 'MAT-Introduction.mp4'
     },
@@ -436,7 +436,7 @@ const modules = [
         code: 'INF 281',
         description: 'Information Systems 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'Building on Information Systems 181, this module delves into advanced topics in information systems. Students will study system development methodologies, enterprise systems, and the strategic use of information technology in organizations.',
         video: 'INF-Introduction.mp4'
     },
@@ -444,7 +444,7 @@ const modules = [
         code: 'INL 201',
         description: 'Innovation and Leadership 201',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module continues the exploration of innovation and leadership, focusing on advanced strategies and techniques. Students will engage in practical projects and case studies to apply innovative solutions and leadership practices.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -452,7 +452,7 @@ const modules = [
         code: 'INL 202',
         description: 'Innovation and Leadership 202',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'A further exploration of innovation and leadership, this module builds on the concepts from INL 201. Students will learn about advanced leadership theories, innovation management, and the implementation of strategic initiatives.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -460,7 +460,7 @@ const modules = [
         code: 'PRG 281',
         description: 'Programming 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced programming module, building on Programming 181 and 182. Students will explore complex programming concepts, including data structures, algorithms, and software design patterns, preparing them for sophisticated programming tasks.',
         video: 'PRG-Introduction.mp4'
     },
@@ -468,7 +468,7 @@ const modules = [
         code: 'PRG 282',
         description: 'Programming 282',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'A continuation of Programming 281, focusing on more advanced programming challenges. Topics include algorithm optimization, advanced data structures, and real-world problem-solving, enhancing students\' programming proficiency.',
         video: 'PRG-Introduction.mp4'
     },
@@ -476,7 +476,7 @@ const modules = [
         code: 'PMM 281',
         description: 'Project Management 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introduction to project management principles and practices. This module covers project planning, execution, and control, providing students with the skills to manage projects effectively in various contexts.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -484,7 +484,7 @@ const modules = [
         code: 'STA 281',
         description: 'Statistics 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in statistics, building on Statistics 181. Students will learn about advanced statistical methods, including hypothesis testing, regression analysis, and ANOVA, with applications in data analysis and research.',
         video: 'STA-Introduction.mp4'
     },
@@ -492,7 +492,7 @@ const modules = [
         code: 'WPR 281',
         description: 'Web Programming 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in web programming, building on Web Programming 181. Students will learn about server-side programming, web frameworks, and database integration, enabling them to develop dynamic and interactive web applications.',
         video: 'PRG-Introduction.mp4'
     },
@@ -500,7 +500,7 @@ const modules = [
         code: 'SAD 281',
         description: 'Systems Analysis and Design 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module introduces students to systems analysis and design methodologies. Topics include requirements gathering, system modeling, and design techniques, providing a foundation for developing efficient and effective information systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -508,7 +508,7 @@ const modules = [
         code: 'DWH 281',
         description: 'Data Warehousing 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introduction to data warehousing concepts and practices. Students will learn about data warehouse design, ETL processes, and data mining techniques, preparing them to manage and analyze large volumes of data effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -516,7 +516,7 @@ const modules = [
         code: 'IOT 281',
         description: 'Internet of Things 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module provides an introduction to the Internet of Things (IoT) and its applications. Topics include IoT architecture, communication protocols, and sensor networks, with a focus on developing IoT solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -524,7 +524,7 @@ const modules = [
         code: 'SWT 281',
         description: 'Software Testing 281',
         year: 2,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An introduction to software testing principles and practices. Students will learn about test planning, test case design, and test automation, with a focus on ensuring software quality and reliability.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -532,7 +532,7 @@ const modules = [
         code: 'RSH 381',
         description: 'Research Methods 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module introduces students to research methods and techniques. Topics include research design, data collection, and data analysis, equipping students with the skills to conduct independent research in computer science.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -540,7 +540,7 @@ const modules = [
         code: 'MAT 381',
         description: 'Mathematics 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in mathematics, building on Mathematics 281. Students will explore topics such as advanced calculus, numerical methods, and mathematical modeling, with applications in computer science and engineering.',
         video: 'MAT-Introduction.mp4'
     },
@@ -548,7 +548,7 @@ const modules = [
         code: 'DBD 381',
         description: 'Database Development 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in database development, building on Database Development 281. Students will learn about complex database architectures, performance optimization, and advanced SQL techniques, preparing them for high-level database management.',
         video: 'DBD-Introduction.mp4'
     },
@@ -556,7 +556,7 @@ const modules = [
         code: 'INL 321',
         description: 'Innovation and Leadership 321',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module covers advanced topics in innovation and leadership, building on earlier modules. Students will engage in strategic planning, change management, and leadership development, preparing them for leadership roles in technology-driven environments.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -564,7 +564,7 @@ const modules = [
         code: 'LPR 381',
         description: 'Linear Programming 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in linear programming, building on Linear Programming 181. Students will learn about advanced optimization techniques, network flows, and integer programming, with applications in operations research and engineering.',
         video: 'LPR-Introduction.mp4'
     },
@@ -572,7 +572,7 @@ const modules = [
         code: 'MLG 381',
         description: 'Machine Learning 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module introduces students to machine learning concepts and techniques. Topics include supervised and unsupervised learning, neural networks, and deep learning, with applications in data analysis and artificial intelligence.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -580,7 +580,7 @@ const modules = [
         code: 'PRJ 381',
         description: 'Project 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'A capstone project integrating knowledge from various modules. Students will work on real-world projects, applying their skills in programming, database management, and systems analysis to develop comprehensive solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -588,7 +588,7 @@ const modules = [
         code: 'PMM 381',
         description: 'Project Management 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in project management, building on Project Management 281. Students will learn about advanced project planning, risk management, and project evaluation techniques, preparing them to manage large-scale projects effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -596,7 +596,7 @@ const modules = [
         code: 'PRG 381',
         description: 'Programming 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced programming module, building on earlier programming courses. Students will explore complex algorithms, software design patterns, and advanced programming languages, enhancing their software development skills.',
         video: 'PRG-Introduction.mp4'
     },
@@ -604,7 +604,7 @@ const modules = [
         code: 'SEN 381',
         description: 'Software Engineering 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module covers the principles and practices of software engineering. Topics include software development methodologies, project management, and quality assurance, preparing students for professional software engineering roles.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -612,7 +612,7 @@ const modules = [
         code: 'WPR 381',
         description: 'Web Programming 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in web programming, building on Web Programming 281. Students will learn about advanced web technologies, server-side scripting, and web security, preparing them to develop sophisticated web applications.',
         video: 'PRG-Introduction.mp4'
     },
@@ -620,7 +620,7 @@ const modules = [
         code: 'BIN 381',
         description: 'Business Intelligence 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module introduces students to business intelligence concepts and practices. Topics include data analytics, business reporting, and decision support systems, with a focus on leveraging data for strategic decision-making.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -628,7 +628,7 @@ const modules = [
         code: 'DBA 381',
         description: 'Database Administration 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in database administration, covering topics such as database security, backup and recovery, and performance tuning, equipping students with the skills to manage and maintain complex database systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -636,7 +636,7 @@ const modules = [
         code: 'STA 381',
         description: 'Statistics 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in statistics, building on Statistics 281. Students will explore topics such as multivariate analysis, time series analysis, and statistical modeling, with applications in research and data analysis.',
         video: 'STA-Introduction.mp4'
     },
@@ -644,7 +644,7 @@ const modules = [
         code: 'INM 381',
         description: 'Information Management 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module covers the principles and practices of information management. Topics include information governance, data quality, and information lifecycle management, preparing students to manage information assets effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -652,7 +652,7 @@ const modules = [
         code: 'MLG 382',
         description: 'Machine Learning 382',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'A continuation of Machine Learning 381, focusing on more advanced topics. Students will learn about reinforcement learning, advanced neural networks, and machine learning in practice, enhancing their skills in artificial intelligence.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -660,7 +660,7 @@ const modules = [
         code: 'UAX 381',
         description: 'User Experience 381',
         year: 3,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module covers the principles and practices of user experience (UX) design. Students will learn about UX research, usability testing, and interaction design, with a focus on creating user-centered digital products.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -668,7 +668,7 @@ const modules = [
         code: 'AIT 481',
         description: 'Advanced Information Technology 481',
         year: 4,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'An advanced module in information technology, covering topics such as emerging technologies, IT strategy, and IT management. Students will explore the latest trends and developments in the IT field, preparing them for leadership roles.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -676,7 +676,7 @@ const modules = [
         code: 'AIT 482',
         description: 'Advanced Information Technology 482',
         year: 4,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'A continuation of Advanced Information Technology 481, focusing on more advanced topics. Students will delve deeper into IT strategy, technology management, and innovation in the IT industry.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -684,7 +684,7 @@ const modules = [
         code: 'DST 481',
         description: 'Distributed Systems 481',
         year: 4,
-        module: 'BCOMP',
+        course: 'BCOMP',
         overview: 'This module covers the principles and practices of distributed systems. Topics include distributed architectures, distributed algorithms, and the challenges of building scalable and reliable distributed applications.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -692,7 +692,7 @@ const modules = [
         code: 'ACW 171',
         description: 'Academic Writing 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'Academic Writing 171 focuses on developing writing skills for academic purposes. The module covers essay writing, research papers, and effective communication techniques, helping students to articulate their ideas clearly and persuasively in an academic context.',
         video: 'ACW-Introduction.mp4'
     },
@@ -700,7 +700,7 @@ const modules = [
         code: 'COA 171',
         description: 'Computer Architecture 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introduction to computer architecture, covering the structure and function of computer systems. Students will learn about hardware components, instruction sets, and the basics of assembly language programming.',
         video: 'COA-Introduction.mp4'
     },
@@ -708,7 +708,7 @@ const modules = [
         code: 'DBD 171',
         description: 'Database Development 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module introduces students to the principles of database design and development. Topics include relational database concepts, SQL, and basic database management, providing a foundation for managing and manipulating data effectively.',
         video: 'DBD-Introduction.mp4'
     },
@@ -716,7 +716,7 @@ const modules = [
         code: 'ENG 171',
         description: 'English 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introductory module in English language skills, covering reading, writing, and comprehension. Students will develop their ability to communicate effectively in both academic and professional contexts.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -724,7 +724,7 @@ const modules = [
         code: 'INF 171',
         description: 'Information Systems 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'Information Systems 171 provides an overview of how information systems are used in organizations. The module covers system components, data management, and the role of information systems in decision-making and operational processes.',
         video: 'INF-Introduction.mp4'
     },
@@ -732,7 +732,7 @@ const modules = [
         code: 'MAT 171',
         description: 'Mathematics 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module provides an introduction to fundamental mathematical concepts and techniques. Topics include algebra, calculus, and basic statistical methods, which are essential for solving problems in computer science and engineering.',
         video: 'MAT-Introduction.mp4'
     },
@@ -740,7 +740,7 @@ const modules = [
         code: 'NWD 171',
         description: 'Networking Development 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module covers the basics of networking concepts and development. Topics include network topologies, protocols, and the OSI model, providing students with the knowledge to understand and work with computer networks.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -748,7 +748,7 @@ const modules = [
         code: 'PRG 171',
         description: 'Programming 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introductory module to programming, focusing on fundamental concepts and practices. Students will learn to write and debug programs using a high-level programming language, covering topics such as variables, control structures, and functions.',
         video: 'PRG-Introduction.mp4'
     },
@@ -756,7 +756,7 @@ const modules = [
         code: 'PRG 172',
         description: 'Programming 172',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'A continuation of Programming 171, this module focuses on advanced programming techniques and concepts. Topics include data structures, algorithms, and object-oriented programming, preparing students for more complex programming challenges.',
         video: 'PRG-Introduction.mp4'
     },
@@ -764,7 +764,7 @@ const modules = [
         code: 'STA 171',
         description: 'Statistics 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introductory module in statistics, covering basic statistical methods and applications. Students will learn about descriptive statistics, probability, and inferential statistics, with a focus on practical applications in data analysis.',
         video: 'STA-Introduction.mp4'
     },
@@ -772,7 +772,7 @@ const modules = [
         code: 'WPR 171',
         description: 'Web Programming 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module introduces students to web programming, including HTML, CSS, and JavaScript. Students will learn to create and style web pages, and implement interactive features, providing a foundation for web development.',
         video: 'PRG-Introduction.mp4'
     },
@@ -780,7 +780,7 @@ const modules = [
         code: 'BUM 171',
         description: 'Business Management 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introduction to the principles of business management. Topics include organizational structure, management theories, and business strategy, equipping students with the knowledge to understand and manage business operations.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -788,7 +788,7 @@ const modules = [
         code: 'ENT 171',
         description: 'Entrepreneurship 171',
         year: 1,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module provides an introduction to entrepreneurship and the development of business ideas. Students will explore the entrepreneurial process, including opportunity recognition, business planning, and venture creation.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -796,7 +796,7 @@ const modules = [
         code: 'DBD 271',
         description: 'Database Development 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in database design, development, and management. Students will explore complex database concepts, including normalization, indexing, and transaction management, building on the foundations of Database Development 171.',
         video: 'DBD-Introduction.mp4'
     },
@@ -804,7 +804,7 @@ const modules = [
         code: 'MAT 271',
         description: 'Mathematics 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'A continuation of Mathematics 171, this module covers more advanced mathematical concepts and techniques. Topics include advanced calculus, linear algebra, and differential equations, essential for higher-level problem-solving in computer science.',
         video: 'MAT-Introduction.mp4'
     },
@@ -812,7 +812,7 @@ const modules = [
         code: 'INF 271',
         description: 'Information Systems 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'Building on Information Systems 171, this module delves into advanced topics in information systems. Students will study system development methodologies, enterprise systems, and the strategic use of information technology in organizations.',
         video: 'INF-Introduction.mp4'
     },
@@ -820,7 +820,7 @@ const modules = [
         code: 'INL 221',
         description: 'Innovation and Leadership 221',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module continues the exploration of innovation and leadership, focusing on advanced strategies and techniques. Students will engage in practical projects and case studies to apply innovative solutions and leadership practices.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -828,7 +828,7 @@ const modules = [
         code: 'PRG 271',
         description: 'Programming 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced programming module, building on Programming 171 and 172. Students will explore complex programming concepts, including data structures, algorithms, and software design patterns, preparing them for sophisticated programming tasks.',
         video: 'PRG-Introduction.mp4'
     },
@@ -836,7 +836,7 @@ const modules = [
         code: 'PRG 272',
         description: 'Programming 272',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'A continuation of Programming 271, focusing on more advanced programming challenges. Topics include algorithm optimization, advanced data structures, and real-world problem-solving, enhancing students\' programming proficiency.',
         video: 'PRG-Introduction.mp4'
     },
@@ -844,7 +844,7 @@ const modules = [
         code: 'PMM 271',
         description: 'Project Management 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introduction to project management principles and practices. This module covers project planning, execution, and control, providing students with the skills to manage projects effectively in various contexts.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -852,7 +852,7 @@ const modules = [
         code: 'STA 271',
         description: 'Statistics 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in statistics, building on Statistics 171. Students will learn about advanced statistical methods, including hypothesis testing, regression analysis, and ANOVA, with applications in data analysis and research.',
         video: 'STA-Introduction.mp4'
     },
@@ -860,7 +860,7 @@ const modules = [
         code: 'WPR 271',
         description: 'Web Programming 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in web programming, building on Web Programming 171. Students will learn about server-side programming, web frameworks, and database integration, enabling them to develop dynamic and interactive web applications.',
         video: 'PRG-Introduction.mp4'
     },
@@ -868,7 +868,7 @@ const modules = [
         code: 'SAD 271',
         description: 'Systems Analysis and Design 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module introduces students to systems analysis and design methodologies. Topics include requirements gathering, system modeling, and design techniques, providing a foundation for developing efficient and effective information systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -876,7 +876,7 @@ const modules = [
         code: 'DWH 271',
         description: 'Data Warehousing 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introduction to data warehousing concepts and practices. Students will learn about data warehouse design, ETL processes, and data mining techniques, preparing them to manage and analyze large volumes of data effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -884,7 +884,7 @@ const modules = [
         code: 'IOT 271',
         description: 'Internet of Things 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module provides an introduction to the Internet of Things (IoT) and its applications. Topics include IoT architecture, communication protocols, and sensor networks, with a focus on developing IoT solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -892,7 +892,7 @@ const modules = [
         code: 'SWT 271',
         description: 'Software Testing 271',
         year: 2,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An introduction to software testing principles and practices. Students will learn about test planning, test case design, and test automation, with a focus on ensuring software quality and reliability.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -900,7 +900,7 @@ const modules = [
         code: 'MAT 371',
         description: 'Mathematics 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in mathematics, building on Mathematics 271. Students will explore topics such as advanced calculus, numerical methods, and mathematical modeling, with applications in computer science and engineering.',
         video: 'MAT-Introduction.mp4'
     },
@@ -908,7 +908,7 @@ const modules = [
         code: 'DBD 371',
         description: 'Database Development 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in database development, building on Database Development 271. Students will learn about complex database architectures, performance optimization, and advanced SQL techniques, preparing them for high-level database management.',
         video: 'DBD-Introduction.mp4'
     },
@@ -916,7 +916,7 @@ const modules = [
         code: 'INL 321',
         description: 'Innovation and Leadership 321',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module covers advanced topics in innovation and leadership, building on earlier modules. Students will engage in strategic planning, change management, and leadership development, preparing them for leadership roles in technology-driven environments.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -924,7 +924,7 @@ const modules = [
         code: 'LPR 371',
         description: 'Linear Programming 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in linear programming, building on Linear Programming 181. Students will learn about advanced optimization techniques, network flows, and integer programming, with applications in operations research and engineering.',
         video: 'LPR-Introduction.mp4'
     },
@@ -932,7 +932,7 @@ const modules = [
         code: 'MLG 371',
         description: 'Machine Learning 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module introduces students to machine learning concepts and techniques. Topics include supervised and unsupervised learning, neural networks, and deep learning, with applications in data analysis and artificial intelligence.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -940,7 +940,7 @@ const modules = [
         code: 'PRJ 371',
         description: 'Project 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'A capstone project integrating knowledge from various modules. Students will work on real-world projects, applying their skills in programming, database management, and systems analysis to develop comprehensive solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -948,7 +948,7 @@ const modules = [
         code: 'PMM 371',
         description: 'Project Management 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in project management, building on Project Management 271. Students will learn about advanced project planning, risk management, and project evaluation techniques, preparing them to manage large-scale projects effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -956,7 +956,7 @@ const modules = [
         code: 'PRG 371',
         description: 'Programming 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced programming module, building on earlier programming courses. Students will explore complex algorithms, software design patterns, and advanced programming languages, enhancing their software development skills.',
         video: 'PRG-Introduction.mp4'
     },
@@ -964,7 +964,7 @@ const modules = [
         code: 'SEN 371',
         description: 'Software Engineering 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module covers the principles and practices of software engineering. Topics include software development methodologies, project management, and quality assurance, preparing students for professional software engineering roles.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -972,7 +972,7 @@ const modules = [
         code: 'WPR 371',
         description: 'Web Programming 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in web programming, building on Web Programming 271. Students will learn about advanced web technologies, server-side scripting, and web security, preparing them to develop sophisticated web applications.',
         video: 'PRG-Introduction.mp4'
     },
@@ -980,7 +980,7 @@ const modules = [
         code: 'BIN 371',
         description: 'Business Intelligence 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module introduces students to business intelligence concepts and practices. Topics include data analytics, business reporting, and decision support systems, with a focus on leveraging data for strategic decision-making.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -988,7 +988,7 @@ const modules = [
         code: 'DBA 371',
         description: 'Database Administration 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in database administration, covering topics such as database security, backup and recovery, and performance tuning, equipping students with the skills to manage and maintain complex database systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -996,7 +996,7 @@ const modules = [
         code: 'STA 371',
         description: 'Statistics 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in statistics, building on Statistics 271. Students will explore topics such as multivariate analysis, time series analysis, and statistical modeling, with applications in research and data analysis.',
         video: 'STA-Introduction.mp4'
     },
@@ -1004,7 +1004,7 @@ const modules = [
         code: 'INM 371',
         description: 'Information Management 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module covers the principles and practices of information management. Topics include information governance, data quality, and information lifecycle management, preparing students to manage information assets effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1012,7 +1012,7 @@ const modules = [
         code: 'MLG 372',
         description: 'Machine Learning 372',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'A continuation of Machine Learning 371, focusing on more advanced topics. Students will learn about reinforcement learning, advanced neural networks, and machine learning in practice, enhancing their skills in artificial intelligence.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1020,7 +1020,7 @@ const modules = [
         code: 'UAX 371',
         description: 'User Experience 371',
         year: 3,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module covers the principles and practices of user experience (UX) design. Students will learn about UX research, usability testing, and interaction design, with a focus on creating user-centered digital products.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1028,7 +1028,7 @@ const modules = [
         code: 'AIT 471',
         description: 'Advanced Information Technology 471',
         year: 4,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'An advanced module in information technology, covering topics such as emerging technologies, IT strategy, and IT management. Students will explore the latest trends and developments in the IT field, preparing them for leadership roles.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1036,7 +1036,7 @@ const modules = [
         code: 'AIT 472',
         description: 'Advanced Information Technology 472',
         year: 4,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'A continuation of Advanced Information Technology 471, focusing on more advanced topics. Students will delve deeper into IT strategy, technology management, and innovation in the IT industry.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1044,7 +1044,7 @@ const modules = [
         code: 'DST 471',
         description: 'Distributed Systems 471',
         year: 4,
-        module: 'BIT',
+        course: 'BIT',
         overview: 'This module covers the principles and practices of distributed systems. Topics include distributed architectures, distributed algorithms, and the challenges of building scalable and reliable distributed applications.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1052,7 +1052,7 @@ const modules = [
         code: 'BUC 161',
         description: 'Business Communication 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'Business Communication 161 covers the basics of effective communication in a business context. Topics include professional writing, presentation skills, and interpersonal communication, preparing students to communicate effectively in the workplace.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1060,7 +1060,7 @@ const modules = [
         code: 'BME 161',
         description: 'Business Management 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to the principles of business management. Students will learn about organizational structures, management theories, and business strategy, providing a foundation for understanding and managing business operations.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1068,7 +1068,7 @@ const modules = [
         code: 'COA 161',
         description: 'Computer Architecture 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introductory module in computer architecture, covering the structure and function of computer systems. Topics include hardware components, instruction sets, and basic assembly language programming, providing a foundation for understanding computer systems.',
         video: 'COA-Introduction.mp4'
     },
@@ -1076,7 +1076,7 @@ const modules = [
         code: 'DBC 161',
         description: 'Database Concepts 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the basics of database concepts, including design, development, and management. Students will learn about relational databases, SQL, and database management systems, providing a foundation for working with databases.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1084,7 +1084,7 @@ const modules = [
         code: 'DBF 161',
         description: 'Database Fundamentals 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introductory module in database fundamentals, covering key concepts and practices. Students will learn about database design, SQL, and basic database management, providing a foundation for managing and manipulating data effectively.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1092,7 +1092,7 @@ const modules = [
         code: 'EUC 161',
         description: 'End User Computing 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the basics of end user computing, including software and hardware use. Topics include office applications, internet use, and basic troubleshooting, preparing students to use and support computer systems effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1100,7 +1100,7 @@ const modules = [
         code: 'INL 161',
         description: 'Information Literacy 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to information literacy, focusing on research skills and information management. Students will learn about information sources, research strategies, and ethical use of information, preparing them for academic and professional research.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1108,7 +1108,7 @@ const modules = [
         code: 'IOT 161',
         description: 'Internet of Things 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module introduces students to the Internet of Things (IoT) and its applications. Topics include IoT architecture, communication protocols, and sensor networks, providing a foundation for developing IoT solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1116,7 +1116,7 @@ const modules = [
         code: 'MAT 161',
         description: 'Mathematics 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introductory module in mathematics, covering fundamental concepts and techniques. Topics include algebra, calculus, and basic statistics, essential for solving problems in computer science and information technology.',
         video: 'MAT-Introduction.mp4'
     },
@@ -1124,7 +1124,7 @@ const modules = [
         code: 'NWD 161',
         description: 'Networking and Web Development 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the basics of networking and web development. Students will learn about network topologies, protocols, and web technologies, providing a foundation for developing and managing networked systems and web applications.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1132,7 +1132,7 @@ const modules = [
         code: 'PRS 161',
         description: 'Professional Skills 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to the professional skills needed in the IT industry. Topics include teamwork, communication, and problem-solving, preparing students to work effectively in professional environments.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1140,7 +1140,7 @@ const modules = [
         code: 'PRG 161',
         description: 'Programming 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introductory module to programming, focusing on fundamental concepts and practices. Students will learn to write and debug programs using a high-level programming language, covering topics such as variables, control structures, and functions.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1148,7 +1148,7 @@ const modules = [
         code: 'PRP 161',
         description: 'Programming Principles 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the basic principles of programming and problem-solving techniques. Students will learn about algorithm design, data structures, and programming best practices, providing a foundation for further programming studies.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1156,7 +1156,7 @@ const modules = [
         code: 'WPR 161',
         description: 'Web Programming 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module introduces students to web programming, including HTML, CSS, and JavaScript. Students will learn to create and style web pages, and implement interactive features, providing a foundation for web development.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1164,7 +1164,7 @@ const modules = [
         code: 'STA 161',
         description: 'Statistics 161',
         year: 1,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introductory module in statistics, covering basic statistical methods and applications. Students will learn about descriptive statistics, probability, and inferential statistics, with a focus on practical applications in data analysis.',
         video: 'STA-Introduction.mp4'
     },
@@ -1172,7 +1172,7 @@ const modules = [
         code: 'DBD 261',
         description: 'Database Development 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in database development, building on Database Concepts 161. Students will learn about advanced database design, SQL optimization, and database management techniques, preparing them for complex database tasks.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1180,7 +1180,7 @@ const modules = [
         code: 'ERP 261',
         description: 'Enterprise Resource Planning 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module introduces students to enterprise resource planning (ERP) systems and their applications. Topics include ERP architecture, implementation, and management, providing a foundation for understanding and using ERP systems effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1188,7 +1188,7 @@ const modules = [
         code: 'INL 261',
         description: 'Information Literacy 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in information literacy, building on Information Literacy 161. Students will learn about advanced research techniques, information management, and ethical use of information, preparing them for professional research and information management.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1196,7 +1196,7 @@ const modules = [
         code: 'ILE 261',
         description: 'Information Literacy and Ethics 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers information literacy and ethical considerations in the IT industry. Topics include research skills, information management, and ethical issues related to information use, preparing students to handle information responsibly.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1204,7 +1204,7 @@ const modules = [
         code: 'PMM 261',
         description: 'Project Management 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to project management principles and practices. This module covers project planning, execution, and control, providing students with the skills to manage projects effectively in various contexts.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1212,7 +1212,7 @@ const modules = [
         code: 'CNA 261',
         description: 'Computer Networks and Architecture 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles of computer networks and architecture. Topics include network design, protocols, and network security, providing students with the knowledge to design, implement, and manage networked systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1220,7 +1220,7 @@ const modules = [
         code: 'IOT 261',
         description: 'Internet of Things 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in the Internet of Things (IoT), building on IoT 161. Students will learn about IoT architectures, protocols, and applications, with a focus on developing and deploying IoT solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1228,7 +1228,7 @@ const modules = [
         code: 'OPS 261',
         description: 'Operating Systems 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to operating systems concepts and practices. Students will learn about operating system architecture, process management, and memory management, providing a foundation for understanding and managing operating systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1236,7 +1236,7 @@ const modules = [
         code: 'OPS 262',
         description: 'Operating Systems 262',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'A continuation of Operating Systems 261, focusing on more advanced topics. Students will learn about file systems, device management, and operating system security, preparing them for advanced operating system management tasks.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1244,7 +1244,7 @@ const modules = [
         code: 'OPS 263',
         description: 'Operating Systems 263',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in operating systems, building on Operating Systems 262. Students will learn about distributed operating systems, virtualization, and operating system performance optimization, preparing them for complex operating system tasks.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1252,7 +1252,7 @@ const modules = [
         code: 'SEC 261',
         description: 'Security 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module introduces students to security principles and practices in the IT industry. Topics include network security, cryptography, and security management, providing a foundation for understanding and implementing security measures.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1260,7 +1260,7 @@ const modules = [
         code: 'PRG 261',
         description: 'Programming 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced programming module, building on Programming 161. Students will explore complex programming concepts, including data structures, algorithms, and software design patterns, preparing them for sophisticated programming tasks.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1268,7 +1268,7 @@ const modules = [
         code: 'PRG 262',
         description: 'Programming 262',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'A continuation of Programming 261, focusing on more advanced programming challenges. Topics include algorithm optimization, advanced data structures, and real-world problem-solving, enhancing students\' programming proficiency.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1276,7 +1276,7 @@ const modules = [
         code: 'SWA 261',
         description: 'Software Architecture 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module introduces students to software architecture principles and practices. Topics include architectural styles, design patterns, and software architecture documentation, providing a foundation for designing and developing robust software systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1284,7 +1284,7 @@ const modules = [
         code: 'SWT 261',
         description: 'Software Testing 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to software testing principles and practices. Students will learn about test planning, test case design, and test automation, with a focus on ensuring software quality and reliability.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1292,7 +1292,7 @@ const modules = [
         code: 'UXD 261',
         description: 'User Experience Design 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles and practices of user experience (UX) design. Students will learn about UX research, usability testing, and interaction design, with a focus on creating user-centered digital products.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1300,7 +1300,7 @@ const modules = [
         code: 'WPR 261',
         description: 'Web Programming 261',
         year: 2,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in web programming, building on Web Programming 161. Students will learn about server-side programming, web frameworks, and database integration, enabling them to develop dynamic and interactive web applications.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1308,7 +1308,7 @@ const modules = [
         code: 'CNA 361',
         description: 'Computer Networks and Architecture 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in computer networks and architecture, building on CNA 261. Students will learn about advanced networking concepts, network design, and network security, preparing them for complex network management tasks.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1316,7 +1316,7 @@ const modules = [
         code: 'EHA 361',
         description: 'Ethics in HCI and AI 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers ethical considerations in human-computer interaction (HCI) and artificial intelligence (AI). Topics include privacy, bias, and ethical decision-making, preparing students to address ethical challenges in technology development.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1324,7 +1324,7 @@ const modules = [
         code: 'PET 361',
         description: 'Petroleum Engineering Technology 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to petroleum engineering technology and its applications. Students will learn about drilling, production, and reservoir engineering, providing a foundation for working in the petroleum industry.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1332,7 +1332,7 @@ const modules = [
         code: 'DOP 361',
         description: 'DevOps 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles and practices of DevOps. Students will learn about continuous integration, continuous delivery, and infrastructure as code, preparing them to implement and manage DevOps processes in IT projects.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1340,7 +1340,7 @@ const modules = [
         code: 'MFR 361',
         description: 'Manufacturing 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to manufacturing technology and its applications. Topics include manufacturing processes, automation, and quality control, providing a foundation for working in the manufacturing industry.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1348,7 +1348,7 @@ const modules = [
         code: 'NWD 361',
         description: 'Networking and Web Development 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in networking and web development, building on NWD 161. Students will learn about advanced networking technologies, web server programming, and web security, preparing them for complex web and network development tasks.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1356,7 +1356,7 @@ const modules = [
         code: 'OPS 361',
         description: 'Operating Systems 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in operating systems, building on earlier operating systems courses. Students will learn about distributed operating systems, virtualization, and operating system performance optimization, preparing them for complex operating system tasks.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1364,7 +1364,7 @@ const modules = [
         code: 'DBA 361',
         description: 'Database Administration 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in database administration, covering topics such as database security, backup and recovery, and performance tuning. Students will learn to manage and maintain complex database systems effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1372,7 +1372,7 @@ const modules = [
         code: 'DBC 361',
         description: 'Database Concepts 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in database concepts, building on DBC 161. Students will learn about advanced database design, SQL optimization, and database management techniques, preparing them for complex database tasks.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1380,7 +1380,7 @@ const modules = [
         code: 'DBD 361',
         description: 'Database Development 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in database development, building on earlier database courses. Students will learn about complex database architectures, performance optimization, and advanced SQL techniques, preparing them for high-level database management.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1388,7 +1388,7 @@ const modules = [
         code: 'DBR 361',
         description: 'Database Recovery 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles and practices of database recovery. Students will learn about backup strategies, disaster recovery, and data restoration techniques, preparing them to ensure data integrity and availability.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1396,7 +1396,7 @@ const modules = [
         code: 'DDB 361',
         description: 'Distributed Database 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to distributed database systems and their applications. Students will learn about distributed database architectures, data replication, and consistency models, preparing them to design and manage distributed databases.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1404,7 +1404,7 @@ const modules = [
         code: 'WDB 361',
         description: 'Web Database 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles and practices of web databases. Students will learn about database-driven web applications, web database integration, and web security, preparing them to develop robust web database solutions.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1412,7 +1412,7 @@ const modules = [
         code: 'WFS 361',
         description: 'Web Frameworks and Services 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to web frameworks and services. Students will learn about popular web frameworks, service-oriented architecture, and web services integration, preparing them to develop sophisticated web applications.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1420,7 +1420,7 @@ const modules = [
         code: 'WSE 361',
         description: 'Web Security 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles and practices of web security. Students will learn about common web vulnerabilities, secure coding practices, and web application firewalls, preparing them to develop and maintain secure web applications.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1428,7 +1428,7 @@ const modules = [
         code: 'PRG 361',
         description: 'Programming 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced programming module, building on earlier programming courses. Students will explore complex algorithms, software design patterns, and advanced programming languages, enhancing their software development skills.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1436,7 +1436,7 @@ const modules = [
         code: 'SSX 361',
         description: 'System Security and Forensics 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module introduces students to system security and forensics principles and practices. Topics include system security measures, incident response, and digital forensics techniques, preparing students to secure systems and investigate security incidents.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1444,7 +1444,7 @@ const modules = [
         code: 'SWA 361',
         description: 'Software Architecture 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in software architecture, building on SWA 261. Students will learn about architectural design patterns, microservices architecture, and architecture evaluation techniques, preparing them to design and develop robust software systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1452,7 +1452,7 @@ const modules = [
         code: 'PMM 361',
         description: 'Project Management 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in project management, building on PMM 261. Students will learn about advanced project planning, risk management, and project evaluation techniques, preparing them to manage large-scale projects effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1460,7 +1460,7 @@ const modules = [
         code: 'DBA 361',
         description: 'Database Administration 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in database administration, covering topics such as database security, backup and recovery, and performance tuning. Students will learn to manage and maintain complex database systems effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1468,7 +1468,7 @@ const modules = [
         code: 'DBC 361',
         description: 'Database Concepts 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in database concepts, building on DBC 161. Students will learn about advanced database design, SQL optimization, and database management techniques, preparing them for complex database tasks.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1476,7 +1476,7 @@ const modules = [
         code: 'DBD 361',
         description: 'Database Development 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in database development, building on earlier database courses. Students will learn about complex database architectures, performance optimization, and advanced SQL techniques, preparing them for high-level database management.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1484,7 +1484,7 @@ const modules = [
         code: 'DBR 361',
         description: 'Database Recovery 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles and practices of database recovery. Students will learn about backup strategies, disaster recovery, and data restoration techniques, preparing them to ensure data integrity and availability.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1492,7 +1492,7 @@ const modules = [
         code: 'DDB 361',
         description: 'Distributed Database 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An introduction to distributed database systems and their applications. Students will learn about distributed database architectures, data replication, and consistency models, preparing them to design and manage distributed databases.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1500,7 +1500,7 @@ const modules = [
         code: 'PRJ 361',
         description: 'Project 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'A capstone project integrating knowledge from various modules. Students will work on real-world projects, applying their skills in programming, database management, and systems analysis to develop comprehensive solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1508,7 +1508,7 @@ const modules = [
         code: 'AIT 361',
         description: 'Advanced Information Technology 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'An advanced module in information technology, building on earlier IT courses. Students will explore topics such as emerging technologies, IT strategy, and IT management, preparing them for leadership roles in the IT industry.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1516,7 +1516,7 @@ const modules = [
         code: 'WSP 361',
         description: 'Web Server Programming 361',
         year: 3,
-        module: 'DIT',
+        course: 'DIT',
         overview: 'This module covers the principles and practices of web server programming. Students will learn about server-side scripting, web server configuration, and web security, preparing them to develop and manage web servers effectively.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1524,7 +1524,7 @@ const modules = [
         code: 'INF 251',
         description: 'Information Systems 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'This module provides an introduction to information systems and their role in organizations. Topics include system components, data management, and the use of information systems for decision-making and operational processes.',
         video: 'INF-Introduction.mp4'
     },
@@ -1532,7 +1532,7 @@ const modules = [
         code: 'OPS 251',
         description: 'Operating Systems 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'An introduction to operating systems concepts and practices. Students will learn about operating system architecture, process management, and memory management, providing a foundation for understanding and managing operating systems.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1540,7 +1540,7 @@ const modules = [
         code: 'PRJ 251',
         description: 'Project 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'A capstone project integrating knowledge from various modules. Students will work on real-world projects, applying their skills in programming, database management, and systems analysis to develop comprehensive solutions.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1548,7 +1548,7 @@ const modules = [
         code: 'PMM 251',
         description: 'Project Management 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'An introduction to project management principles and practices. This module covers project planning, execution, and control, providing students with the skills to manage projects effectively in various contexts.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1556,7 +1556,7 @@ const modules = [
         code: 'SEC 251',
         description: 'Security 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'This module introduces students to security principles and practices in the IT industry. Topics include network security, cryptography, and security management, providing a foundation for understanding and implementing security measures.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1564,7 +1564,7 @@ const modules = [
         code: 'MAT 151',
         description: 'Mathematics 151',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'An introductory module in mathematics, covering fundamental concepts and techniques. Topics include algebra, calculus, and basic statistics, essential for solving problems in computer science and information technology.',
         video: 'MAT-Introduction.mp4'
     },
@@ -1572,7 +1572,7 @@ const modules = [
         code: 'DBD 251',
         description: 'Database Development 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'This module covers the basics of database design, development, and management. Students will learn about relational database concepts, SQL, and database management systems, providing a foundation for working with databases.',
         video: 'DBD-Introduction.mp4'
     },
@@ -1580,7 +1580,7 @@ const modules = [
         code: 'DBM 251',
         description: 'Database Management 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'An introduction to database management principles and practices. Students will learn about database administration, performance tuning, and security, preparing them to manage and maintain database systems effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1588,7 +1588,7 @@ const modules = [
         code: 'PRG 251',
         description: 'Programming 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'An introductory module to programming, focusing on fundamental concepts and practices. Students will learn to write and debug programs using a high-level programming language, covering topics such as variables, control structures, and functions.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1596,7 +1596,7 @@ const modules = [
         code: 'PRG 252',
         description: 'Programming 252',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'A continuation of Programming 251, focusing on advanced programming techniques and concepts. Topics include data structures, algorithms, and object-oriented programming, preparing students for more complex programming challenges.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1604,7 +1604,7 @@ const modules = [
         code: 'WPR 251',
         description: 'Web Programming 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'This module introduces students to web programming, including HTML, CSS, and JavaScript. Students will learn to create and style web pages, and implement interactive features, providing a foundation for web development.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1612,7 +1612,7 @@ const modules = [
         code: 'WPR 252',
         description: 'Web Programming 252',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'A continuation of Web Programming 251, focusing on more advanced topics. Students will learn about server-side programming, web frameworks, and web security, enabling them to develop robust web applications.',
         video: 'PRG-Introduction.mp4'
     },
@@ -1620,7 +1620,7 @@ const modules = [
         code: 'ERP 251',
         description: 'Enterprise Resource Planning 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'This module introduces students to enterprise resource planning (ERP) systems and their applications. Topics include ERP architecture, implementation, and management, providing a foundation for understanding and using ERP systems effectively.',
         video: 'All-Other-Introduction.mp4'
     },
@@ -1628,7 +1628,7 @@ const modules = [
         code: 'IOT 251',
         description: 'Internet of Things 251',
         year: 1,
-        module: 'CIT',
+        course: 'CIT',
         overview: 'This module introduces students to the Internet of Things (IoT) and its applications. Topics include IoT architecture, communication protocols, and sensor networks, providing a foundation for developing IoT solutions.',
         video: 'All-Other-Introduction.mp4'
     }
@@ -2149,86 +2149,84 @@ function createVenues(){
         });
       });
 }
-
 async function createMyModules() {
-  let dashContent = document.querySelector(".dashboardContent")
+  let dashContent = document.querySelector(".dashboardContent");
   dashContent.innerHTML = ``;
  await getStudentDetails();
 
- let filteredModules = modules.filter(module => module.course === sCourse)
+  let filteredModules = modules.filter(module => module.course === sCourse);
 
- let moduleTable = document.createElement('table');
- moduleTable.className = 'moduleTable';
+  let moduleTable = document.createElement('table')
+  moduleTable.className = 'moduleTable';
 
- let moduleTblHeader = document.createElement('thead')
- let headerRow = document.createElement('tr')
- let headers = ['Description', 'Code', 'Completed']
+  let moduleTblHeader=document.createElement('thead')
+  let headerRow=document.createElement('tr');
+  let headers=['Description','Code','Completed']
 
- headers.forEach(text => {
-     const th = document.createElement('th')
-     th.textContent = text;
-     headerRow.appendChild(th)
- });
- moduleTblHeader.appendChild(headerRow);
+  headers.forEach(text=>{
+      const th=document.createElement('th')
+      th.textContent=text;
+      headerRow.appendChild(th)
+  });
+  moduleTblHeader.appendChild(headerRow)
 
- let moduleTblBody = document.createElement('tbody')
+  let moduleTblBody= document.createElement('tbody')
 
- filteredModules.forEach(module => {
-     let row = document.createElement('tr');
-     row.innerHTML = `<td>${module.description}</td>
-                     <td>${module.code}</td>
-                     <td><input type="checkbox" class="completedMod"></td>`;
+  filteredModules.forEach(module => {
+      let row = document.createElement('tr')
+      row.innerHTML = `<td>${module.description}</td>
+                      <td>${module.code}</td>
+                      <td><input type="checkbox" class="completedMod"></td>`;
 
-     moduleTblBody.appendChild(row);
+                      moduleTblBody.appendChild(row);
+      
+                  let checkbox=row.querySelector('.completedMod');
 
-     let checkbox = row.querySelector('.completedMod');
+                  checkbox.addEventListener('change', (e)=>{
+                          if(e.target.checked){
+                              completeModule(module,row)
+                          }
+                      })
 
-     checkbox.addEventListener('change', (e) => {
-         if (e.target.checked) {
-             completeModule(module, row);
-         }
-     });
- });
+  });
+  moduleTable.appendChild(moduleTblHeader)
+  moduleTable.appendChild(moduleTblBody);
 
- moduleTable.appendChild(moduleTblHeader)
- moduleTable.appendChild(moduleTblBody)
+          let completedTable = document.createElement('table');
+          completedTable.className = 'completedTable';
 
- let completedTable = document.createElement('table')
- completedTable.className = 'completedTable'
+          let completedTableHeader = document.createElement('thead');
+          completedTableHeader.innerHTML = `
+              <tr>
+                  <th>Description</th>
+                  <th>Code</th>
+                  <th>Year</th>
+              </tr>
+          `;
 
- let completedTableHeader = document.createElement('thead')
- completedTableHeader.innerHTML = `
-     <tr>
-         <th>Description</th>
-         <th>Code</th>
-         <th>Year</th>
-     </tr>
- `;
- let completedTableBody = document.createElement('tbody')
- completedTable.appendChild(completedTableHeader)
- completedTable.appendChild(completedTableBody)
+          let completedTableBody = document.createElement('tbody');
+          completedTable.appendChild(completedTableHeader);
+          completedTable.appendChild(completedTableBody);
 
- //container for both tables
- let container = document.createElement('div')
- container.className = 'modulesContainer'
- container.appendChild(moduleTable)
- container.appendChild(completedTable);
+          dashContent.innerHTML = '';
+          dashContent.appendChild(moduleTable);
+          dashContent.appendChild(completedTable);
 
- dashContent.innerHTML = '';
- dashContent.appendChild(container);
-}
+}    
 
 function completeModule(module, row) {
- let completedTableBody = document.querySelector('.completedTable tbody');
- let completedRow = document.createElement('tr');
- completedRow.innerHTML = `
-     <td>${module.description}</td>
-     <td>${module.code}</td>
-     <td>${module.year}</td>
- `;
- completedTableBody.appendChild(completedRow);
- row.remove();
-}
+  let completedTableBody = document.querySelector('.completedTable tbody');
+  let completedRow = document.createElement('tr');
+  completedRow.innerHTML = `
+      <td>${module.description}</td>
+      <td>${module.code}</td>
+      <td>${module.year}</td>
+  `;
+  completedTableBody.appendChild(completedRow);
+  row.remove();}
+
+
+
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Function to fetch and handle student details
