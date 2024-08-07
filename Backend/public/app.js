@@ -1528,6 +1528,8 @@ async function handleSubmit(event) {
     }
 }
 
+
+
 async function createHome() {
     let dashContent = document.querySelector(".dashboardContent");
     dashContent.innerHTML = ``
@@ -1718,13 +1720,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log(`Dynamic generate : ${sName} `)
 
     let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
-    let StudentName = document.createElement('a');
-    StudentName.textContent = `${sName} ${sSurname}`;
-    let StudentID = document.createElement('span');
-    StudentID.textContent = `${sID}`;
 
-    StudentDetailsdiv.appendChild(StudentName);
-    StudentDetailsdiv.appendChild(StudentID);
+    StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
+    console.log('Add Logged in user run');
+    // let StudentName = document.createElement('a');
+    // StudentName.textContent = `${sName} ${sSurname}`;
+    // let StudentID = document.createElement('span');
+    // StudentID.textContent = `${sID}`;
+    
+    // StudentDetailsdiv.appendChild(StudentName);
+    // StudentDetailsdiv.appendChild(StudentID);
 
 });
 
