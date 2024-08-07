@@ -2251,6 +2251,8 @@ async function createVenues(){
     let tBody = document.createElement('tbody')
     let table = document.createElement('table')
     let dashContent = document.querySelector('.dashboardContent')
+    let contentContainer = document.createElement('div')
+    contentContainer.classList.add('contentContainer')
     dashContent.innerHTML = ''
     dashContent.appendChild(pageHeading)
     let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs']
@@ -2297,8 +2299,9 @@ async function createVenues(){
         }
     });
     table.appendChild(tBody)
-    dashContent.appendChild(table)
-
+    contentContainer.innerHTML = `<img src="Images/Map.png" alt="">`
+    contentContainer.appendChild(table)
+    dashContent.appendChild(contentContainer)
     const rows = table.querySelectorAll("tr");
     rows.forEach((row) => {
         row.addEventListener("mouseover", () => {
@@ -2318,6 +2321,8 @@ async function createMyModules() {
   dashContent.innerHTML = ''; 
   await getStudentDetails();
 
+    let pageHeading = document.createElement('h1')
+    pageHeading.textContent = "My modules"
   let filteredModules = modules.filter(module => module.course === sCourse);
 
   let moduleTable = document.createElement('table');
@@ -2374,13 +2379,22 @@ async function createMyModules() {
   completedTable.appendChild(completedTableBody);
 
   // container for the tables
-  let container = document.createElement('div');
-  container.className = 'modulesContainer';
-  container.appendChild(moduleTable);
-  container.appendChild(completedTable);
+  let bigContainer = document.createElement('div');
+  let container1 = document.createElement('div');
+  let container2 = document.createElement('div');
+  
+  container1.appendChild(moduleTable);
+  container2.appendChild(completedTable);
+  bigContainer.classList.add('bigContainer');
+  container1.classList.add('table');
+  container2.classList.add('table');
+  
+  dashContent.appendChild(pageHeading)
 
-  dashContent.appendChild(container);
-  container.classList.add('table');
+  bigContainer.appendChild(container1);
+  bigContainer.appendChild(container2);
+  dashContent.appendChild(bigContainer)
+
 }
 
 function completeModule(module, row) {
@@ -2394,9 +2408,6 @@ function completeModule(module, row) {
   completedTableBody.appendChild(completedRow);
   row.remove();
 }
-
-
-
 
 document.addEventListener("DOMContentLoaded", async () => {
     // Function to fetch and handle student details
@@ -2422,13 +2433,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Get the modal
 let modal = document.getElementById("studentModal");
 
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// Get the form in the modal
 let form = document.getElementById("studentForm");
 
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
     fetch('/getStudentDetails')
         .then(response => response.json())
