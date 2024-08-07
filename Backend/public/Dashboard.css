@@ -16,11 +16,27 @@ body, html {
     align-items: center;
 }
 
-.dashboardContent table{
+.dashboardContent .contentContainer table{
     width: 40%;
-    
+    height: 50%;
     border-collapse: collapse;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5%;
+}
+
+.dashboardContent table{
+   
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* margin: 5%; */
+}
+
+.dashboardContent .contentContainer table th{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
 }
 
 .dashboardContent table th{
@@ -31,12 +47,31 @@ body, html {
     font-size: 1.3em;
 }
 
+.dashboardContent .contentContainer table td{
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
 .dashboardContent table td{
     padding: 5px;
     border: 1px solid black;
     text-align: center;
 
 }
+
+.contentContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentContainer img{
+    width: 40%;
+}
+
 :root {
     --background: #f5f5f5;
     --sideNavbar-width: 256px;
@@ -512,53 +547,58 @@ label[for=sideNav-footer-toggle] {
     margin-bottom: 0;
 }
 
+.dashContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+}
 
-.modulesContainer {
-    max-width: 100%;
-    margin: auto;
-    padding: 20px;
+.container1, .container2 {
     display: flex;
-    gap: 60px;
-    overflow-y: auto;
+    flex-direction: column; 
 }
 
 
-.moduleTable tbody tr:hover, .completedTable tbody tr:hover, .moduleTable tbody td a:hover, .completedTable tbody td a:hover {
-    cursor: pointer;
-}
-
-.moduleTable, .completedTable {
-    flex: 1; 
+/* .moduleTable, .completedTable {
+    width: 100%;
     border-collapse: collapse;
 }
 
 .moduleTable thead, .completedTable thead {
     display: table;
     width: 100%;
-    border-collapse: collapse
+    border-collapse: collapse;
+    top: 0;
+    position: sticky;
+    background-color: #222;
+    color: white;
 }
 
 .moduleTable tbody, .completedTable tbody {
     display: block;
-    height: 600px; 
-   
+    height: 600px;
+    overflow-y: auto;
     width: 100%;
 }
 
 .moduleTable tbody td, .completedTable tbody td, .moduleTable thead th, .completedTable thead th {
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ddd;
     box-sizing: border-box;
     background-color: #fff;
     text-align: left;
 }
 
+.moduleTable tbody tr:hover, .completedTable tbody tr:hover, .moduleTable tbody td a:hover, .completedTable tbody td a:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
 .moduleTable thead th, .completedTable thead th {
     position: sticky;
     top: 0;
-    background-color: #bf2c2c;
+    background-color: #222;
     color: white;
     font-weight: 500;
     z-index: 1;
-}
-
+} */

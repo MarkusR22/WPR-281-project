@@ -2239,6 +2239,8 @@ async function createVenues() {
     let tBody = document.createElement('tbody')
     let table = document.createElement('table')
     let dashContent = document.querySelector('.dashboardContent')
+    let contentContainer = document.createElement('div')
+    contentContainer.classList.add('contentContainer')
     dashContent.innerHTML = ''
     dashContent.appendChild(pageHeading)
     let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs']
@@ -2285,8 +2287,9 @@ async function createVenues() {
         }
     });
     table.appendChild(tBody)
-    dashContent.appendChild(table)
-
+    contentContainer.innerHTML = `<img src="Images/Map.png" alt="">`
+    contentContainer.appendChild(table)
+    dashContent.appendChild(contentContainer)
     const rows = table.querySelectorAll("tr");
     rows.forEach((row) => {
         row.addEventListener("mouseover", () => {
@@ -2361,14 +2364,18 @@ async function createMyModules() {
     completedTable.appendChild(completedTableHeader);
     completedTable.appendChild(completedTableBody);
 
-    // container for the tables
-    let container = document.createElement('div');
-    container.className = 'modulesContainer';
-    container.appendChild(moduleTable);
-    container.appendChild(completedTable);
+  // container for the tables
+  let container1 = document.createElement('div');
+  let container2 = document.createElement('div');
+  
+  container1.appendChild(moduleTable);
+  container2.appendChild(completedTable);
+  container1.classList.add('table');
+  container2.classList.add('table');
 
-    dashContent.appendChild(container);
-    container.classList.add('table');
+  dashContent.appendChild(container1);
+  dashContent.appendChild(container2);
+
 }
 
 function completeModule(module, row) {
@@ -2382,9 +2389,6 @@ function completeModule(module, row) {
     completedTableBody.appendChild(completedRow);
     row.remove();
 }
-
-
-
 
 document.addEventListener("DOMContentLoaded", async () => {
     // Function to fetch and handle student details
@@ -2410,29 +2414,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Get the modal
     let modal = document.getElementById("studentModal");
 
-    // Get the <span> element that closes the modal
-    let span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
-    // Get the form in the modal
-    let form = document.getElementById("studentForm");
+let form = document.getElementById("studentForm");
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        fetch('/getStudentDetails')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('name').value = data.name;
-                document.getElementById('surname').value = data.surname;
-                document.getElementById('adr').value = data.adr;
-                document.getElementById('city').value = data.city;
-                document.getElementById('zip').value = data.zip;
-                document.getElementById('province').value = data.province;
-                document.getElementById('gender').value = data.gender;
-                document.getElementById('email').value = data.email;
-                document.getElementById('course').value = data.course;
-                document.getElementById('attendance').value = data.attendance;
-            })
-            .catch(error => console.error('Error:', error));
+btn.onclick = function() {
+    fetch('/getStudentDetails')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('name').value = data.name;
+            document.getElementById('surname').value = data.surname;
+            document.getElementById('adr').value = data.adr;
+            document.getElementById('city').value = data.city;
+            document.getElementById('zip').value = data.zip;
+            document.getElementById('province').value = data.province;
+            document.getElementById('gender').value = data.gender;
+            document.getElementById('email').value = data.email;
+            document.getElementById('course').value = data.course;
+            document.getElementById('attendance').value = data.attendance;
+        })
+        .catch(error => console.error('Error:', error));
 
         modal.style.display = "block";
     }
