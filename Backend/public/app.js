@@ -14,33 +14,40 @@ let sAttendance = '';
 let sStudentId = '';
 let sPassword = '';
 
+const CourseStartDates = {
+    BCOMP: `December 1, 2024 00:00:00`,
+    BIT: `November 1, 2024 00:00:00`,
+    DIT: 'October 1, 2024 00:00:00',
+    CIT: 'September 1, 2024 00:00:00',
+}
+
 const courseDescriptions = {
     BCOMP: {
         cName: 'BA of Computer Science', cDescription: `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
                                     computer science and its applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or 
-                                    internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`, 
-                                    Duration: `3 years academic
-                                    1 year workplace training`, NQF:'Level 8', Credits:'506', SAQAID: '62689',
-                                    Location:`Pretoria Campus
+                                    internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`,
+        Duration: `3 years academic
+                                    1 year workplace training`, NQF: 'Level 8', Credits: '506', SAQAID: '62689',
+        Location: `Pretoria Campus
                                     Kempton Park Campus`},
     BIT: {
         cName: 'BA in IT', cDescription: `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
                                     development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
-                                    with both theoretical knowledge and practical skills needed to excel in the IT industry.`,Duration: `3 years academic`, NQF:'Level 7', Credits:'360', SAQAID: '94121',
-                                    Location:`Pretoria Campus
+                                    with both theoretical knowledge and practical skills needed to excel in the IT industry.`, Duration: `3 years academic`, NQF: 'Level 7', Credits: '360', SAQAID: '94121',
+        Location: `Pretoria Campus
                                     Kempton Park Campus`},
     DIT: {
         cName: 'Diploma in IT', cDescription: `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
                                     skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
-                                    in the IT industry. `,Duration: `2½ years of academic training
-                                    6 months of workplace training`, NQF:'Level 6', Credits:'360', SAQAID: '120097',
-                                    Location:`Pretoria Campus
+                                    in the IT industry. `, Duration: `2½ years of academic training
+                                    6 months of workplace training`, NQF: 'Level 6', Credits: '360', SAQAID: '120097',
+        Location: `Pretoria Campus
                                     Kempton Park Campus`},
     CIT: {
         cName: 'Certificate in IT', cDescription: `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
                                     skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
-                                    or prepare for further education in IT.`,Duration: `1 year academic`, NQF:'Level 6', Credits:'120', SAQAID: '71850',
-                                    Location:`Pretoria Campus
+                                    or prepare for further education in IT.`, Duration: `1 year academic`, NQF: 'Level 6', Credits: '120', SAQAID: '71850',
+        Location: `Pretoria Campus
                                     Kempton Park Campus`},
 }
 
@@ -1521,6 +1528,8 @@ async function handleSubmit(event) {
     }
 }
 
+
+
 async function createHome() {
     let dashContent = document.querySelector(".dashboardContent");
     dashContent.innerHTML = ``
@@ -1584,7 +1593,7 @@ async function createHome() {
             Credits.textContent = courseDescriptions[course].Credits;
             SAQAID.textContent = courseDescriptions[course].SAQAID;
             Location.textContent = courseDescriptions[course].Location;
-            
+
         }
     });
 
@@ -1592,31 +1601,35 @@ async function createHome() {
     let course = document.querySelector('.course')
     course.appendChild(courseHeading)
 
-    function startCountdown() {
-        let eventDate = new Date("November 1, 2024 00:00:00").getTime();;
 
 
-        const timerInterval = setInterval(function () {
-            const now = new Date().getTime();
-            const timeRemaining = eventDate - now;
+    Object.keys(CourseStartDates).forEach(course => {
+        console.log(sCourse)
+        if (sCourse == course) {
+            let eventDate = new Date(CourseStartDates[course]).getTime();;
+            const timerInterval = setInterval(function () {
+                const now = new Date().getTime();
+                const timeRemaining = eventDate - now;
 
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-            document.querySelector("#countdown").innerHTML = `
+                document.querySelector("#countdown").innerHTML = `
             ${days}d ${hours}h ${minutes}m ${seconds}s
           `;
 
-            if (timeRemaining < 0) {
-                clearInterval(timerInterval);
-                document.querySelector("#countdown").innerHTML = "The event has started!";
-            }
-        }, 1000);
-    }
+                if (timeRemaining < 0) {
+                    clearInterval(timerInterval);
+                    document.querySelector("#countdown").innerHTML = "The event has started!";
+                }
+            }, 1000);
+        }
 
-    startCountdown()
+    })
+
+
 
     let tHead = document.createElement("thead");
     let tBody = document.createElement("tbody");
@@ -1707,13 +1720,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log(`Dynamic generate : ${sName} `)
 
     let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
-    let StudentName = document.createElement('a');
-    StudentName.textContent = `${sName} ${sSurname}`;
-    let StudentID = document.createElement('span');
-    StudentID.textContent = `${sID}`;
 
-    StudentDetailsdiv.appendChild(StudentName);
-    StudentDetailsdiv.appendChild(StudentID);
+    StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
+    console.log('Add Logged in user run');
+    // let StudentName = document.createElement('a');
+    // StudentName.textContent = `${sName} ${sSurname}`;
+    // let StudentID = document.createElement('span');
+    // StudentID.textContent = `${sID}`;
+    
+    // StudentDetailsdiv.appendChild(StudentName);
+    // StudentDetailsdiv.appendChild(StudentID);
 
 });
 
@@ -1863,27 +1879,27 @@ document.addEventListener('DOMContentLoaded', () => {
             currentCourse = button.getAttribute('data-course');
             let courseHeading
             let courseDesc
-            let Duration 
-            let NQF 
+            let Duration
+            let NQF
             let Credits
-            let SAQAID 
+            let SAQAID
             let Location
             Object.keys(courseDescriptions).forEach((course) => {
                 if (currentCourse == course) {
-                courseHeading = courseDescriptions[course].cName;
-                courseDesc = courseDescriptions[course].cDescription;
-                Duration = courseDescriptions[course].Duration;
-                NQF = courseDescriptions[course].NQF;
-                Credits = courseDescriptions[course].Credits;
-                SAQAID = courseDescriptions[course].SAQAID;
-                Location = courseDescriptions[course].Location;
+                    courseHeading = courseDescriptions[course].cName;
+                    courseDesc = courseDescriptions[course].cDescription;
+                    Duration = courseDescriptions[course].Duration;
+                    NQF = courseDescriptions[course].NQF;
+                    Credits = courseDescriptions[course].Credits;
+                    SAQAID = courseDescriptions[course].SAQAID;
+                    Location = courseDescriptions[course].Location;
                 }
-              });
-        
+            });
+
             const courseDescription = document.querySelector('.description');
             courseDescription.innerHTML = "";
             let infoContainer = document.createElement("div");
-      
+
             infoContainer.innerHTML = `           <h1>${courseHeading}</h1>
                                             <div class = "info-container">
                                         <div class="info-box">
@@ -1916,12 +1932,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <p>${courseDesc}</p>
                                     </div>
                                           `;
-            courseDescription.appendChild(infoContainer)  
+            courseDescription.appendChild(infoContainer)
             const selectedYear = document.getElementById('yearFilter').value;
             const searchQuery = searchInput.value.toLowerCase();
             displayModules(currentCourse, selectedYear, searchQuery);
             displayLecturers(currentCourse);
-            
+
         });
     });
 
