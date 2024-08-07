@@ -408,7 +408,7 @@ label[for=sideNav-toggle] {
 }
 
 #sideNav-toggle:not(:checked)~#sideNav-footer-toggle:checked+#sideNav-footer {
-    height: 30%;
+    height: 15%;
     min-height: 54px;
 }
 
@@ -449,11 +449,10 @@ label[for=sideNav-footer-toggle] {
     background-color: #222;
     border-radius: 5px;
     color: #ddd;
-    font-size: 20px;
-    margin-left: 5%;
+    font-size: 15px;
+    margin-left: 20%;
     width: fit-content;
     text-align: center;
-    margin-top: 25%;
 }
 #nav-footer-content p{
     padding: 9px;
@@ -553,7 +552,18 @@ label[for=sideNav-footer-toggle] {
     display: flex;
     flex-direction: column; 
 }
+#studentForm input[type="text"],
+#studentForm input[type="email"],
+#studentForm select {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
 
+}
 
 .bigContainer{
     display: flex;
