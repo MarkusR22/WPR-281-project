@@ -2575,8 +2575,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const isCourseMatch = course === "all" || module.course === course;
             const isYearMatch = filterYear === "all" || module.year == filterYear;
             const isSearchMatch =
-                module.code.toLowerCase().includes(searchQuery) ||
-                module.description.toLowerCase().includes(searchQuery);
+                module.code.toLowerCase().includes(searchQuery);
 
             if (isCourseMatch && isYearMatch && isSearchMatch) {
                 const moduleCard = `
