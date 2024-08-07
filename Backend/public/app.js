@@ -2370,7 +2370,6 @@ async function createMyModules() {
   dashContent.appendChild(container1);
   dashContent.appendChild(container2);
 
-
 }
 
 function completeModule(module, row) {
@@ -2384,9 +2383,6 @@ function completeModule(module, row) {
   completedTableBody.appendChild(completedRow);
   row.remove();
 }
-
-
-
 
 document.addEventListener("DOMContentLoaded", async () => {
     // Function to fetch and handle student details

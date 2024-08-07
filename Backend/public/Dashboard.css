@@ -550,16 +550,16 @@ label[for=sideNav-footer-toggle] {
 
 .dashContent {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
-    gap: 20px; /* Space between columns */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
 }
 
 .container1, .container2 {
-    display: flex; /* Optional: ensure content inside is laid out properly */
-    flex-direction: column; /* Ensure that table content is stacked vertically within each container */
+    display: flex;
+    flex-direction: column; 
 }
 
-/* Ensure tables are styled correctly */
+
 .moduleTable, .completedTable {
     width: 100%;
     border-collapse: collapse;
@@ -571,7 +571,7 @@ label[for=sideNav-footer-toggle] {
     border-collapse: collapse;
     top: 0;
     position: sticky;
-    background-color: #bf2c2c;
+    background-color: #222;
     color: white;
 }
 
@@ -598,7 +598,7 @@ label[for=sideNav-footer-toggle] {
 .moduleTable thead th, .completedTable thead th {
     position: sticky;
     top: 0;
-    background-color: #bf2c2c;
+    background-color: #222;
     color: white;
     font-weight: 500;
     z-index: 1;
