@@ -2391,10 +2391,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     modal.innerHTML = `
                     <div class="modal-content">
                         <span class="close-btn">&times;</span>
-                        <h1>${module.code}</h1>
-                        <p>${module.description}</p>
+                        <h1>${module.description}</h1>                        
                         <p>${module.overview}</p>
-                        <video src="Images/${module.video}" class="video" id="ModuleModalVideo" muted autoplay loop></video>
+                        <video src="Images/${module.video}" class="video" id="ModuleModalVideo"  controls muted autoplay loop></video>                        
                     </div>
                      `;
                     modal.style.display = 'block';
