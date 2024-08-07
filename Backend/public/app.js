@@ -1,252 +1,299 @@
 const port = 3000;
 
-let sName = '';
-let sSurname = '';
-let sID = '';
-let sAdr = '';
-let sCity = '';
-let sZip = '';
-let sProvince = '';
-let sGender = '';
-let sEmail = '';
-let sCourse = '';
-let sAttendance = '';
-let sStudentId = '';
-let sPassword = '';
+let sName = "";
+let sSurname = "";
+let sID = "";
+let sAdr = "";
+let sCity = "";
+let sZip = "";
+let sProvince = "";
+let sGender = "";
+let sEmail = "";
+let sCourse = "";
+let sAttendance = "";
+let sStudentId = "";
+let sPassword = "";
 
 const CourseStartDates = {
-    BCOMP: `December 1, 2024 00:00:00`,
-    BIT: `November 1, 2024 00:00:00`,
-    DIT: 'October 1, 2024 00:00:00',
-    CIT: 'September 1, 2024 00:00:00',
-}
+  BCOMP: `December 1, 2024 00:00:00`,
+  BIT: `November 1, 2024 00:00:00`,
+  DIT: "October 1, 2024 00:00:00",
+  CIT: "September 1, 2024 00:00:00",
+};
 
 const courseDescriptions = {
-    BCOMP: {
-        cName: 'BA of Computer Science', cDescription: `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
+  BCOMP: {
+    cName: "BA of Computer Science",
+    cDescription: `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
                                     computer science and its applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or 
                                     internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`,
-        Duration: `3 years academic
-                                    1 year workplace training`, NQF: 'Level 8', Credits: '506', SAQAID: '62689',
-        Location: `Pretoria Campus
-                                    Kempton Park Campus`},
-    BIT: {
-        cName: 'BA in IT', cDescription: `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
+    Duration: `3 years academic
+                                    1 year workplace training`,
+    NQF: "Level 8",
+    Credits: "506",
+    SAQAID: "62689",
+    Location: `Pretoria Campus
+                                    Kempton Park Campus`,
+  },
+  BIT: {
+    cName: "BA in IT",
+    cDescription: `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
                                     development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
-                                    with both theoretical knowledge and practical skills needed to excel in the IT industry.`, Duration: `3 years academic`, NQF: 'Level 7', Credits: '360', SAQAID: '94121',
-        Location: `Pretoria Campus
-                                    Kempton Park Campus`},
-    DIT: {
-        cName: 'Diploma in IT', cDescription: `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
+                                    with both theoretical knowledge and practical skills needed to excel in the IT industry.`,
+    Duration: `3 years academic`,
+    NQF: "Level 7",
+    Credits: "360",
+    SAQAID: "94121",
+    Location: `Pretoria Campus
+                                    Kempton Park Campus`,
+  },
+  DIT: {
+    cName: "Diploma in IT",
+    cDescription: `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
                                     skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
-                                    in the IT industry. `, Duration: `2½ years of academic training
-                                    6 months of workplace training`, NQF: 'Level 6', Credits: '360', SAQAID: '120097',
-        Location: `Pretoria Campus
-                                    Kempton Park Campus`},
-    CIT: {
-        cName: 'Certificate in IT', cDescription: `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
+                                    in the IT industry. `,
+    Duration: `2½ years of academic training
+                                    6 months of workplace training`,
+    NQF: "Level 6",
+    Credits: "360",
+    SAQAID: "120097",
+    Location: `Pretoria Campus
+                                    Kempton Park Campus`,
+  },
+  CIT: {
+    cName: "Certificate in IT",
+    cDescription: `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
                                     skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
-                                    or prepare for further education in IT.`, Duration: `1 year academic`, NQF: 'Level 6', Credits: '120', SAQAID: '71850',
-        Location: `Pretoria Campus
-                                    Kempton Park Campus`},
-}
-
+                                    or prepare for further education in IT.`,
+    Duration: `1 year academic`,
+    NQF: "Level 6",
+    Credits: "120",
+    SAQAID: "71850",
+    Location: `Pretoria Campus
+                                    Kempton Park Campus`,
+  },
+};
 
 const lecturers = [
-    {
-        name: 'Francois Venter',
-        email: 'venter.f@belgiumcampus.ac.za',
-        imgSrc: './Images/FrancoisVenter.png',
-        modules: ['MAT 181', 'MAT 281', 'MAT 381']
-    },
-    {
-        name: 'Tendai Mkwaira',
-        email: 'mkwaira.t@belgiumcampus.ac.za',
-        imgSrc: './Images/TendaiMkwaira.png',
-        modules: ['ACW 181', 'ACW 171', 'PRG 371', 'PRG 261', 'PRG 262',]
-    },
-    {
-        name: 'Alfred Mazorodze',
-        email: 'mazorodze.a@belgiumcampus.ac.za',
-        imgSrc: './Images/AlfredMazorodze.png',
-        modules: ['COA 181', 'COA 171', 'COA 161', 'MAT 181', 'MAT 281']
-    },
-    {
-        name: 'Anila Mundackal',
-        email: 'joy.a@belgiumcampus.ac.za',
-        imgSrc: './Images/AnilaMundackal.png',
-        modules: ['DBD 181', 'DBD 281', 'DBD 381', 'DBD 261', 'DBA 361']
-    },
-    {
-        name: 'Charmaine Tavagwisa',
-        email: 'tavagwisa.p@belgiumcampus.ac.za',
-        imgSrc: './Images/CharmaineTavagwisa.png',
-        modules: ['INF 181', 'INF 271', 'INF 281', 'WPR 252', 'WPR 161']
-    },
-    {
-        name: 'Edward Van Niekerk',
-        email: 'edward@belgiumcampus.ac.za',
-        imgSrc: './Images/EdwardVanNiekerk.png',
-        modules: ['INL 101', 'INL 102', 'INL 201', 'INL 202', 'INL 321', 'INL 161']
-    },
-    {
-        name: 'Raymond Hood',
-        email: 'hood.r@belgiumcampus.ac.za',
-        imgSrc: './Images/RaymondHood.png',
-        modules: ['LPR 181', 'LPR 271', 'LPR 381', 'PRG 181', 'PRG 182', 'PRG 281',]
-    },
-    {
-        name: 'Francois Smit',
-        email: 'smit.f@belgiumcampus.ac.za',
-        imgSrc: './Images/FrancoisSmit.png',
-        modules: ['NWD 181', 'NWD 171', 'NWD 361', 'WPR 271', 'WPR 381',]
-    },
-    {
-        name: 'Gift Mudare',
-        email: 'mudare.g@belgiumcampus.ac.za',
-        imgSrc: './Images/GiftMudare.png',
-        modules: ['PRG 181', 'PRG 182', 'PRG 281', 'PRG 282', 'PRG 371', 'PRG 261', 'PRG 262', 'PRG 251', 'PRG 252']
-    },
-    {
-        name: 'Kudzayi Matekaire',
-        email: 'matekaire.k@belgiumcampus.ac.za',
-        imgSrc: './Images/KudzayiMatekaire.png',
-        modules: ['PRG 171', 'PRG 172', 'PRG 272']
-    },
-    {
-        name: 'Matildah Chiruka',
-        email: 'chiruka.m@belgiumcampus.ac.za',
-        imgSrc: './Images/MatildahChiruka.png',
-        modules: ['STA 181', 'STA 171', 'STA 271', 'STA 281', 'STA 381', 'STA 161']
-    },
-    {
-        name: 'Nsuku Ngoveni',
-        email: 'ngoveni.n@belgiumcampus.ac.za',
-        imgSrc: './Images/NsukuNgoveni.png',
-        modules: ['WPR 181', 'WPR 171', 'WPR 271', 'WPR 381', 'WPR 251', 'WPR 252', 'WPR 161']
-    },
-    {
-        name: 'Catharina Boshoff',
-        email: 'boshoff.c@belgiumcampus.ac.za',
-        imgSrc: './Images/CatharinaBoshoff.png',
-        modules: ['BUM 181', 'BUM 171', 'DBA 361']
-    },
-    {
-        name: 'Caviner Ruiters',
-        email: 'ruiters.c@belgiumcampus.ac.za',
-        imgSrc: './Images/CavinerRuiters.png',
-        modules: ['ENT 181', 'ENT 171', 'PRJ 371', 'PRJ 381',]
-    },
-    {
-        name: 'Desire Sundire',
-        email: 'sundire.d@belgiumcampus.ac.za',
-        imgSrc: './Images/DesireSundire.png',
-        modules: ['DBD 261', 'DBA 361', 'DBR 361']
-    },
-    {
-        name: 'Dino Giovannoni',
-        email: 'giovannoni.d@belgiumcampus.ac.za',
-        imgSrc: './Images/DinoGiovannoni.png',
-        modules: ['ERP 261', 'ERP 271', 'ERP 251', 'PMM 251', 'PRJ 371', 'PRJ 381',]
-    },
-    {
-        name: 'Elaine Rynners',
-        email: 'rynners.e@belgiumcampus.ac.za',
-        imgSrc: './Images/ElaineRynners.png',
-        modules: ['PMM 261', 'PMM 271', 'SEC 261', 'SEC 251']
-    },
-    {
-        name: 'Evangelistars Shayamano',
-        email: 'shayamano.e@belgiumcampus.ac.za',
-        imgSrc: './Images/EvangelistarsShayamano.png',
-        modules: ['ENT 181', 'ENT 171', , 'SWT 271', 'IOT 281', 'IOT 271',]
-    },
-    {
-        name: 'Galaletsang Modimola',
-        email: 'Modimola.g@belgumcampus.ac.za',
-        imgSrc: './Images/GalaletsangModimola.png',
-        modules: ['IOT 261', 'IOT 281', 'IOT 271', 'IOT 161', 'IOT 251']
-    },
-    {
-        name: 'Lungile Saula',
-        email: 'saula.l@belgiumcampus.ac.za',
-        imgSrc: './Images/LungileSaula.png',
-        modules: ['PMM 261', 'PMM 271', 'PMM 281', 'PMM 371', 'PMM 251', 'PRJ 371', 'PRJ 381',]
-    },
-    {
-        name: 'Masimba Zengeni',
-        email: 'zengeni.s@belgiumcampus.ac.za',
-        imgSrc: './Images/MasimbaZengeni.png',
-        modules: ['PRJ 361', 'PRJ 371', 'PRJ 381', 'PRJ 251', 'PMM 371', 'PMM 251']
-    },
-    {
-        name: 'Michael Combrinck',
-        email: 'combrinck.m@belgiumcampus.ac.za',
-        imgSrc: './Images/MichaelCombrinck.png',
-        modules: ['WDB 361', 'WPR 381', 'WPR 251',]
-    },
-    {
-        name: 'Philip van Huyssteen',
-        email: 'vanhuyssteen.p@belgiumcampus.ac.za',
-        imgSrc: './Images/PhilipvanHuyssteen.png',
-        modules: ['AIT 481', 'AIT 482', 'AIT 361', 'WPR 381',]
-    },
-    {
-        name: 'Sannie Zwane',
-        email: 'zwane.s@belgiumcampus.ac.za',
-        imgSrc: './Images/SannieZwane.png',
-        modules: ['DST 481', 'DBD 381', 'PRG 371', 'PRG 261', 'PRG 262',]
-    },
-    {
-        name: 'Shakeng Thamaga',
-        email: 'thamaga.s@belgiumcampus.ac.za',
-        imgSrc: './Images/ShakengThamaga.png',
-        modules: ['COA 161', 'COA 171', 'WPR 271', 'WPR 381', 'WPR 251',]
-    },
-    {
-        name: 'Stanley Makweche',
-        email: 'makweche.s@belgiumcampus.ac.za',
-        imgSrc: './Images/StanleyMakweche.png',
-        modules: ['PRG 261', 'PRG 262', 'ENT 181', 'ENT 171',]
-    },
-    {
-        name: 'Tshegofatso Hutang',
-        email: 'hutang.t@belgiumcampus.ac.za',
-        imgSrc: './Images/TshegofatsoHutang.png',
-        modules: ['MAT 171', 'MAT 161', 'INL 202', 'INL 321', 'INL 161']
-    },
-    {
-        name: 'Raymond Hood',
-        email: 'hood.r@belgiumcampus.ac.za',
-        imgSrc: './Images/RaymondHood.png',
-        modules: ['LPR 181', 'LPR 271', 'LPR 381']
-    },
-    {
-        name: 'Michael Combrinck',
-        email: 'combrinck.m@belgiumcampus.ac.za',
-        imgSrc: './Images/MichaelCombrinck.png',
-        modules: ['DBD 371', 'WFS 361', 'WSE 361']
-    },
-    {
-        name: 'Philip van Huyssteen',
-        email: 'vanhuyssteen.p@belgiumcampus.ac.za',
-        imgSrc: './Images/PhilipvanHuyssteen.png',
-        modules: ['EUC 161', 'MLG 381', 'MLG 382', 'SAD 281', 'SAD 371',]
-    },
-    {
-        name: 'Tshegofatso Hutang',
-        email: 'hutang.t@belgiumcampus.ac.za',
-        imgSrc: './Images/TshegofatsoHutang.png',
-        modules: ['ENG 171', 'ENG 161', 'ENT 181', 'ENT 171',]
-    },
-    {
-        name: 'Raymond Hood',
-        email: 'hood.r@belgiumcampus.ac.za',
-        imgSrc: './Images/RaymondHood.png',
-        modules: ['RSH 381', 'BIN 371', 'BIN 381']
-    }
+  {
+    name: "Francois Venter",
+    email: "venter.f@belgiumcampus.ac.za",
+    imgSrc: "./Images/FrancoisVenter.png",
+    modules: ["MAT 181", "MAT 281", "MAT 381"],
+  },
+  {
+    name: "Tendai Mkwaira",
+    email: "mkwaira.t@belgiumcampus.ac.za",
+    imgSrc: "./Images/TendaiMkwaira.png",
+    modules: ["ACW 181", "ACW 171", "PRG 371", "PRG 261", "PRG 262"],
+  },
+  {
+    name: "Alfred Mazorodze",
+    email: "mazorodze.a@belgiumcampus.ac.za",
+    imgSrc: "./Images/AlfredMazorodze.png",
+    modules: ["COA 181", "COA 171", "COA 161", "MAT 181", "MAT 281"],
+  },
+  {
+    name: "Anila Mundackal",
+    email: "joy.a@belgiumcampus.ac.za",
+    imgSrc: "./Images/AnilaMundackal.png",
+    modules: ["DBD 181", "DBD 281", "DBD 381", "DBD 261", "DBA 361"],
+  },
+  {
+    name: "Charmaine Tavagwisa",
+    email: "tavagwisa.p@belgiumcampus.ac.za",
+    imgSrc: "./Images/CharmaineTavagwisa.png",
+    modules: ["INF 181", "INF 271", "INF 281", "WPR 252", "WPR 161"],
+  },
+  {
+    name: "Edward Van Niekerk",
+    email: "edward@belgiumcampus.ac.za",
+    imgSrc: "./Images/EdwardVanNiekerk.png",
+    modules: ["INL 101", "INL 102", "INL 201", "INL 202", "INL 321", "INL 161"],
+  },
+  {
+    name: "Raymond Hood",
+    email: "hood.r@belgiumcampus.ac.za",
+    imgSrc: "./Images/RaymondHood.png",
+    modules: ["LPR 181", "LPR 271", "LPR 381", "PRG 181", "PRG 182", "PRG 281"],
+  },
+  {
+    name: "Francois Smit",
+    email: "smit.f@belgiumcampus.ac.za",
+    imgSrc: "./Images/FrancoisSmit.png",
+    modules: ["NWD 181", "NWD 171", "NWD 361", "WPR 271", "WPR 381"],
+  },
+  {
+    name: "Gift Mudare",
+    email: "mudare.g@belgiumcampus.ac.za",
+    imgSrc: "./Images/GiftMudare.png",
+    modules: [
+      "PRG 181",
+      "PRG 182",
+      "PRG 281",
+      "PRG 282",
+      "PRG 371",
+      "PRG 261",
+      "PRG 262",
+      "PRG 251",
+      "PRG 252",
+    ],
+  },
+  {
+    name: "Kudzayi Matekaire",
+    email: "matekaire.k@belgiumcampus.ac.za",
+    imgSrc: "./Images/KudzayiMatekaire.png",
+    modules: ["PRG 171", "PRG 172", "PRG 272"],
+  },
+  {
+    name: "Matildah Chiruka",
+    email: "chiruka.m@belgiumcampus.ac.za",
+    imgSrc: "./Images/MatildahChiruka.png",
+    modules: ["STA 181", "STA 171", "STA 271", "STA 281", "STA 381", "STA 161"],
+  },
+  {
+    name: "Nsuku Ngoveni",
+    email: "ngoveni.n@belgiumcampus.ac.za",
+    imgSrc: "./Images/NsukuNgoveni.png",
+    modules: [
+      "WPR 181",
+      "WPR 171",
+      "WPR 271",
+      "WPR 381",
+      "WPR 251",
+      "WPR 252",
+      "WPR 161",
+    ],
+  },
+  {
+    name: "Catharina Boshoff",
+    email: "boshoff.c@belgiumcampus.ac.za",
+    imgSrc: "./Images/CatharinaBoshoff.png",
+    modules: ["BUM 181", "BUM 171", "DBA 361"],
+  },
+  {
+    name: "Caviner Ruiters",
+    email: "ruiters.c@belgiumcampus.ac.za",
+    imgSrc: "./Images/CavinerRuiters.png",
+    modules: ["ENT 181", "ENT 171", "PRJ 371", "PRJ 381"],
+  },
+  {
+    name: "Desire Sundire",
+    email: "sundire.d@belgiumcampus.ac.za",
+    imgSrc: "./Images/DesireSundire.png",
+    modules: ["DBD 261", "DBA 361", "DBR 361"],
+  },
+  {
+    name: "Dino Giovannoni",
+    email: "giovannoni.d@belgiumcampus.ac.za",
+    imgSrc: "./Images/DinoGiovannoni.png",
+    modules: ["ERP 261", "ERP 271", "ERP 251", "PMM 251", "PRJ 371", "PRJ 381"],
+  },
+  {
+    name: "Elaine Rynners",
+    email: "rynners.e@belgiumcampus.ac.za",
+    imgSrc: "./Images/ElaineRynners.png",
+    modules: ["PMM 261", "PMM 271", "SEC 261", "SEC 251"],
+  },
+  {
+    name: "Evangelistars Shayamano",
+    email: "shayamano.e@belgiumcampus.ac.za",
+    imgSrc: "./Images/EvangelistarsShayamano.png",
+    modules: ["ENT 181", "ENT 171", , "SWT 271", "IOT 281", "IOT 271"],
+  },
+  {
+    name: "Galaletsang Modimola",
+    email: "Modimola.g@belgumcampus.ac.za",
+    imgSrc: "./Images/GalaletsangModimola.png",
+    modules: ["IOT 261", "IOT 281", "IOT 271", "IOT 161", "IOT 251"],
+  },
+  {
+    name: "Lungile Saula",
+    email: "saula.l@belgiumcampus.ac.za",
+    imgSrc: "./Images/LungileSaula.png",
+    modules: [
+      "PMM 261",
+      "PMM 271",
+      "PMM 281",
+      "PMM 371",
+      "PMM 251",
+      "PRJ 371",
+      "PRJ 381",
+    ],
+  },
+  {
+    name: "Masimba Zengeni",
+    email: "zengeni.s@belgiumcampus.ac.za",
+    imgSrc: "./Images/MasimbaZengeni.png",
+    modules: ["PRJ 361", "PRJ 371", "PRJ 381", "PRJ 251", "PMM 371", "PMM 251"],
+  },
+  {
+    name: "Michael Combrinck",
+    email: "combrinck.m@belgiumcampus.ac.za",
+    imgSrc: "./Images/MichaelCombrinck.png",
+    modules: ["WDB 361", "WPR 381", "WPR 251"],
+  },
+  {
+    name: "Philip van Huyssteen",
+    email: "vanhuyssteen.p@belgiumcampus.ac.za",
+    imgSrc: "./Images/PhilipvanHuyssteen.png",
+    modules: ["AIT 481", "AIT 482", "AIT 361", "WPR 381"],
+  },
+  {
+    name: "Sannie Zwane",
+    email: "zwane.s@belgiumcampus.ac.za",
+    imgSrc: "./Images/SannieZwane.png",
+    modules: ["DST 481", "DBD 381", "PRG 371", "PRG 261", "PRG 262"],
+  },
+  {
+    name: "Shakeng Thamaga",
+    email: "thamaga.s@belgiumcampus.ac.za",
+    imgSrc: "./Images/ShakengThamaga.png",
+    modules: ["COA 161", "COA 171", "WPR 271", "WPR 381", "WPR 251"],
+  },
+  {
+    name: "Stanley Makweche",
+    email: "makweche.s@belgiumcampus.ac.za",
+    imgSrc: "./Images/StanleyMakweche.png",
+    modules: ["PRG 261", "PRG 262", "ENT 181", "ENT 171"],
+  },
+  {
+    name: "Tshegofatso Hutang",
+    email: "hutang.t@belgiumcampus.ac.za",
+    imgSrc: "./Images/TshegofatsoHutang.png",
+    modules: ["MAT 171", "MAT 161", "INL 202", "INL 321", "INL 161"],
+  },
+  {
+    name: "Raymond Hood",
+    email: "hood.r@belgiumcampus.ac.za",
+    imgSrc: "./Images/RaymondHood.png",
+    modules: ["LPR 181", "LPR 271", "LPR 381"],
+  },
+  {
+    name: "Michael Combrinck",
+    email: "combrinck.m@belgiumcampus.ac.za",
+    imgSrc: "./Images/MichaelCombrinck.png",
+    modules: ["DBD 371", "WFS 361", "WSE 361"],
+  },
+  {
+    name: "Philip van Huyssteen",
+    email: "vanhuyssteen.p@belgiumcampus.ac.za",
+    imgSrc: "./Images/PhilipvanHuyssteen.png",
+    modules: ["EUC 161", "MLG 381", "MLG 382", "SAD 281", "SAD 371"],
+  },
+  {
+    name: "Tshegofatso Hutang",
+    email: "hutang.t@belgiumcampus.ac.za",
+    imgSrc: "./Images/TshegofatsoHutang.png",
+    modules: ["ENG 171", "ENG 161", "ENT 181", "ENT 171"],
+  },
+  {
+    name: "Raymond Hood",
+    email: "hood.r@belgiumcampus.ac.za",
+    imgSrc: "./Images/RaymondHood.png",
+    modules: ["RSH 381", "BIN 371", "BIN 381"],
+  },
 ];
-
 
 const modules = [
     {
@@ -1587,287 +1634,311 @@ const modules = [
     }
 ];
 
+const venues = [
+  { name: "Iota", seats: 30, location: "main campus", hasPCs: true },
+  { name: "Phi", seats: 40, location: "main campus", hasPCs: false },
+  { name: "Omega", seats: 50, location: "main campus", hasPCs: true },
+  { name: "Sigma", seats: 60, location: "main campus", hasPCs: false },
+  { name: "Kappa", seats: 35, location: "south campus", hasPCs: true },
+  { name: "Pi", seats: 45, location: "south campus", hasPCs: false },
+  { name: "Roh", seats: 25, location: "south campus", hasPCs: true },
+  { name: "Tau", seats: 55, location: "south campus", hasPCs: false },
+  { name: "Eta", seats: 40, location: "main campus", hasPCs: true },
+  { name: "Gamma", seats: 50, location: "main campus", hasPCs: false },
+  { name: "Zeta", seats: 60, location: "main campus", hasPCs: true },
+  { name: "Omnikron", seats: 70, location: "south campus", hasPCs: false },
+  { name: "Lambda", seats: 30, location: "south campus", hasPCs: true },
+  { name: "Theta", seats: 45, location: "south campus", hasPCs: false },
+  { name: "Delta", seats: 55, location: "main campus", hasPCs: true },
+  { name: "Alpha", seats: 35, location: "main campus", hasPCs: false },
+];
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for sections
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.5 });
+document.addEventListener("DOMContentLoaded", () => {
+  // Intersection Observer for sections
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    },
+    { threshold: 0.5 }                                                                      /*/////// VRA ERICK /////*/
+  );
 
-    document.querySelectorAll('.section').forEach(section => {
-        observer.observe(section);
+  document.querySelectorAll(".section").forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Modal functionality
+  const modal = document.getElementById("modal");
+  const loginButton = document.getElementById("loginButton");
+  const closeButton = document.querySelector(".close");
+
+  if (loginButton) {
+    loginButton.addEventListener("click", () => {
+      if (modal) modal.style.display = "flex";
+    });
+  }
+
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
+      if (modal) modal.style.display = "none";
+    });
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // Video controls on hover
+  const video = document.getElementById("myVideo");
+
+  if (video) {
+    video.addEventListener("mouseover", () => {
+      video.controls = true;
     });
 
-    // Modal functionality
-    const modal = document.getElementById('modal');
-    const loginButton = document.getElementById('loginButton');
-    const closeButton = document.querySelector('.close');
+    video.addEventListener("mouseout", () => {
+      video.controls = false;
+    });
+  }
 
-    if (loginButton) {
-        loginButton.addEventListener('click', () => {
-            if (modal) modal.style.display = 'flex';
+  const formLogin = document.getElementById("FormLogin");
+
+  if (formLogin) {
+    formLogin.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const studentId = document.getElementById("StudentID").value;
+      const password = document.getElementById("password").value;
+
+      try {
+        const response = await fetch(`http://localhost:${port}/login`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ studentId, password }),
         });
-    }
 
-    if (closeButton) {
-        closeButton.addEventListener('click', () => {
-            if (modal) modal.style.display = 'none';
-        });
-    }
+        const data = await response.json();
+        if (data.message === "Login successful") {
+          if (password === "BelgiumCampus") {
+            if (passwordChangeModal) passwordChangeModal.style.display = "flex";
+          }
+          await getStudentDetails();
+          console.log(`${sID} ${sName} ${sSurname}`);
+          window.location.href = "./Dashboard.html";
 
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+          // Additional code if needed
+        } else {
+          alert(data.message);
         }
-    };
-
-    // Video controls on hover
-    const video = document.getElementById('myVideo');
-
-    if (video) {
-        video.addEventListener('mouseover', () => {
-            video.controls = true;
-        });
-
-        video.addEventListener('mouseout', () => {
-            video.controls = false;
-        });
-    }
-
-    const formLogin = document.getElementById('FormLogin');
-
-    if (formLogin) {
-        formLogin.addEventListener('submit', async function (event) {
-            event.preventDefault();
-            const studentId = document.getElementById('StudentID').value;
-            const password = document.getElementById('password').value;
-
-            try {
-                const response = await fetch(`http://localhost:${port}/login`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ studentId, password })
-                });
-
-                const data = await response.json();
-                if (data.message === 'Login successful') {
-                    if (password === 'BelgiumCampus') {
-                        if (passwordChangeModal) passwordChangeModal.style.display = 'flex';
-                    }
-                    await getStudentDetails();
-                    console.log(`${sID} ${sName} ${sSurname}`);
-                    window.location.href = './Dashboard.html'
-
-                    // Additional code if needed
-                } else {
-                    alert(data.message);
-                }
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        });
-    }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    });
+  }
 });
 
 async function getStudentDetails() {
-    try {
-        console.log(`GET StudentDetails executed`);
-        const response = await fetch(`http://localhost:${port}/getStudentDetails`);
-        const data = await response.json();
-        console.log(data);
-        sName = data.name;
-        sID = data.id;
-        sSurname = data.surname;
-    } catch (error) {
-        console.error('Error fetching student details:', error);
-        return null;
-    }
+  try {
+    console.log(`GET StudentDetails executed`);
+    const response = await fetch(`http://localhost:${port}/getStudentDetails`);
+    const data = await response.json();
+    console.log(data);
+    sName = data.name;
+    sID = data.id;
+    sSurname = data.surname;
+  } catch (error) {
+    console.error("Error fetching student details:", error);
+    return null;
+  }
 }
-
 
 // Courses side nav
 function toggleNav() {
-    var sidebar = document.querySelector('.sidebar');
-    var toggleStrip = document.querySelector('.toggle-strip');
-    var toggleIcon = document.getElementById('toggle-icon');
+  var sidebar = document.querySelector(".sidebar");
+  var toggleStrip = document.querySelector(".toggle-strip");
+  var toggleIcon = document.getElementById("toggle-icon");
 
-    if (sidebar.style.width === '250px') {
-        sidebar.style.width = '0';
-        toggleStrip.style.left = '0';
-        toggleIcon.classList.remove('fa-arrow-left');
-        toggleIcon.classList.add('fa-arrow-right');
-    } else {
-        sidebar.style.width = '250px';
-        toggleStrip.style.left = '250px';
-        toggleIcon.classList.remove('fa-arrow-right');
-        toggleIcon.classList.add('fa-arrow-left');
-    }
+  if (sidebar.style.width === "250px") {
+    sidebar.style.width = "0";
+    toggleStrip.style.left = "0";
+    toggleIcon.classList.remove("fa-arrow-left");
+    toggleIcon.classList.add("fa-arrow-right");
+  } else {
+    sidebar.style.width = "250px";
+    toggleStrip.style.left = "250px";
+    toggleIcon.classList.remove("fa-arrow-right");
+    toggleIcon.classList.add("fa-arrow-left");
+  }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const passwordChangeModal = document.getElementById('passwordChangeModal');
-    const closePasswordChange = document.getElementById('closePasswordChange');
-    const changePasswordForm = document.getElementById('changePasswordForm');
+document.addEventListener("DOMContentLoaded", () => {
+  const passwordChangeModal = document.getElementById("passwordChangeModal");
+  const closePasswordChange = document.getElementById("closePasswordChange");
+  const changePasswordForm = document.getElementById("changePasswordForm");
 
-    if (closePasswordChange) {
-        closePasswordChange.addEventListener('click', () => {
-            if (passwordChangeModal) passwordChangeModal.style.display = 'none';
-        });
+  if (closePasswordChange) {
+    closePasswordChange.addEventListener("click", () => {
+      if (passwordChangeModal) passwordChangeModal.style.display = "none";
+    });
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    } else if (event.target == passwordChangeModal) {
+      passwordChangeModal.style.display = "none";
     }
+  };
 
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        } else if (event.target == passwordChangeModal) {
-            passwordChangeModal.style.display = 'none';
-        }
-    };
+  if (changePasswordForm) {
+    changePasswordForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const studentId = document.getElementById("StudentID").value;
+      const newPassword = document.getElementById("newPassword").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
 
-    if (changePasswordForm) {
-        changePasswordForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const studentId = document.getElementById('StudentID').value;
-            const newPassword = document.getElementById('newPassword').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
+      if (newPassword !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
 
-            if (newPassword !== confirmPassword) {
-                alert('Passwords do not match.');
-                return;
-            }
-
-            fetch(`http://localhost:${port}/changePassword`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ studentId, newPassword })
-            })
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.message);
-                    if (passwordChangeModal) passwordChangeModal.style.display = 'none';
-                    if (modal) modal.style.display = 'none';
-                })
-                .catch(error => console.error('Error:', error));
-        });
-    }
+      fetch(`http://localhost:${port}/changePassword`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ studentId, newPassword }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          alert(data.message);
+          if (passwordChangeModal) passwordChangeModal.style.display = "none";
+          if (modal) modal.style.display = "none";
+        })
+        .catch((error) => console.error("Error:", error));
+    });
+  }
 });
 
-const signUpForm = document.getElementById('signUpForm');
+const signUpForm = document.getElementById("signUpForm");
 
 if (signUpForm) {
-    signUpForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const username = document.getElementById('signUpUsername').value;
-        const password = document.getElementById('signUpPassword').value;
+  signUpForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const username = document.getElementById("signUpUsername").value;
+    const password = document.getElementById("signUpPassword").value;
 
-        fetch(`http://localhost:${port}/signup`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, password })
-        })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-            })
-            .catch(error => console.error('Error:', error));
-    });
+    fetch(`http://localhost:${port}/signup`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert(data.message);
+      })
+      .catch((error) => console.error("Error:", error));
+  });
 }
 
 function populateEnrollmentForm(data) {
-    const name = document.getElementById('name');
-    const surname = document.getElementById('surname');
-    const id = document.getElementById('id');
-    const adr1 = document.getElementById('adr1');
-    const adr2 = document.getElementById('adr2');
-    const city = document.getElementById('city');
-    const zip = document.getElementById('zip');
-    const province = document.getElementById('province');
-    const gender = document.querySelector(`input[name="gender"][value="${data.gender}"]`);
-    const email = document.getElementById('email');
-    const course = document.getElementById('course');
-    const attendance = document.querySelector(`input[name="attendance"][value="${data.attendance}"]`);
+  const name = document.getElementById("name");
+  const surname = document.getElementById("surname");
+  const id = document.getElementById("id");
+  const adr1 = document.getElementById("adr1");
+  const adr2 = document.getElementById("adr2");
+  const city = document.getElementById("city");
+  const zip = document.getElementById("zip");
+  const province = document.getElementById("province");
+  const gender = document.querySelector(
+    `input[name="gender"][value="${data.gender}"]`
+  );
+  const email = document.getElementById("email");
+  const course = document.getElementById("course");
+  const attendance = document.querySelector(
+    `input[name="attendance"][value="${data.attendance}"]`
+  );
 
-    if (name) name.value = data.name;
-    if (surname) surname.value = data.surname;
-    if (id) id.value = data.id;
-    if (adr1) adr1.value = data.address[0];
-    if (adr2) adr2.value = data.address[1];
-    if (city) city.value = data.address[2];
-    if (zip) zip.value = data.address[3];
-    if (province) province.value = data.province;
-    if (gender) gender.checked = true;
-    if (email) email.value = data.username;
-    if (course) course.value = data.course;
-    if (attendance) attendance.checked = true;
+  if (name) name.value = data.name;
+  if (surname) surname.value = data.surname;
+  if (id) id.value = data.id;
+  if (adr1) adr1.value = data.address[0];
+  if (adr2) adr2.value = data.address[1];
+  if (city) city.value = data.address[2];
+  if (zip) zip.value = data.address[3];
+  if (province) province.value = data.province;
+  if (gender) gender.checked = true;
+  if (email) email.value = data.username;
+  if (course) course.value = data.course;
+  if (attendance) attendance.checked = true;
 }
 
 async function handleSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const form = document.getElementById('formGroup');
-    const formData = new FormData(form);
-    const data = {};
+  const form = document.getElementById("formGroup");
+  const formData = new FormData(form);
+  const data = {};
 
-    let allFieldsFilled = true;
+  let allFieldsFilled = true;
 
-    formData.forEach((value, key) => {
-        if (!value) {
-            allFieldsFilled = false;
-        }
-        data[key] = value;
+  formData.forEach((value, key) => {
+    if (!value) {
+      allFieldsFilled = false;
+    }
+    data[key] = value;
+  });
+
+  if (!allFieldsFilled) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  try {
+    const response = await fetch(`http://localhost:${port}/saveForm`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     });
 
-    if (!allFieldsFilled) {
-        alert('Please fill in all fields.');
-        return;
-    }
+    const result = await response.json();
+    alert(result.message);
 
-    try {
-        const response = await fetch(`http://localhost:${port}/saveForm`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
+    const modal = document.getElementById("modal");
+    const formLogin = document.getElementById("FormLogin");
 
-        const result = await response.json();
-        alert(result.message);
-
-        const modal = document.getElementById('modal');
-        const formLogin = document.getElementById('FormLogin');
-
-        if (modal) modal.style.display = 'flex';
-        if (formLogin) {
-            formLogin.innerHTML = `
+    if (modal) modal.style.display = "flex";
+    if (formLogin) {
+      formLogin.innerHTML = `
                 <label for="StudentID">StudentID:</label>
                 <input type="text" id="StudentID" name="StudentID" value="${result.studentId}" required>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" value="BelgiumCampus" required>
                 <button type="submit">Login</button>`;
-        }
-    } catch (error) {
-        console.error('Error:', error);
     }
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
 
 
 async function createHome() {
-    let dashContent = document.querySelector(".dashboardContent");
-    dashContent.innerHTML = ``
-    await getStudentDetails();
-    dashContent.innerHTML = `
+  let dashContent = document.querySelector(".dashboardContent");
+  dashContent.innerHTML = ``;
+  await getStudentDetails();
+  dashContent.innerHTML = `
         <div class="course">
           
         </div>
@@ -1905,213 +1976,321 @@ async function createHome() {
             </div>
             <p id ="cDesc"> </p>
         </div>
-    `
+    `;
 
-    let courseHeading = document.createElement('h1');
-    let courseDesc = document.querySelector('#cDesc');
-    let Duration = document.querySelector('#Duration');
-    let NQF = document.querySelector('#NQF');
-    let Credits = document.querySelector('#Credits');
-    let SAQAID = document.querySelector('#SAQAID');
-    let Location = document.querySelector('#Location');
+  let courseHeading = document.createElement("h1");
+  let courseDesc = document.querySelector("#cDesc");
+  let Duration = document.querySelector("#Duration");
+  let NQF = document.querySelector("#NQF");
+  let Credits = document.querySelector("#Credits");
+  let SAQAID = document.querySelector("#SAQAID");
+  let Location = document.querySelector("#Location");
 
+  Object.keys(courseDescriptions).forEach((course) => {
+    if (sCourse == course) {
+      courseHeading.textContent = courseDescriptions[course].cName;
+      courseDesc.textContent = courseDescriptions[course].cDescription;
+      Duration.textContent = courseDescriptions[course].Duration;
+      NQF.textContent = courseDescriptions[course].NQF;
+      Credits.textContent = courseDescriptions[course].Credits;
+      SAQAID.textContent = courseDescriptions[course].SAQAID;
+      Location.textContent = courseDescriptions[course].Location;
+    }
+  });
 
-    Object.keys(courseDescriptions).forEach(course => {
-        if (sCourse == course) {
+  let course = document.querySelector(".course");
+  course.appendChild(courseHeading);
 
-            courseHeading.textContent = courseDescriptions[course].cName;
-            courseDesc.textContent = courseDescriptions[course].cDescription;
-            Duration.textContent = courseDescriptions[course].Duration;
-            NQF.textContent = courseDescriptions[course].NQF;
-            Credits.textContent = courseDescriptions[course].Credits;
-            SAQAID.textContent = courseDescriptions[course].SAQAID;
-            Location.textContent = courseDescriptions[course].Location;
+  Object.keys(CourseStartDates).forEach((course) => {
+    console.log(sCourse);
+    if (sCourse == course) {
+      let eventDate = new Date(CourseStartDates[course]).getTime();
+      const timerInterval = setInterval(function () {
+        const now = new Date().getTime();
+        const timeRemaining = eventDate - now;
 
-        }
-    });
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-
-    let course = document.querySelector('.course')
-    course.appendChild(courseHeading)
-
-
-
-    Object.keys(CourseStartDates).forEach(course => {
-        console.log(sCourse)
-        if (sCourse == course) {
-            let eventDate = new Date(CourseStartDates[course]).getTime();;
-            const timerInterval = setInterval(function () {
-                const now = new Date().getTime();
-                const timeRemaining = eventDate - now;
-
-                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-                document.querySelector("#countdown").innerHTML = `
+        document.querySelector("#countdown").innerHTML = `
             ${days}d ${hours}h ${minutes}m ${seconds}s
           `;
 
-                if (timeRemaining < 0) {
-                    clearInterval(timerInterval);
-                    document.querySelector("#countdown").innerHTML = "The event has started!";
-                }
-            }, 1000);
+        if (timeRemaining < 0) {
+          clearInterval(timerInterval);
+          document.querySelector("#countdown").innerHTML =
+            "The event has started!";
         }
-
-    })
-
-
-
-    let tHead = document.createElement("thead");
-    let tBody = document.createElement("tbody");
-    let table = document.createElement("table");
-    let bcompData = [
-        ["Academic Writing", "ACW181", 5, "4", "Phi", "Simba"],
-        ["Computer Architecture 181", "COA181", 5, "4", "Chi", "Zuma"],
-        ["Database Development 181", "DBD181", 5, "12", "Kappa", "Malema"],
-        ["Information Systems 181", "INF181", 5, "5", "Lambda", "Neil"],
-        ["Linear Programming 181", "LPR181", 5, "11", "Omega", "Gift"],
-    ];
-
-    let Heading = [
-        "Module",
-        "Module Code",
-        "NQF",
-        "Credits",
-        "Venues",
-        "Lecturers",
-    ];
-
-    Heading.forEach((data) => {
-        let th = document.createElement("th");
-        th.style.padding = '10px';
-        th.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
-        th.style.color = 'white';
-        th.style.textAlign = 'center';
-        th.style.fontSize = '1.3em';
-
-        th.textContent = data;
-        tHead.appendChild(th);
-    });
-
-    table.appendChild(tHead);
-    table.appendChild(tBody); // Add tbody to the table
-
-    bcompData.forEach((rowData) => {
-        const row = document.createElement("tr");
-        rowData.forEach((cellData) => {
-            const cell = document.createElement("td");
-            cell.style.padding = "5px";
-            cell.style.border = "1px solid black";
-            cell.textContent = cellData;
-            row.appendChild(cell);
-        });
-        tBody.appendChild(row);
-    });
-
-    const rows = table.querySelectorAll('tr');
-    for (let i = 1; i < rows.length; i++) {
-        if (i % 2 === 0) {
-            rows[i].style.backgroundColor = '#f2f2f2';
-        }
+      }, 1000);
     }
+  });
 
-    rows.forEach(row => {
-        row.addEventListener('mouseover', () => {
-            row.style.backgroundColor = '#ddd';
-        });
-        row.addEventListener('mouseout', () => {
-            row.style.backgroundColor = '';
-            if (Array.from(rows).indexOf(row) % 2 === 0 && row !== headerRow) {
-                row.style.backgroundColor = '#f2f2f2';
-            }
-        });
+  let tHead = document.createElement("thead");
+  let tBody = document.createElement("tbody");
+  let table = document.createElement("table");
+  let bcompData = [
+    ["Academic Writing", "ACW181", 5, "4", "Phi", "Simba"],
+    ["Computer Architecture 181", "COA181", 5, "4", "Chi", "Zuma"],
+    ["Database Development 181", "DBD181", 5, "12", "Kappa", "Malema"],
+    ["Information Systems 181", "INF181", 5, "5", "Lambda", "Neil"],
+    ["Linear Programming 181", "LPR181", 5, "11", "Omega", "Gift"],
+  ];
+
+  let Heading = [
+    "Module",
+    "Module Code",
+    "NQF",
+    "Credits",
+    "Venues",
+    "Lecturers",
+  ];
+
+  Heading.forEach((data) => {
+    let th = document.createElement("th");
+
+    th.textContent = data;
+    tHead.appendChild(th);
+  });
+
+  table.appendChild(tHead);
+  table.appendChild(tBody); // Add tbody to the table
+
+  bcompData.forEach((rowData) => {
+    const row = document.createElement("tr");
+    rowData.forEach((cellData) => {
+      const cell = document.createElement("td");
+       cell.textContent = cellData;
+      row.appendChild(cell);
     });
+    tBody.appendChild(row);
+  });
 
-    table.appendChild(tBody);
-    table.style.width = '70%';
-    table.style.height = '30%';
-    table.style.borderCollapse = 'collapse';
-    table.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+  const rows = table.querySelectorAll("tr");
+  for (let i = 1; i < rows.length; i++) {
+    if (i % 2 === 0) {
+      rows[i].style.backgroundColor = "#f2f2f2";
+    }
+  }
 
-    dashContent.appendChild(table);
+  rows.forEach((row) => {
+    row.addEventListener("mouseover", () => {
+      row.style.backgroundColor = "#ddd";
+    });
+    row.addEventListener("mouseout", () => {
+      row.style.backgroundColor = "";
+      if (Array.from(rows).indexOf(row) % 2 === 0 && row !== headerRow) {
+        row.style.backgroundColor = "#f2f2f2";
+      }
+    });
+  });
+
+  table.appendChild(tBody);
+  table.style.width = "70%";
+  table.style.height = "30%";
+  table.style.borderCollapse = "collapse";
+  table.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+
+  dashContent.appendChild(table);
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    // Function to fetch and handle student details
-    const DashboardLink = document.querySelector(`#dashboardLink`);
+//Create Venues tab on Dashboard
+function createVenues(){
+    let tHead = document.createElement('thead')
+    let tBody = document.createElement('tbody')
+    let table = document.createElement('table')
+    let dashContent = document.querySelector('.dashboardContent')
+    dashContent.innerHTML = ''
 
-    await getStudentDetails();
+    let tableHeadings = ['Name', 'Seats', 'Location', 'Has PCs', 'Map']
 
-    if (sID && sID !== '') {
-        DashboardLink.classList.add('visible');
-    } else {
-        DashboardLink.classList.add('notVisible');
-    }
-    console.log(`Dynamic generate : ${sName} `)
+    tableHeadings.forEach(heading => {
+        let th = document.createElement('th')
+        th.textContent = heading
+        tHead.appendChild(th)
+    });
+  
+    table.appendChild(tHead)
 
-    let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
+    venues.forEach(data => {
+        let tRow = document.createElement('tr')      
+        let cellName = document.createElement('td')
+        cellName.textContent = data.name
+        let cellSeats = document.createElement('td')
+        cellSeats.textContent = data.seats
+        let cellLocations = document.createElement('td')
+        cellLocations.textContent = data.location
+        let cellHasPcs = document.createElement('td')
+        cellHasPcs.textContent = data.hasPCs
+        tRow.appendChild(cellName)
+        tRow.appendChild(cellSeats)
+        tRow.appendChild(cellLocations)
+        tRow.appendChild(cellHasPcs)
+        tBody.appendChild(tRow)
+    });
+    table.appendChild(tBody)
+    dashContent.appendChild(table)
+
+    const rows = table.querySelectorAll("tr");
+    rows.forEach((row) => {
+        row.addEventListener("mouseover", () => {
+          row.style.backgroundColor = "#ddd";
+        });
+        row.addEventListener("mouseout", () => {
+          row.style.backgroundColor = "";
+          if (Array.from(rows).indexOf(row) % 2 === 0 && row !== headerRow) {
+            row.style.backgroundColor = "#f2f2f2";
+          }
+        });
+      });
+}
+async function createMyModules() {
+  let dashContent = document.querySelector(".dashboardContent");
+  dashContent.innerHTML = ``;
+ await getStudentDetails();
+
+  let filteredModules = modules.filter(module => module.course === sCourse);
+
+  let moduleTable = document.createElement('table')
+  moduleTable.className = 'moduleTable';
+
+  let moduleTblHeader=document.createElement('thead')
+  let headerRow=document.createElement('tr');
+  let headers=['Description','Code','Completed']
+
+  headers.forEach(text=>{
+      const th=document.createElement('th')
+      th.textContent=text;
+      headerRow.appendChild(th)
+  });
+  moduleTblHeader.appendChild(headerRow)
+
+  let moduleTblBody= document.createElement('tbody')
+
+  filteredModules.forEach(module => {
+      let row = document.createElement('tr')
+      row.innerHTML = `<td>${module.description}</td>
+                      <td>${module.code}</td>
+                      <td><input type="checkbox" class="completedMod"></td>`;
+
+                      moduleTblBody.appendChild(row);
+      
+                  let checkbox=row.querySelector('.completedMod');
+
+                  checkbox.addEventListener('change', (e)=>{
+                          if(e.target.checked){
+                              completeModule(module,row)
+                          }
+                      })
+
+  });
+  moduleTable.appendChild(moduleTblHeader)
+  moduleTable.appendChild(moduleTblBody);
+
+          let completedTable = document.createElement('table');
+          completedTable.className = 'completedTable';
+
+          let completedTableHeader = document.createElement('thead');
+          completedTableHeader.innerHTML = `
+              <tr>
+                  <th>Description</th>
+                  <th>Code</th>
+                  <th>Year</th>
+              </tr>
+          `;
+
+          let completedTableBody = document.createElement('tbody');
+          completedTable.appendChild(completedTableHeader);
+          completedTable.appendChild(completedTableBody);
+
+          dashContent.innerHTML = '';
+          dashContent.appendChild(moduleTable);
+          dashContent.appendChild(completedTable);
+
+}    
+
+function completeModule(module, row) {
+  let completedTableBody = document.querySelector('.completedTable tbody');
+  let completedRow = document.createElement('tr');
+  completedRow.innerHTML = `
+      <td>${module.description}</td>
+      <td>${module.code}</td>
+      <td>${module.year}</td>
+  `;
+  completedTableBody.appendChild(completedRow);
+  row.remove();}
+
+
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+  // Function to fetch and handle student details
+  const DashboardLink = document.querySelector(`#dashboardLink`);
+
+  await getStudentDetails();
+
+  if (sID && sID !== "") {
+    DashboardLink.classList.add("visible");
+  } else {
+    DashboardLink.classList.add("notVisible");
+  }
+  console.log(`Dynamic generate : ${sName} `);
+
+  let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
 
     StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
     console.log('Add Logged in user run');
-    // let StudentName = document.createElement('a');
-    // StudentName.textContent = `${sName} ${sSurname}`;
-    // let StudentID = document.createElement('span');
-    // StudentID.textContent = `${sID}`;
-    
-    // StudentDetailsdiv.appendChild(StudentName);
-    // StudentDetailsdiv.appendChild(StudentID);
-
 });
 
-
-
 async function getStudentDetails() {
-    try {
-        console.log(`GET StudentDetails executed`);
-        const response = await fetch(`http://localhost:${port}/getStudentDetails`);
-        const data = await response.json();
-        console.log(data);
+  try {
+    console.log(`GET StudentDetails executed`);
+    const response = await fetch(`http://localhost:${port}/getStudentDetails`);
+    const data = await response.json();
+    console.log(data);
 
-        // Update all global variables
-        sName = data.name;
-        sSurname = data.surname;
-        sID = data.id;
-        sAdr = data.adr;
-        sCity = data.city;
-        sZip = data.zip;
-        sProvince = data.province;
-        sGender = data.gender;
-        sEmail = data.email;
-        sCourse = data.course;
-        sAttendance = data.attendance;
-        sStudentId = data.studentId;
-        sPassword = data.password;
-
-    } catch (error) {
-        console.error('Error fetching student details:', error);
-        return null;
-    }
+    // Update all global variables
+    sName = data.name;
+    sSurname = data.surname;
+    sID = data.id;
+    sAdr = data.adr;
+    sCity = data.city;
+    sZip = data.zip;
+    sProvince = data.province;
+    sGender = data.gender;
+    sEmail = data.email;
+    sCourse = data.course;
+    sAttendance = data.attendance;
+    sStudentId = data.studentId;
+    sPassword = data.password;
+  } catch (error) {
+    console.error("Error fetching student details:", error);
+    return null;
+  }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const lecturerContainer = document.querySelector(".lecturer");
+  const moduleContainer = document.querySelector(".modules");
+  const searchInput = document.querySelector(".search-input");
+  let currentCourse = "all";
 
-document.addEventListener('DOMContentLoaded', () => {
-    const lecturerContainer = document.querySelector('.lecturer');
-    const moduleContainer = document.querySelector('.modules');
-    const searchInput = document.querySelector('.search-input');
-    let currentCourse = 'all';
-
-    function displayLecturers(course = 'all') {
-        lecturerContainer.innerHTML = '';
-        lecturers.forEach(lecturer => {
-            const isCourseMatch = course === 'all' || lecturer.modules.some(moduleCode => {
-                const module = modules.find(m => m.code === moduleCode);
-                return module && module.course === course;
-            });
-            if (isCourseMatch) {
-                const lecturerCard = `
+  function displayLecturers(course = "all") {
+    lecturerContainer.innerHTML = "";
+    lecturers.forEach((lecturer) => {
+      const isCourseMatch =
+        course === "all" ||
+        lecturer.modules.some((moduleCode) => {
+          const module = modules.find((m) => m.code === moduleCode);
+          return module && module.course === course;
+        });
+      if (isCourseMatch) {
+        const lecturerCard = `
                     <div class="container">
                         <div class="lecturerCard">
                             <div class="frontCard">
@@ -2124,42 +2303,47 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                 `;
-                lecturerContainer.insertAdjacentHTML('beforeend', lecturerCard);
-            }
-        });
-    }
+        lecturerContainer.insertAdjacentHTML("beforeend", lecturerCard);
+      }
+    });
+  }
 
-    function createFilterDropdown() {
-        const filterContainer = document.getElementById('filterContainer');
-        const selectElement = document.createElement('select');
-        selectElement.id = 'yearFilter';
+  function createFilterDropdown() {
+    const filterContainer = document.getElementById("filterContainer");
+    const selectElement = document.createElement("select");
+    selectElement.id = "yearFilter";
 
-        const years = ['all', 1, 2, 3, 4];
-        years.forEach(year => {
-            const optionElement = document.createElement('option');
-            optionElement.value = year;
-            optionElement.text = year === 'all' ? 'All Years' : `Year ${year}`;
-            selectElement.appendChild(optionElement);
-        });
+    const years = ["all", 1, 2, 3, 4];
+    years.forEach((year) => {
+      const optionElement = document.createElement("option");
+      optionElement.value = year;
+      optionElement.text = year === "all" ? "All Years" : `Year ${year}`;
+      selectElement.appendChild(optionElement);
+    });
 
-        const label = document.createElement('label');
-        label.htmlFor = 'yearFilter';
-        label.innerText = 'Select Year: ';
+    const label = document.createElement("label");
+    label.htmlFor = "yearFilter";
+    label.innerText = "Select Year: ";
 
-        filterContainer.appendChild(label);
-        filterContainer.appendChild(selectElement);
-    }
+    filterContainer.appendChild(label);
+    filterContainer.appendChild(selectElement);
+  }
 
-    function displayModules(course = 'all', filterYear = 'all', searchQuery = '') {
-        moduleContainer.innerHTML = '';
-        modules.forEach(module => {
-            const isCourseMatch = course === 'all' || module.course === course;
-            const isYearMatch = filterYear === 'all' || module.year == filterYear;
-            const isSearchMatch = module.code.toLowerCase().includes(searchQuery) ||
-                module.description.toLowerCase().includes(searchQuery);
+  function displayModules(
+    course = "all",
+    filterYear = "all",
+    searchQuery = ""
+  ) {
+    moduleContainer.innerHTML = "";
+    modules.forEach((module) => {
+      const isCourseMatch = course === "all" || module.course === course;
+      const isYearMatch = filterYear === "all" || module.year == filterYear;
+      const isSearchMatch =
+        module.code.toLowerCase().includes(searchQuery) ||
+        module.description.toLowerCase().includes(searchQuery);
 
-            if (isCourseMatch && isYearMatch && isSearchMatch) {
-                const moduleCard = `
+      if (isCourseMatch && isYearMatch && isSearchMatch) {
+        const moduleCard = `
                     <div class="module-card ${module.course} year${module.year}">
                         <div class="module-header">
                             <h1>${module.code}</h1>
@@ -2195,43 +2379,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    createFilterDropdown();
-    displayModules();
-    displayLecturers();
 
-    document.getElementById('yearFilter').addEventListener('change', function () {
-        const selectedYear = this.value;
-        const searchQuery = searchInput.value.toLowerCase();
-        displayModules(currentCourse, selectedYear, searchQuery);
-    });
+  createFilterDropdown();
+  displayModules();
+  displayLecturers();
 
-    document.querySelectorAll('.sideNav-button').forEach(button => {
-        button.addEventListener('click', () => {
-            currentCourse = button.getAttribute('data-course');
-            let courseHeading
-            let courseDesc
-            let Duration
-            let NQF
-            let Credits
-            let SAQAID
-            let Location
-            Object.keys(courseDescriptions).forEach((course) => {
-                if (currentCourse == course) {
-                    courseHeading = courseDescriptions[course].cName;
-                    courseDesc = courseDescriptions[course].cDescription;
-                    Duration = courseDescriptions[course].Duration;
-                    NQF = courseDescriptions[course].NQF;
-                    Credits = courseDescriptions[course].Credits;
-                    SAQAID = courseDescriptions[course].SAQAID;
-                    Location = courseDescriptions[course].Location;
-                }
-            });
+  document.getElementById("yearFilter").addEventListener("change", function () {
+    const selectedYear = this.value;
+    const searchQuery = searchInput.value.toLowerCase();
+    displayModules(currentCourse, selectedYear, searchQuery);
+    moduleContainer.insertAdjacentHTML("beforeend", moduleCard);
+  });
 
-            const courseDescription = document.querySelector('.description');
-            courseDescription.innerHTML = "";
-            let infoContainer = document.createElement("div");
+  document.querySelectorAll(".sideNav-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      currentCourse = button.getAttribute("data-course");
+      let courseHeading;
+      let courseDesc;
+      let Duration;
+      let NQF;
+      let Credits;
+      let SAQAID;
+      let Location;
+      Object.keys(courseDescriptions).forEach((course) => {
+        if (currentCourse == course) {
+          courseHeading = courseDescriptions[course].cName;
+          courseDesc = courseDescriptions[course].cDescription;
+          Duration = courseDescriptions[course].Duration;
+          NQF = courseDescriptions[course].NQF;
+          Credits = courseDescriptions[course].Credits;
+          SAQAID = courseDescriptions[course].SAQAID;
+          Location = courseDescriptions[course].Location;
+        }
+      });
 
-            infoContainer.innerHTML = `           <h1>${courseHeading}</h1>
+      const courseDescription = document.querySelector(".description");
+      courseDescription.innerHTML = "";
+      let infoContainer = document.createElement("div");
+
+      infoContainer.innerHTML = `           <h1>${courseHeading}</h1>
                                             <div class = "info-container">
                                         <div class="info-box">
                                             <div class="info-item">
@@ -2263,22 +2449,20 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <p>${courseDesc}</p>
                                     </div>
                                           `;
-            courseDescription.appendChild(infoContainer)
-            const selectedYear = document.getElementById('yearFilter').value;
-            const searchQuery = searchInput.value.toLowerCase();
-            displayModules(currentCourse, selectedYear, searchQuery);
-            displayLecturers(currentCourse);
-
-        });
+      courseDescription.appendChild(infoContainer);
+      const selectedYear = document.getElementById("yearFilter").value;
+      const searchQuery = searchInput.value.toLowerCase();
+      displayModules(currentCourse, selectedYear, searchQuery);
+      displayLecturers(currentCourse);
     });
+  });
 
-    searchInput.addEventListener('input', () => {
-        const searchQuery = searchInput.value.toLowerCase();
-        displayModules(currentCourse, document.getElementById('yearFilter').value, searchQuery);
-    });
+  searchInput.addEventListener("input", () => {
+    const searchQuery = searchInput.value.toLowerCase();
+    displayModules(
+      currentCourse,
+      document.getElementById("yearFilter").value,
+      searchQuery
+    );
+  });
 });
-
-
-
-
-
