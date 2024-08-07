@@ -15,6 +15,26 @@ body, html {
     align-items: center;
 }
 
+.dashboardContent table{
+    width: 40%;
+    
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboardContent table th{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.dashboardContent table td{
+    padding: 5px;
+    border: 1px solid black;
+
+}
 :root {
     --background: #f5f5f5;
     --sideNavbar-width: 256px;

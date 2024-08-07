@@ -208,5 +208,20 @@
     "attendance": "face-to-face",
     "studentId": "600997",
     "password": "BelgiumCampus"
+  },
+  {
+    "name": "Markus",
+    "surname": "Reblin",
+    "id": "asdfewfqwef",
+    "adr": "ewa",
+    "city": "asf",
+    "zip": "ewef",
+    "province": "WC",
+    "gender": "Male",
+    "email": "asdf@gmail.com",
+    "course": "BCOMP",
+    "attendance": "face-to-face",
+    "studentId": "600998",
+    "password": "BelgiumCampus"
   }
 ]
