@@ -160,6 +160,31 @@ app.post('/saveForm', (req, res) => {
     });
 });
 
+app.post('/updateStudentDetails', (req, res) => {
+    const updatedData = req.body;
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).json({ message: 'Failed to read student data.' });
+        }
+
+        const students = JSON.parse(data);
+        const studentIndex = students.findIndex(student => student.studentId === updatedData.studentId);
+
+        if (studentIndex !== -1) {
+            students[studentIndex] = { ...students[studentIndex], ...updatedData };
+            fs.writeFile(filePath, JSON.stringify(students, null, 2), (err) => {
+                if (err) {
+                    return res.status(500).json({ message: 'Failed to save updated data.' });
+                }
+                res.json({ message: 'Student details updated successfully.' });
+            });
+        } else {
+            res.status(404).json({ message: 'Student not found.' });
+        }
+    });
+});
+
 const PORT = 3000; // Ensure this matches the port in the fetch requests
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
