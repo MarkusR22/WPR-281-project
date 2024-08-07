@@ -1528,6 +1528,8 @@ async function handleSubmit(event) {
     }
 }
 
+
+
 async function createHome() {
     let dashContent = document.querySelector(".dashboardContent");
     dashContent.innerHTML = ``
@@ -1756,13 +1758,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log(`Dynamic generate : ${sName} `)
 
     let StudentDetailsdiv = document.querySelector('#sideNav-footer-titlebox');
-    let StudentName = document.createElement('a');
-    StudentName.textContent = `${sName} ${sSurname}`;
-    let StudentID = document.createElement('span');
-    StudentID.textContent = `${sID}`;
 
-    StudentDetailsdiv.appendChild(StudentName);
-    StudentDetailsdiv.appendChild(StudentID);
+    StudentDetailsdiv.innerHTML = `<a id="sideNav-footer-title">${sName} ${sSurname}</a><span id="sideNav-footer-subtitle">${sID}</span>`;
+    console.log('Add Logged in user run');
+    // let StudentName = document.createElement('a');
+    // StudentName.textContent = `${sName} ${sSurname}`;
+    // let StudentID = document.createElement('span');
+    // StudentID.textContent = `${sID}`;
+    
+    // StudentDetailsdiv.appendChild(StudentName);
+    // StudentDetailsdiv.appendChild(StudentID);
 
 });
 
@@ -1871,10 +1876,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
+                
+                let button =document.getElementById(module.code);
+                button.addEventListener("click",function(){
+                let modal=document.getElementById("ModuleModal");
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h1>${module.code}</h1>
+                        <p>${module.description}</p>
+                         <video width="600" controls>
+                          <source src="${module.video}" type="video/mp4">
+                          Your browser does not support the video tag.
+                         </video>
+                    </div>
+                     `;
+                     modal.style.display = 'block';
+                     let closeBtn = modal.querySelector('.close-btn');
+                     closeBtn.addEventListener("click", function() {
+                          modal.style.display = 'none';
+                  });
+                })
+                
             }
         });
     }
-
 
     createFilterDropdown();
     displayModules();
