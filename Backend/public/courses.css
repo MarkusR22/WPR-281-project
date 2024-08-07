@@ -707,6 +707,8 @@ label[for=sideNav-footer-toggle] {
     width: 45%;
     height: 20%;
     margin: 10px;
+    margin-bottom: 25px;
+    margin-top: 4px;
 }
 
 .container:hover .lecturerCard {
@@ -808,9 +810,7 @@ label[for=sideNav-footer-toggle] {
 .overview {
     height: 100%;
     margin: 20px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
+  
 }
 
 .overview h1 {

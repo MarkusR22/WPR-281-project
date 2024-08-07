@@ -2078,8 +2078,7 @@ async function createHome() {
                 </div>
             </div>
             <p id ="cDesc"> </p>
-        </div>
-    `;
+        </div>`;
 
     let courseHeading = document.createElement("h1");
     let courseDesc = document.querySelector("#cDesc");
@@ -2224,10 +2223,29 @@ async function createHome() {
     table.style.width = "100%";
     table.style.borderCollapse = "collapse";
     table.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+    table.classList.add("Print")
 
 
     tableContainer.appendChild(table);
     dashContent.appendChild(tableContainer);
+
+    let button=document.createElement('button');
+    button.id = 'printTableButton';
+    button.innerText = 'Print Table';
+    button.style.display = 'block';
+    button.style.marginLeft = 'auto';
+    button.style.marginTop='0.5vw';
+    button.style.marginRight = '4.1vw';
+    button.style.padding = '10px 30px';
+    button.style.backgroundColor = "grey";
+    button.style.color = 'white';
+    button.style.border = 'none';
+    button.style.borderRadius = '5px';
+    button.style.cursor = 'pointer';
+    button.onclick=function(){
+        window.print()
+    }
+    dashContent.appendChild(button);
 }
 
 //Create Venues tab on Dashboard
@@ -2309,7 +2327,9 @@ async function createMyModules() {
     dashContent.innerHTML = '';
     await getStudentDetails();
 
-    let filteredModules = modules.filter(module => module.course === sCourse);
+    let pageHeading = document.createElement('h1')
+    pageHeading.textContent = "My modules"
+  let filteredModules = modules.filter(module => module.course === sCourse);
 
     let moduleTable = document.createElement('table');
     moduleTable.className = 'moduleTable';
@@ -2365,16 +2385,21 @@ async function createMyModules() {
     completedTable.appendChild(completedTableBody);
 
   // container for the tables
+  let bigContainer = document.createElement('div');
   let container1 = document.createElement('div');
   let container2 = document.createElement('div');
   
   container1.appendChild(moduleTable);
   container2.appendChild(completedTable);
+  bigContainer.classList.add('bigContainer');
   container1.classList.add('table');
   container2.classList.add('table');
+  
+  dashContent.appendChild(pageHeading)
 
-  dashContent.appendChild(container1);
-  dashContent.appendChild(container2);
+  bigContainer.appendChild(container1);
+  bigContainer.appendChild(container2);
+  dashContent.appendChild(bigContainer)
 
 }
 
