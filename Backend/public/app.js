@@ -2356,13 +2356,18 @@ async function createMyModules() {
   completedTable.appendChild(completedTableBody);
 
   // container for the tables
-  let container = document.createElement('div');
-  container.className = 'modulesContainer';
-  container.appendChild(moduleTable);
-  container.appendChild(completedTable);
+  let container1 = document.createElement('div');
+  let container2 = document.createElement('div');
+  
+  container1.appendChild(moduleTable);
+  container2.appendChild(completedTable);
+  container1.classList.add('table');
+  container2.classList.add('table');
 
-  dashContent.appendChild(container);
-  container.classList.add('table');
+  dashContent.appendChild(container1);
+  dashContent.appendChild(container2);
+
+
 }
 
 function completeModule(module, row) {
@@ -2404,13 +2409,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Get the modal
 let modal = document.getElementById("studentModal");
 
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// Get the form in the modal
 let form = document.getElementById("studentForm");
 
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
     fetch('/getStudentDetails')
         .then(response => response.json())

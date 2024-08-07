@@ -511,45 +511,51 @@ label[for=sideNav-footer-toggle] {
     margin-bottom: 0;
 }
 
-
-.modulesContainer {
-    max-width: 100%;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    gap: 60px;
-    overflow-y: auto;
+.dashContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    gap: 20px; /* Space between columns */
 }
 
-
-.moduleTable tbody tr:hover, .completedTable tbody tr:hover, .moduleTable tbody td a:hover, .completedTable tbody td a:hover {
-    cursor: pointer;
+.container1, .container2 {
+    display: flex; /* Optional: ensure content inside is laid out properly */
+    flex-direction: column; /* Ensure that table content is stacked vertically within each container */
 }
 
+/* Ensure tables are styled correctly */
 .moduleTable, .completedTable {
-    flex: 1; 
+    width: 100%;
     border-collapse: collapse;
 }
 
 .moduleTable thead, .completedTable thead {
     display: table;
     width: 100%;
-    border-collapse: collapse
+    border-collapse: collapse;
+    top: 0;
+    position: sticky;
+    background-color: #bf2c2c;
+    color: white;
 }
 
 .moduleTable tbody, .completedTable tbody {
     display: block;
-    height: 600px; 
-   
+    height: 600px;
+    overflow-y: auto;
     width: 100%;
 }
 
 .moduleTable tbody td, .completedTable tbody td, .moduleTable thead th, .completedTable thead th {
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ddd;
     box-sizing: border-box;
     background-color: #fff;
     text-align: left;
+}
+
+.moduleTable tbody tr:hover, .completedTable tbody tr:hover, .moduleTable tbody td a:hover, .completedTable tbody td a:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
 }
 
 .moduleTable thead th, .completedTable thead th {
@@ -560,4 +566,3 @@ label[for=sideNav-footer-toggle] {
     font-weight: 500;
     z-index: 1;
 }
-
