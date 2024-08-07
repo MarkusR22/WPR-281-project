@@ -1243,16 +1243,20 @@ const modules = [
     }
 ];
 
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
     const lecturerContainer = document.querySelector('.lecturer');
     const moduleContainer = document.querySelector('.modules');
     const searchInput = document.querySelector('.search-input');
+    let currentCourse = 'all';
 
     function displayLecturers(course = 'all') {
         lecturerContainer.innerHTML = '';
         lecturers.forEach(lecturer => {
-            const isCourseMatch = course === 'all' || lecturer.modules.some(module => modules.find(m => m.code === module && m.course === course));
+            const isCourseMatch = course === 'all' || lecturer.modules.some(moduleCode => {
+                const module = modules.find(m => m.code === moduleCode);
+                return module && module.course === course;
+            });
             if (isCourseMatch) {
                 const lecturerCard = `
                     <div class="container">
@@ -1271,8 +1275,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-
 
     function createFilterDropdown() {
         const filterContainer = document.getElementById('filterContainer');
@@ -1294,8 +1296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         filterContainer.appendChild(label);
         filterContainer.appendChild(selectElement);
     }
-    
- 
+
     function displayModules(course = 'all', filterYear = 'all', searchQuery = '') {
         moduleContainer.innerHTML = '';
         modules.forEach(module => {
@@ -1311,7 +1312,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h1>${module.code}</h1>
                         </div>
                         <div class="card-content">
-                        <p>${module.description}</p> 
+                        <p>${module.description}</p>
                         <button id='${module.code}'>View More</button>
                         </div>
                     </div>
@@ -1319,52 +1320,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 moduleContainer.insertAdjacentHTML('beforeend', moduleCard);
             }
         });
-     }
-
+    }
 
     function displayOverview(course, description) {
-        description.innerHTML = ''
-        let heading = document.createElement('h1')
-        
-        let coursePara = document.createElement('p')
+        description.innerHTML = '';
+        let heading = document.createElement('h1');
+        let coursePara = document.createElement('p');
         switch (course) {
             case 'BCOMP':
-                heading.textContent = 'BA of Computer Science'
+                heading.textContent = 'BA of Computer Science';
                 coursePara.textContent = `The Bachelor of Computer Science (BSc CS) is an undergraduate degree program designed to provide students with a strong foundation in 
                                         computer science and its applications. This program typically spans four years, including three years of academic coursework and one year of workplace training or 
-                                        internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`
-                description.appendChild(heading)
-                description.appendChild(coursePara)
+                                        internship. The curriculum combines theoretical knowledge with practical skills, preparing graduates for various roles in the technology and computing industries.`;
+                description.appendChild(heading);
+                description.appendChild(coursePara);
                 break;
 
             case 'BIT':
-                heading.textContent = 'BA in IT'
+                heading.textContent = 'BA in IT';
                 coursePara.textContent = `A Bachelor in Information Technology (BIT) is an undergraduate degree program focused on the study of information systems, software 
                                         development, computer networks, and related technologies. This program typically spans three to four years and is designed to equip students 
-                                        with both theoretical knowledge and practical skills needed to excel in the IT industry.`
-                description.appendChild(heading)
-                description.appendChild(coursePara)
+                                        with both theoretical knowledge and practical skills needed to excel in the IT industry.`;
+                description.appendChild(heading);
+                description.appendChild(coursePara);
                 break;
 
             case 'DIT':
-                heading.textContent = 'Diploma in IT'
+                heading.textContent = 'Diploma in IT';
                 coursePara.textContent = `A Diploma in Information Technology (IT) is a vocational qualification designed to provide students with foundational knowledge and practical 
                                         skills in the field of IT. This program usually spans one to two years and serves as a stepping stone for further studies or entry-level positions 
-                                        in the IT industry. `
-                description.appendChild(heading)
-                description.appendChild(coursePara)
+                                        in the IT industry.`;
+                description.appendChild(heading);
+                description.appendChild(coursePara);
                 break;
 
             case 'CIT':
-                heading.textContent = 'Certificate in IT'
+                heading.textContent = 'Certificate in IT';
                 coursePara.textContent = `A Certificate in Information Technology (IT) is a short-term educational program designed to provide foundational knowledge and practical 
                                         skills in various areas of IT. This program is ideal for individuals looking to enter the IT field quickly, enhance their current job skills, 
-                                        or prepare for further education in IT.`
-                description.appendChild(heading)
-                description.appendChild(coursePara)
+                                        or prepare for further education in IT.`;
+                description.appendChild(heading);
+                description.appendChild(coursePara);
                 break;
-
-
 
             default:
                 break;
@@ -1373,7 +1370,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createFilterDropdown();
     displayModules();
-    displayLecturers(); 
+    displayLecturers();
 
     document.getElementById('yearFilter').addEventListener('change', function () {
         const selectedYear = this.value;
@@ -1381,17 +1378,15 @@ document.addEventListener('DOMContentLoaded', () => {
         displayModules(currentCourse, selectedYear, searchQuery);
     });
 
-
-    let currentCourse = 'all';
     document.querySelectorAll('.sideNav-button').forEach(button => {
         button.addEventListener('click', () => {
             currentCourse = button.getAttribute('data-course');
-            const courseDescription = document.querySelector('.description')
+            const courseDescription = document.querySelector('.description');
             const selectedYear = document.getElementById('yearFilter').value;
             const searchQuery = searchInput.value.toLowerCase();
             displayModules(currentCourse, selectedYear, searchQuery);
             displayLecturers(currentCourse);
-            displayOverview(currentCourse, courseDescription)
+            displayOverview(currentCourse, courseDescription);
         });
     });
 
@@ -1399,9 +1394,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchQuery = searchInput.value.toLowerCase();
         displayModules(currentCourse, document.getElementById('yearFilter').value, searchQuery);
     });
-   
-});
-
+});*/
 
 
 
