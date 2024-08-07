@@ -1689,7 +1689,7 @@ const venues = [
     },
     {
         course: ['BIT', 'DIT'],
-        modules: ['MAT 171', 'PRG 271', 'INL 321', 'MLG 372', 'INL 161', 'OPS 261', 'OPS 361'],
+        modules: ['MAT 171', 'PRG 271', 'INL 321', 'MLG 372', 'INL 161', 'OPS 261', 'OPS 361', 'MAT 151'],
         name: "Roh",
         seats: 25,
         location: "south campus",
@@ -1713,7 +1713,7 @@ const venues = [
     },
     {
         course: ['BIT', 'DIT'],
-        modules: ['PRG 172', 'STA 271', 'PRJ 371', 'AIT 4712', 'NWD 161', 'SEC 261', 'DBD 361'],
+        modules: ['PRG 172', 'STA 271', 'PRJ 371', 'AIT 4712', 'NWD 161', 'SEC 261', 'DBD 361','MAT 381'],
         name: "Gamma",
         seats: 50,
         location: "main campus",
@@ -1737,7 +1737,7 @@ const venues = [
     },
     {
         course: ['BCOMP', 'DIT'],
-        modules: ['PRG 181', 'PRG 282', 'MLG 381', 'AIT 481', 'PRP 161', 'SWA 261', 'WDB 361'],
+        modules: ['PRG 181', 'PRG 282', 'MLG 381', 'AIT 481', 'PRP 161', 'SWA 261', 'WDB 361','MAT 381'],
         name: "Lambda",
         seats: 30,
         location: "south campus",
@@ -1745,7 +1745,7 @@ const venues = [
     },
     {
         course: ['BIT', 'DIT'],
-        modules: ['BUM 171', 'SAD 271', 'SEN 371', 'WPR 161', 'SWT 261', 'WFS 361'],
+        modules: ['BUM 171', 'SAD 271', 'SEN 371', 'WPR 161', 'SWT 261', 'WFS 361','DBD 381'],
         name: "Theta",
         seats: 45,
         location: "south campus",
@@ -2421,7 +2421,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await getStudentDetails();
 
-    if (sStudentId && sStudentId !== "") {
+    if (sStudentId !== "") {
         DashboardLink.classList.add("visible");
     } else {
         DashboardLink.classList.add("notVisible");

@@ -398,21 +398,29 @@ form button:hover {
     background-color: #333;
     width: 60%;
     max-width: 800px;
-    margin: 60px auto;
+    margin: 80px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    
+}
+#StudentEnroll input, option, select, button{
+max-width: 60%;
 }
 
 #StudentEnroll h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #ccc;
+}
+#StudentEnroll label{
+    text-align: right;
+    padding-right: 20px;
 }
 
 #formGroup {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 3fr 6fr;
 
 }
 
